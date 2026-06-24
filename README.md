@@ -1,85 +1,25 @@
-# Русский перевод для Foundry VTT
+# Русский перевод Foundry VTT 14
 
 ![](https://img.shields.io/badge/FVTT-v14-green)
 
 ![](/public/images/module/cover.webp)
 
-Модуль добавляет поддержку русского языка в Foundry VTT, а также многие системы и модули.
+Core-only форк русского языкового пакета Foundry VTT. Он переводит интерфейс Foundry и не содержит переводов, стилей, шрифтов или интеграций для игровых систем и модулей.
 
-## Ссылки
+## Установка
 
-- [manifest.json V14](https://github.com/DroiD16/foundry-vtt-ru/releases/download/release-v14/module.json)
+Используйте manifest:
 
-- [Русскоязычное сообщество Foundry в Discord](https://discord.gg/Z2CXFy35WF)
-- [Модуль на сайте Foundry VTT](https://foundryvtt.com/packages/ru-ru/)
-- [Github](https://github.com/DroiD16/foundry-vtt-ru)
+https://github.com/DroiD16/foundry-vtt-ru/releases/download/release-v14/module.json
 
-## Установка и настройка
+Модуль сохраняет ID `ru-ru` и является прямой заменой оригинального пакета. Перед установкой удалите другой модуль с тем же ID.
 
-**Нужно выполнить один раз:**
+## Состав
 
-1. В главном меню на вкладке **Add-on Modules** нажмите **Install Module**
-2. Введите в фильтр "русский перевод", в списке должен появится модуль _"Russian Translation | Русский перевод"_. Нажмите кнопку **Install**
-3. Перейдите на вкладку **Configuration** и измените **Default Language** на "Russian - Russian Translation". Нажмите **Save Changes**.
+- русский перевод Foundry VTT 14;
+- дополнительные строки интерфейса;
+- русские прилагательные для генерации имён токенов.
 
-**Нужно выполнять каждый раз для каждого мира:**
+Переводы систем, модулей и compendium, Babele-интеграции, CSS и webfont-подмены намеренно исключены.
 
-1. Находясь в игре перейдите на вкладку **Настройки игры** и нажмите **Управление модулями**.
-2. Поставьте галочку напротив _"Russian Translation | Русский перевод"_ и нажмите **Сохранить настройки**.
-
-**Примечание:** некоторые системы могут также требовать модули _Babele_ и _libWrapper_ для перевода содержимого библиотек.
-
-## Информация о переводе
-
-**Разработка и поддержка**: Phenomen
-
-Модуль в данный момент имеет перевод самого приложения Foundry VTT, а также:
-
-### Системы
-
-- 13th Age
-- AGE System
-- Age of Sigmar: Soulbound
-- Alien (Чужой)
-- Blades in the Dark (Клинки во тьме)
-- Call of Cthulhu (Зов Ктулху)
-- City of Mist (Город Тумана)
-- Coriolis: Third Horizon (Кориолис)
-- Coriolis: The Great Dark
-- Cosmere
-- Cy-Borg
-- Death in Space
-- Delta Green
-- Dragonbane
-- Dungeon Crawl Classics
-- Dungeon World (Мир Подземелий)
-- Dungeons & Dragons 5
-- Forbidden Lands (Запретные земли)
-- Genesys / Star Wars FFG
-- GUMSHOE (СЫШИК)
-- Ironsworn / Starforged
-- Mausritter
-- Mouseguard
-- Mutants Year Zero (Мутанты. Точка Отсчёта)
-- Old-School Essentials
-- Pathfinder 1e
-- Savage Worlds (Дневник Авантюриста)
-- Shadow of the Demon Lord
-- Star Trek Adventures (Звёздный Путь)
-- Starfinder + Beginner Box
-- Tales from the Loop (Тайны Эхосферы)
-- The One Ring 2e
-- The Witcher (Ведьмак)
-- Traveler / Cepheus Engine
-- Vaesen (Нечисть)
-- Vampire V5 (Вампиры: Маскарад)
-- [Warhammer Fantasy Roleplay 4](https://github.com/phenomen/fvtt-wfrp4e-ru)
-- Warhammer The Old World
-
-### Модули
-
-Переведено более 100 модулей, список в можно посмотреть `public/i18n/modules`
-
-### Сообщество
-
-Присоединяйтесь к нашему [Discord серверу](https://discord.gg/Z2CXFy35WF), где можно задать вопросы по Foundry VTT, оставить заявки на перевод и обсудить НРИ.
+Основано на [phenomen/foundry-vtt-ru](https://github.com/phenomen/foundry-vtt-ru).

@@ -1,13 +1,6 @@
-import { glob, readFile, writeFile } from "node:fs/promises";
-import path from "node:path";
+import { readFile, writeFile } from "node:fs/promises";
 
-const patterns = {
-  modules: "public/i18n/modules/*.json",
-  systems: "public/i18n/systems/*.json",
-  styles: "public/styles/*.css",
-};
-
-const languages = [
+const CORE_LANGUAGES = [
   {
     lang: "ru",
     name: "Russian",
@@ -21,54 +14,23 @@ const languages = [
     lang: "ru",
     path: "i18n/core/adjectives_m.json",
   },
-  {
-    lang: "ru",
-    path: "i18n/systems/misc/dnd5e-plural.json",
-    system: "dnd5e",
-  },
 ];
-
-function toPublicPath(file) {
-  return file.replace(/\\/g, "/").replace("public/", "");
-}
 
 async function main() {
   const manifestPath = "./public/module.json";
   const manifestData = JSON.parse(await readFile(manifestPath, "utf8"));
 
-  const systems = [];
-  const modules = [];
-  const styles = [];
+  manifestData.styles = [];
+  manifestData.languages = CORE_LANGUAGES;
+  delete manifestData.relationships;
+  delete manifestData.flags.styles;
+  manifestData.flags.hotReload = {
+    enabled: true,
+    extensions: ["json"],
+    paths: ["i18n/core/*.json"],
+  };
 
-  for await (const file of glob(patterns.systems)) {
-    systems.push({
-      lang: "ru",
-      path: toPublicPath(file),
-      system: path.basename(file, ".json"),
-    });
-  }
-
-  for await (const file of glob(patterns.modules)) {
-    modules.push({
-      module: path.basename(file, ".json"),
-      path: toPublicPath(file),
-      lang: "ru",
-    });
-  }
-
-  for await (const file of glob(patterns.styles)) {
-    const name = path.basename(file, ".css");
-    if (name !== "_fonts" && name !== "_main") {
-      styles.push(name);
-    }
-  }
-
-  languages.push(...systems, ...modules);
-
-  manifestData.languages = languages;
-  manifestData.flags.styles = styles;
-
-  await writeFile(manifestPath, JSON.stringify(manifestData, null, "\t"), "utf8");
+  await writeFile(manifestPath, `${JSON.stringify(manifestData, null, 2)}\n`, "utf8");
 }
 
 main();

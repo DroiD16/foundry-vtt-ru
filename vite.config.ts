@@ -1,6 +1,30 @@
 import { defineConfig } from "vite-plus";
+import { resolve } from "node:path";
+import { rm } from "node:fs/promises";
+
+const CORE_ONLY_EXCLUDES = [
+  "compendium",
+  "fonts",
+  "styles",
+  "i18n/modules",
+  "i18n/systems",
+  "i18n/core/adjectives_f.json",
+  "images/alien",
+];
 
 export default defineConfig({
+  plugins: [
+    {
+      name: "core-only-package",
+      async closeBundle() {
+        await Promise.all(
+          CORE_ONLY_EXCLUDES.map((path) =>
+            rm(resolve("ru-ru", path), { force: true, recursive: true }),
+          ),
+        );
+      },
+    },
+  ],
   staged: {
     "*.{js,ts,tsx,css,json}": "vp check --fix",
   },
