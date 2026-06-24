@@ -1,6 +1,6 @@
 # Русский перевод для Foundry VTT
 
-![](https://img.shields.io/badge/FVTT-v13-green) ![](https://img.shields.io/badge/FVTT-v14-green)
+![](https://img.shields.io/badge/FVTT-v14-green)
 
 ![](/public/images/module/cover.webp)
 
@@ -8,12 +8,11 @@
 
 ## Ссылки
 
-- [manifest.json V14](https://github.com/phenomen/foundry-vtt-ru/releases/download/release-v14/module.json)
-- [manifest.json V13](https://github.com/phenomen/foundry-vtt-ru/releases/download/release-v13/module.json)
+- [manifest.json V14](https://github.com/DroiD16/foundry-vtt-ru/releases/download/release-v14/module.json)
 
 - [Русскоязычное сообщество Foundry в Discord](https://discord.gg/Z2CXFy35WF)
 - [Модуль на сайте Foundry VTT](https://foundryvtt.com/packages/ru-ru/)
-- [Github](https://github.com/phenomen/foundry-vtt-ru)
+- [Github](https://github.com/DroiD16/foundry-vtt-ru)
 
 ## Установка и настройка
 
@@ -76,7 +75,6 @@
 - Vampire V5 (Вампиры: Маскарад)
 - [Warhammer Fantasy Roleplay 4](https://github.com/phenomen/fvtt-wfrp4e-ru)
 - Warhammer The Old World
-- Warhammer 40K The Dark Heresy
 
 ### Модули
 
