@@ -1,10 +1,18 @@
+import { registerTargetAgreement } from "./dnd5e/target-labels.js";
 import { getSettings, registerCompendiumTranslations } from "#helpers";
+import {
+  actorItemsConverter,
+  actorDetailsConverter,
+  translateAdvancement,
+  translateEffectChanges,
+} from "./dnd5e/content24.js";
 import { init as initAltTranslation } from "./dnd5e/alt.js";
 
 export function init() {
   initAltTranslation();
   registerSettings();
   registerHooks();
+  Hooks.once("ready", registerTargetAgreement);
 }
 
 export function registerBabeleTranslations(babele) {
@@ -25,6 +33,15 @@ export function registerBabeleTranslations(babele) {
   }
 
   registerCompendiumTranslations(babele, dirs);
+}
+
+export function registerBabeleConverters(babele) {
+  babele.registerConverters({
+    dnd2024ActorItems: actorItemsConverter,
+    dnd2024ActorDetails: actorDetailsConverter,
+    dnd2024Advancement: translateAdvancement,
+    dnd2024EffectChanges: translateEffectChanges,
+  });
 }
 
 function registerSettings() {

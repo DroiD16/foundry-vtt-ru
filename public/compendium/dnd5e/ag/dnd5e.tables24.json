@@ -1,764 +1,764 @@
 {
-  "label": "Таблицы (Modern)",
+  "label": "Таблицы (2024)",
   "folders": {
-    "Sentient Item Attributes": "Sentient Item Attributes",
-    "Mysterious Deck": "Mysterious Deck",
-    "Item-Specific Tables": "Item-Specific Tables",
-    "Monster Details": "Monster Details",
-    "Bag of Tricks": "Bag of Tricks",
-    "Spells": "Spells",
-    "Reincarnated Lineages": "Reincarnated Lineages",
-    "Creating a Character": "Creating a Character",
-    "Random Magic Item Rarity by Level": "Random Magic Item Rarity by Level",
-    "Magic Items": "Magic Items"
+    "Sentient Item Attributes": "Свойства разумного предмета",
+    "Mysterious Deck": "Таинственная колода",
+    "Item-Specific Tables": "Таблицы отдельных предметов",
+    "Monster Details": "Сведения о чудовищах",
+    "Bag of Tricks": "Сумка сюрпризов",
+    "Spells": "Заклинания",
+    "Reincarnated Lineages": "Родословные при реинкарнации",
+    "Creating a Character": "Создание персонажа",
+    "Random Magic Item Rarity by Level": "Случайная редкость магического предмета по уровню",
+    "Magic Items": "Магические предметы"
   },
   "entries": {
     "Level 11-16": {
-      "name": "Level 11-16",
+      "name": "Уровень 11-16",
       "results": {
         "1-11": {
-          "description": "Common"
+          "description": "Обычный"
         },
         "12-34": {
-          "description": "Uncommon"
+          "description": "Необычный"
         },
         "35-70": {
-          "description": "Rare"
+          "description": "Редкий"
         },
         "71-93": {
-          "description": "Very Rare"
+          "description": "Крайне редкий"
         },
         "94-100": {
-          "description": "Legendary"
+          "description": "Легендарный"
         }
       }
     },
     "Mysterious Deck: 13 Cards": {
-      "name": "Mysterious Deck: 13 Cards",
+      "name": "Таинственная колода: 13 карт",
       "results": {
         "1-8": {
-          "name": "Euryale"
+          "name": "Эвриала"
         },
         "9-16": {
-          "name": "Flames"
+          "name": "Пламя"
         },
         "17-24": {
-          "name": "Jester"
+          "name": "Шут"
         },
         "25-32": {
-          "name": "Key"
+          "name": "Ключ"
         },
         "33-40": {
-          "name": "Knight"
+          "name": "Рыцарь"
         },
         "41-48": {
-          "name": "Moon"
+          "name": "Луна"
         },
         "49-56": {
-          "name": "Rogue"
+          "name": "Плут"
         },
         "57-64": {
-          "name": "Ruin"
+          "name": "Разорение"
         },
         "65-72": {
-          "name": "Skull"
+          "name": "Череп"
         },
         "73-80": {
-          "name": "Star"
+          "name": "Звезда"
         },
         "81-88": {
-          "name": "Sun"
+          "name": "Солнце"
         },
         "89-96": {
-          "name": "Throne"
+          "name": "Трон"
         },
         "97-100": {
-          "name": "Void"
+          "name": "Пустота"
         }
       }
     },
     "Level 1-4": {
-      "name": "Level 1-4",
+      "name": "Уровень 1-4",
       "results": {
         "1-54": {
-          "description": "Common"
+          "description": "Обычный"
         },
         "55-91": {
-          "description": "Uncommon"
+          "description": "Необычный"
         },
         "92-100": {
-          "description": "Rare"
+          "description": "Редкий"
         }
       }
     },
     "Level 17-20": {
-      "name": "Level 17-20",
+      "name": "Уровень 17-20",
       "results": {
         "1-20": {
-          "description": "Rare"
+          "description": "Редкий"
         },
         "21-64": {
-          "description": "Very Rare"
+          "description": "Крайне редкий"
         },
         "65-100": {
-          "description": "Legendary"
+          "description": "Легендарный"
         }
       }
     },
     "Mysterious Deck: 22 Cards": {
-      "name": "Mysterious Deck: 22 Cards",
+      "name": "Таинственная колода: 22 карты",
       "results": {
         "1-5": {
-          "name": "Balance"
+          "name": "Равновесие"
         },
         "6-10": {
-          "name": "Comet"
+          "name": "Комета"
         },
         "11-14": {
-          "name": "Donjon"
+          "name": "Темница"
         },
         "15-18": {
-          "name": "Euryale"
+          "name": "Эвриала"
         },
         "19-23": {
-          "name": "Fates"
+          "name": "Судьбы"
         },
         "24-27": {
-          "name": "Flames"
+          "name": "Пламя"
         },
         "28-31": {
-          "name": "Fool"
+          "name": "Дурак"
         },
         "32-36": {
-          "name": "Gem"
+          "name": "Самоцвет"
         },
         "37-41": {
-          "name": "Jester"
+          "name": "Шут"
         },
         "42-46": {
-          "name": "Key"
+          "name": "Ключ"
         },
         "47-51": {
-          "name": "Knight"
+          "name": "Рыцарь"
         },
         "52-56": {
-          "name": "Moon"
+          "name": "Луна"
         },
         "57-60": {
-          "name": "Puzzle"
+          "name": "Загадка"
         },
         "61-64": {
-          "name": "Rogue"
+          "name": "Плут"
         },
         "65-68": {
-          "name": "Ruin"
+          "name": "Разорение"
         },
         "69-73": {
-          "name": "Sage"
+          "name": "Мудрец"
         },
         "74-77": {
-          "name": "Skull"
+          "name": "Череп"
         },
         "78-82": {
-          "name": "Star"
+          "name": "Звезда"
         },
         "83-87": {
-          "name": "Sun"
+          "name": "Солнце"
         },
         "88-91": {
-          "name": "Talons"
+          "name": "Когти"
         },
         "92-96": {
-          "name": "Throne"
+          "name": "Трон"
         },
         "97-100": {
-          "name": "Void"
+          "name": "Пустота"
         }
       }
     },
     "Level 5-10": {
-      "name": "Level 5-10",
+      "name": "Уровень 5-10",
       "results": {
         "1-30": {
-          "description": "Common"
+          "description": "Обычный"
         },
         "31-81": {
-          "description": "Uncommon"
+          "description": "Необычный"
         },
         "82-98": {
-          "description": "Rare"
+          "description": "Редкий"
         },
         "99-100": {
-          "description": "Very Rare"
+          "description": "Крайне редкий"
         }
       }
     },
     "Amulet of the Planes Destination": {
-      "name": "Amulet of the Planes Destination",
+      "name": "Планарный амулет: место назначения",
       "results": {
         "1-60": {
-          "description": "Random location on the plane you named"
+          "description": "Случайное место на названном вами плане"
         },
         "61-70": {
-          "description": "Random location on an Inner Plane determined by rolling [[/r 1d6]]: on a 1 , the Plane of Air; on a 2 , the Plane of Earth; on a 3 , the Plane of Fire; on a 4 , the Plane of Water; on a 5 , the Feywild; on a 6 , the Shadowfell"
+          "description": "Случайное место на Внутреннем плане, определяемом броском [[/r 1d6]]: при 1 , План Воздуха; при 2 , План Земли; при 3 , План Огня; при 4 , План Воды; при 5 , Страна Фей; при 6 , Царство Теней"
         },
         "71-80": {
-          "description": "Random location on an Outer Plane determined by rolling [[/r 1d8]]: on a 1 , Arborea; on a 2 , Arcadia; on a 3 , the Beastlands; on a 4 , Bytopia; on a 5 , Elysium; on a 6 , Mechanus; on a 7 , Mount Celestia; on an 8 , Ysgard"
+          "description": "Случайное место на Внешнем плане, определяемом броском [[/r 1d8]]: при 1 , Арборея; при 2 , Аркадия; при 3 , Звериные земли; при 4 , Битопия; при 5 , Элизиум; при 6 , Механус; при 7 , Гора Целестия; при 8 , Исгард"
         },
         "81-90": {
-          "description": "Random location on an Outer Plane determined by rolling [[/r 1d8]]: on a 1 , the Abyss; on a 2 , Acheron; on a 3 , Carceri; on a 4 , Gehenna; on a 5 , Hades; on a 6 , Limbo; on a 7 , the Nine Hells; on an 8 , Pandemonium"
+          "description": "Случайное место на Внешнем плане, определяемом броском [[/r 1d8]]: при 1 , Бездна; при 2 , Ахерон; при 3 , Карцери; при 4 , Геенна; при 5 , Гадес; при 6 , Лимб; при 7 , Девять Преисподних; при 8 , Пандемоний"
         },
         "91-100": {
-          "description": "Random location on the Astral Plane"
+          "description": "Случайное место на Астральном плане"
         }
       }
     },
     "Armor of Resistance Type": {
-      "name": "Armor of Resistance Type",
+      "name": "Броня устойчивости: тип",
       "results": {
         "1-1": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.YreDFSu9z9mGCWt1]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.YreDFSu9z9mGCWt1]{Броня устойчивости к кислоте}"
         },
         "6-6": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.CfxFdUSiXkOUXym6]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.CfxFdUSiXkOUXym6]{Броня устойчивости к некротическому урону}"
         },
         "2-2": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.LTByr2rsRPBLLOA0]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.LTByr2rsRPBLLOA0]{Броня устойчивости к холоду}"
         },
         "7-7": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.VST1qNRu1dHDzkD2]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.VST1qNRu1dHDzkD2]{Броня устойчивости к яду}"
         },
         "3-3": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.MqubvD3XEwB7DRST]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.MqubvD3XEwB7DRST]{Броня устойчивости к огню}"
         },
         "8-8": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.mmp5O2pZOxJUc2vq]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.mmp5O2pZOxJUc2vq]{Броня устойчивости к психическому урону}"
         },
         "4-4": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.lsPKUk288Jkvahsp]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.lsPKUk288Jkvahsp]{Броня устойчивости к силе}"
         },
         "9-9": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.jyWNVNHLYdxvCOQz]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.jyWNVNHLYdxvCOQz]{Броня устойчивости к лучистому урону}"
         },
         "5-5": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.18IZ8X8zpDXyN33T]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.18IZ8X8zpDXyN33T]{Броня устойчивости к молнии}"
         },
         "10-10": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.cbsuJ2tdbBuT5e8U]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.cbsuJ2tdbBuT5e8U]{Броня устойчивости к грому}"
         }
       }
     },
     "Bag of Beans Effect": {
-      "name": "Bag of Beans Effect",
+      "name": "Сумка бобов: эффект",
       "results": {
         "1-1": {
-          "description": "[[/r 5d4#Toadstools]] toadstools sprout. If a creature eats a toadstool, roll [[/r 1d2#Toadstool side-effect]]{any die}. On an odd roll, the eater must succeed on a [[/save ability=con dc=15 format=long]] or take [[/damage 5d6 type=poison]] damage and have the &amp;Reference[Poisoned] condition for 1 hour. On an even roll, the eater gains [[/healing 5d6 type=temphp]] for 1 hour."
+          "description": "Вырастает [[/r 5d4#Поганки]] поганок. Если существо съедает поганку, бросьте [[/r 1d2#Побочный эффект поганки]]{любую кость}. При нечётном результате съевшее её существо должно успешно пройти [[/save ability=con dc=15 format=long]], иначе оно получает [[/damage 5d6 type=poison]] урона и состояние &amp;Reference[Poisoned] на 1 час. При чётном результате съевшее её существо получает [[/healing 5d6 type=temphp]] на 1 час."
         },
         "2-10": {
-          "description": "A geyser erupts and spouts water, beer, mayonnaise, tea, vinegar, wine, or oil (DM’s choice) 30 feet into the air for [[/r 1d4#Geyser duration (minutes)]] minutes."
+          "description": "Извергается гейзер, выбрасывающий воду, пиво, майонез, чай, уксус, вино или масло на выбор Мастера на 30 футов в воздух в течение [[/r 1d4#Длительность гейзера (минуты)]] минут."
         },
         "11-20": {
-          "description": "A @UUID[Compendium.dnd5e.actors24.Actor.mmTreant00000000]{Treant} sprouts. Roll [[/r 1d2#Treant alignment]]{any die}. On an odd roll, the treant is Chaotic Evil. On an even roll, the treant is Chaotic Good."
+          "description": "Вырастает @UUID[Compendium.dnd5e.actors24.Actor.mmTreant00000000]{древень}. Бросьте [[/r 1d2#Мировоззрение древня]]{любую кость}. При нечётном результате древень Хаотичный Злой. При чётном результате древень Хаотичный Добрый."
         },
         "21-30": {
-          "description": "An animate but immobile stone statue in your likeness rises and makes verbal threats against you. If you leave it and others come near, it describes you as the most heinous of villains and directs the newcomers to find and attack you. If you are on the same plane of existence as the statue, it knows where you are. The statue becomes inanimate after 24 hours."
+          "description": "Появляется ожившая, но неподвижная каменная статуя, похожая на вас, и начинает угрожать вам. Если вы уходите, а к ней приближаются другие, она описывает вас как самого гнусного злодея и велит пришедшим найти и атаковать вас. Если вы находитесь на одном плане бытия со статуей, она знает, где вы. Через 24 часа статуя перестаёт быть живой."
         },
         "31-40": {
-          "description": "A campfire with green flames springs forth and burns for 24 hours or until it is extinguished."
+          "description": "Вспыхивает костёр с зелёным пламенем, который горит 24 часа или пока его не погасят."
         },
         "41-50": {
-          "description": "Three @UUID[Compendium.dnd5e.actors24.Actor.mmShriekerFungus]{Shrieker Fungi} sprout."
+          "description": "Вырастает три @UUID[Compendium.dnd5e.actors24.Actor.mmShriekerFungus]{гриба-визгуна}."
         },
         "51-60": {
-          "description": "[[/r 1d4 + 4#Bright-pink toads]] bright-pink @UUID[Compendium.dnd5e.actors24.Actor.mmFrog0000000000]{toads} crawl forth. Whenever a toad is touched, it transforms into a Large or smaller monster of the DM’s choice that acts in accordance with its alignment and nature. The monster remains for 1 minute, then disappears in a puff of bright-pink smoke."
+          "description": "Выползает [[/r 1d4 + 4#Ярко-розовые жабы]] ярко-розовых @UUID[Compendium.dnd5e.actors24.Actor.mmFrog0000000000]{жаб}. При прикосновении жаба превращается в чудовище Крупного или меньшего размера на выбор Мастера, которое действует согласно своему мировоззрению и природе. Чудовище остаётся на 1 минуту, а затем исчезает в клубе ярко-розового дыма."
         },
         "61-70": {
-          "description": "A hungry @UUID[Compendium.dnd5e.actors24.Actor.mmBulette0000000]{Bulette} burrows up and attacks."
+          "description": "Из-под земли вырывается голодный @UUID[Compendium.dnd5e.actors24.Actor.mmBulette0000000]{булей} и атакует."
         },
         "71-80": {
-          "description": "A fruit tree grows. It has [[/r 1d10 + 20#Pieces of fruit]] fruit, [[/gmr 1d8#Fruits acting as Potions]] of which act as randomly determined potions. The tree vanishes after 1 hour. Picked fruit remains, retaining any magic for 30 days."
+          "description": "Вырастает плодовое дерево. На нём [[/r 1d10 + 20#Плоды]] плодов, из которых [[/gmr 1d8#Плоды с эффектом зелий]] действуют как случайно определённые зелья. Дерево исчезает через 1 час. Сорванные плоды остаются и сохраняют магию в течение 30 дней."
         },
         "81-90": {
-          "description": "A nest of [[/r 1d4 + 3#Rainbow-colored eggs]] rainbow-colored eggs springs up. Any creature that eats an egg makes a [[/save ability=con dc=20 format=long]]. On a successful save, a creature permanently increases its lowest ability score by 1, randomly choosing among equally low scores. On a failed save, the creature takes [[/damage 10d6 type=force]] damage from an internal explosion."
+          "description": "Появляется гнездо с [[/r 1d4 + 3#Радужные яйца]] радужными яйцами. Любое существо, съевшее яйцо, проходит [[/save ability=con dc=20 format=long]]. При успехе оно навсегда увеличивает наименьшее значение своей характеристики на 1, случайным образом выбирая среди равных наименьших значений. При провале существо получает [[/damage 10d6 type=force]] урона от внутреннего взрыва."
         },
         "91-95": {
-          "description": "A pyramid with a 60-foot-square base bursts upward. Inside is a burial chamber containing a @UUID[Compendium.dnd5e.actors24.Actor.mmMummy000000000]{Mummy} , a @UUID[Compendium.dnd5e.actors24.Actor.mmMummyLord00000]{Mummy Lord} , or some other Undead of the DM’s choice. Its sarcophagus contains treasure of the DM’s choice."
+          "description": "Из земли вырастает пирамида с квадратным основанием со стороной 60 футов. Внутри находится погребальная камера с @UUID[Compendium.dnd5e.actors24.Actor.mmMummy000000000]{мумией}, @UUID[Compendium.dnd5e.actors24.Actor.mmMummyLord00000]{владыкой мумий} или другой Нежитью на выбор Мастера. В саркофаге находятся сокровища на выбор Мастера."
         },
         "96-100": {
-          "description": "A giant beanstalk sprouts, growing to a height of the DM’s choice. The top leads where the DM chooses, such as to a great view, a cloud giant’s castle, or another plane of existence."
+          "description": "Вырастает гигантский бобовый стебель высотой на выбор Мастера. Его вершина ведёт туда, куда решит Мастер, например к прекрасному виду, замку облачного великана или на другой план бытия."
         }
       }
     },
     "Candle of Invocation: Outer Plane Destination": {
-      "name": "Candle of Invocation: Outer Plane Destination",
+      "name": "Свеча воззвания: место назначения на Внешнем плане",
       "results": {
         "1-5": {
-          "description": "Abyss"
+          "description": "Бездна"
         },
         "55-59": {
-          "description": "Gehenna"
+          "description": "Геенна"
         },
         "6-10": {
-          "description": "Acheron"
+          "description": "Ахерон"
         },
         "60-64": {
-          "description": "Hades"
+          "description": "Гадес"
         },
         "11-17": {
-          "description": "Arborea"
+          "description": "Арборея"
         },
         "65-69": {
-          "description": "Limbo"
+          "description": "Лимб"
         },
         "18-25": {
-          "description": "Arcadia"
+          "description": "Аркадия"
         },
         "70-77": {
-          "description": "Mechanus"
+          "description": "Механус"
         },
         "26-33": {
-          "description": "Beastlands"
+          "description": "Звериные земли"
         },
         "78-85": {
-          "description": "Mount Celestia"
+          "description": "Гора Целестия"
         },
         "34-41": {
-          "description": "Bytopia"
+          "description": "Битопия"
         },
         "86-90": {
-          "description": "Nine Hells"
+          "description": "Девять Преисподних"
         },
         "42-46": {
-          "description": "Carceri"
+          "description": "Карцери"
         },
         "91-95": {
-          "description": "Pandemonium"
+          "description": "Пандемоний"
         },
         "47-54": {
-          "description": "Elysium"
+          "description": "Элизиум"
         },
         "96-100": {
-          "description": "Ysgard"
+          "description": "Исгард"
         }
       }
     },
     "Carpet of Flying: Size, Capacity, and Speed": {
-      "name": "Carpet of Flying: Size, Capacity, and Speed",
+      "name": "Ковёр-самолёт: размер, грузоподъёмность и скорость",
       "results": {
         "1-20": {
-          "description": "3 × 5 ft. | 200 lb. capacity | 80 ft. Fly speed"
+          "description": "3 × 5 футов | 200 фунтов грузоподъёмности | 80 футов скорости полёта"
         },
         "21-55": {
-          "description": "4 × 6 ft. | 400 lb. capacity | 60 ft. Fly speed"
+          "description": "4 × 6 футов | 400 фунтов грузоподъёмности | 60 футов скорости полёта"
         },
         "56-80": {
-          "description": "5 × 7 ft. | 600 lb. capacity | 40 ft. Fly speed"
+          "description": "5 × 7 футов | 600 фунтов грузоподъёмности | 40 футов скорости полёта"
         },
         "81-100": {
-          "description": "6 × 9 ft. | 800 lb. capacity | 30 ft. Fly speed"
+          "description": "6 × 9 футов | 800 фунтов грузоподъёмности | 30 футов скорости полёта"
         }
       }
     },
     "Deck of Illusions": {
-      "name": "Deck of Illusions",
-      "description": "<p>Stat blocks for these creatures (except the card drawer) appear in Monsters.</p>",
+      "name": "Колода иллюзий",
+      "description": "<p>Блоки статистики этих существ, кроме вытянувшего карту, приведены в разделе «Чудовища».</p>",
       "results": {
         "1-3": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmAdultRedDragon]{Adult Red Dragon}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmAdultRedDragon]{Взрослый красный дракон}"
         },
         "4-6": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmArchmage000000]{Archmage}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmArchmage000000]{Архимаг}"
         },
         "7-9": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmAssassin000000]{Assassin}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmAssassin000000]{Ассасин}"
         },
         "10-12": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmBanditCaptain0]{Bandit Captain}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmBanditCaptain0]{Бандитский атаман}"
         },
         "13-15": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmBasilisk000000]{Basilisk}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmBasilisk000000]{Василиск}"
         },
         "16-18": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmBerserker00000]{Berserker}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmBerserker00000]{Берсерк}"
         },
         "19-21": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmBugbearWarrior]{Bugbear Warrior}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmBugbearWarrior]{Багбер-воитель}"
         },
         "22-24": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmCloudGiant0000]{Cloud Giant}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmCloudGiant0000]{Облачный великан}"
         },
         "25-27": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmDruid000000000]{Druid}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmDruid000000000]{Друид}"
         },
         "28-30": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmErinyes0000000]{Erinyes}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmErinyes0000000]{Эриния}"
         },
         "31-33": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmEttin000000000]{Ettin}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmEttin000000000]{Эттин}"
         },
         "34-36": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmFireGiant00000]{Fire Giant}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmFireGiant00000]{Огненный великан}"
         },
         "37-39": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmFrostGiant0000]{Frost Giant}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmFrostGiant0000]{Морозный великан}"
         },
         "40-42": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmGnollWarrior00]{Gnoll Warrior}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmGnollWarrior00]{Гнолл-воитель}"
         },
         "43-45": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmGoblinWarrior0]{Goblin Warrior}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmGoblinWarrior0]{Гоблин-воитель}"
         },
         "46-48": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmGuardianNaga00]{Guardian Naga}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmGuardianNaga00]{Нага-хранитель}"
         },
         "49-51": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmHillGiant00000]{Hill Giant}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmHillGiant00000]{Холмовой великан}"
         },
         "52-54": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmHobgoblinWarri]{Hobgoblin Warrior}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmHobgoblinWarri]{Хобгоблин-воитель}"
         },
         "55-57": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmIncubus0000000]{Incubus}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmIncubus0000000]{Инкуб}"
         },
         "58-60": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmIronGolem00000]{Iron Golem}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmIronGolem00000]{Железный голем}"
         },
         "61-63": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmKnight00000000]{Knight}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmKnight00000000]{Рыцарь}"
         },
         "64-66": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmKoboldWarrior0]{Kobold Warrior}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmKoboldWarrior0]{Кобольд-воитель}"
         },
         "67-69": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmLich0000000000]{Lich}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmLich0000000000]{Лич}"
         },
         "70-72": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmMedusa00000000]{Medusa}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmMedusa00000000]{Медуза}"
         },
         "73-75": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmNightHag000000]{Night Hag}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmNightHag000000]{Ночная карга}"
         },
         "76-78": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmOgre0000000000]{Ogre}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmOgre0000000000]{Огр}"
         },
         "79-81": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmOni00000000000]{Oni}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmOni00000000000]{Они}"
         },
         "82-84": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmPriest00000000]{Priest}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmPriest00000000]{Священник}"
         },
         "85-87": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmSuccubus000000]{Succubus}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmSuccubus000000]{Суккуб}"
         },
         "88-90": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmTroll000000000]{Troll}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmTroll000000000]{Тролль}"
         },
         "91-93": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmWarriorVeteran]{Veteran Warrior}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmWarriorVeteran]{Воитель-ветеран}"
         },
         "94-96": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmWyvern00000000]{Wyvern}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmWyvern00000000]{Виверна}"
         },
         "97-100": {
-          "description": "The card drawer"
+          "description": "Вытянувший карту"
         }
       }
     },
     "Efreeti Bottle": {
-      "name": "Efreeti Bottle",
-      "description": "<p>The first time the @UUID[Compendium.dnd5e.equipment24.Item.dmgEfreetiBottle]{bottle} is opened, the DM rolls on the following table to determine what happens.</p>",
+      "name": "Бутылка с ифритом",
+      "description": "<p>Когда @UUID[Compendium.dnd5e.equipment24.Item.dmgEfreetiBottle]{бутылку} открывают впервые, Мастер делает бросок по следующей таблице, чтобы определить, что происходит.</p>",
       "results": {
         "1-1": {
-          "description": "The efreeti attacks you. After fighting for 5 rounds, the efreeti disappears, and the bottle loses its magic."
+          "description": "Ифрит атакует вас. После 5 раундов боя ифрит исчезает, а бутылка теряет магию."
         },
         "2-9": {
-          "description": "The efreeti understands your languages and obeys your commands for 1 hour, after which it returns to the bottle, and a new stopper contains it. The stopper can’t be removed for 24 hours. The next two times the bottle is opened, the same effect occurs. If the bottle is opened a fourth time, the efreeti escapes and disappears, and the bottle loses its magic."
+          "description": "Ифрит понимает ваши языки и подчиняется вашим приказам в течение 1 часа, после чего возвращается в бутылку, а новая пробка запирает его внутри. Пробку нельзя вынуть в течение 24 часов. При следующих двух открытиях бутылки происходит то же самое. Если открыть бутылку в четвёртый раз, ифрит вырывается и исчезает, а бутылка теряет магию."
         },
         "10-10": {
-          "description": "The efreeti understands your languages and can cast <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{Wish}</em> once for you. It disappears when it grants the wish or after 1 hour, and the bottle loses its magic."
+          "description": "Ифрит понимает ваши языки и может один раз сотворить для вас <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{Желание}</em>. Он исчезает, исполнив желание или через 1 час, а бутылка теряет магию."
         }
       }
     },
     "Gray Bag of Tricks": {
-      "name": "Gray Bag of Tricks",
+      "name": "Сумка сюрпризов (серая)",
       "results": {
         "1-1": {
-          "name": "Weasel"
+          "name": "Ласка"
         },
         "2-2": {
-          "name": "Giant Rat"
+          "name": "Гигантская крыса"
         },
         "3-3": {
-          "name": "Badger"
+          "name": "Барсук"
         },
         "4-4": {
-          "name": "Boar"
+          "name": "Кабан"
         },
         "5-5": {
-          "name": "Panther"
+          "name": "Пантера"
         },
         "6-6": {
-          "name": "Giant Badger"
+          "name": "Гигантский барсук"
         },
         "7-7": {
-          "name": "Dire Wolf"
+          "name": "Свирепый волк"
         },
         "8-8": {
-          "name": "Giant Elk"
+          "name": "Гигантский лось"
         }
       }
     },
     "Hat of Many Spells": {
-      "name": "Hat of Many Spells",
+      "name": "Колпак непредсказуемых заклинаний",
       "results": {
         "1-50": {
-          "description": "You cast a random spell determined by rolling [[/r 1d10]]: on a 1, @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{Enlarge/Reduce} (enlarge effect); on a 2, Enlarge/Reduce (reduce effect); on a 3, @UUID[Compendium.dnd5e.spells24.Item.phbsplFaerieFire]{Faerie Fire}; on a 4, @UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{Fireball}; on a 5, @UUID[Compendium.dnd5e.spells24.Item.phbsplGustofWind]{Gust of Wind}; on a 6, @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Invisibility} (cast on yourself); on a 7, @UUID[Compendium.dnd5e.spells24.Item.phbsplLightningB]{Lightning Bolt}; on an 8, @UUID[Compendium.dnd5e.spells24.Item.phbPhantasmalFor]{Phantasmal Force}; on a 9, @UUID[Compendium.dnd5e.spells24.Item.phbsplPolymorph0]{Polymorph}; on a 10, @UUID[Compendium.dnd5e.spells24.Item.phbsplStinkingCl]{Stinking Cloud}."
+          "description": "Вы творите случайное заклинание, определяемое броском [[/r 1d10]]: при 1, @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{Увеличение/уменьшение} с эффектом увеличения; при 2, Увеличение/уменьшение с эффектом уменьшения; при 3, @UUID[Compendium.dnd5e.spells24.Item.phbsplFaerieFire]{Фейское сияние}; при 4, @UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{Огненный шар}; при 5, @UUID[Compendium.dnd5e.spells24.Item.phbsplGustofWind]{Порыв ветра}; при 6, @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Невидимость} на себя; при 7, @UUID[Compendium.dnd5e.spells24.Item.phbsplLightningB]{Удар молнии}; при 8, @UUID[Compendium.dnd5e.spells24.Item.phbPhantasmalFor]{Сила фантазма}; при 9, @UUID[Compendium.dnd5e.spells24.Item.phbsplPolymorph0]{Полиморф}; при 10, @UUID[Compendium.dnd5e.spells24.Item.phbsplStinkingCl]{Смрадное облако}."
         },
         "51-55": {
-          "description": "You have the &amp;Reference[Stunned] condition until the end of your next turn, believing something awesome just happened."
+          "description": "Вы получаете состояние &amp;Reference[Stunned] до конца своего следующего хода, полагая, что произошло нечто потрясающее."
         },
         "56-60": {
-          "description": "A harmless swarm of butterflies fills a 10-foot Cube within 30 feet of yourself. The swarm disperses after 1 minute."
+          "description": "Безвредная стая бабочек заполняет Куб со стороной 10 футов в пределах 30 футов от вас. Стая рассеивается через 1 минуту."
         },
         "61-65": {
-          "description": "You pull a nonmagical object out of the hat. Roll [[/r 1d4]] to determine the object: on a 1, a vial of @UUID[Compendium.dnd5e.equipment24.Item.phbagAcid0000000]{Acid}; on a 2, a @UUID[Compendium.dnd5e.equipment24.Item.phbagAlchemistsF]{flask of Alchemist’s Fire}; on a 3, a @UUID[Compendium.dnd5e.equipment24.Item.phbagCrowbar0000]{Crowbar}; on a 4, a lit @UUID[Compendium.dnd5e.equipment24.Item.phbagTorch000000]{Torch}."
+          "description": "Вы достаёте из колпака немагический предмет. Бросьте [[/r 1d4]], чтобы определить предмет: при 1, пузырёк @UUID[Compendium.dnd5e.equipment24.Item.phbagAcid0000000]{Кислоты}; при 2, @UUID[Compendium.dnd5e.equipment24.Item.phbagAlchemistsF]{склянка Алхимического огня}; при 3, @UUID[Compendium.dnd5e.equipment24.Item.phbagCrowbar0000]{Ломик}; при 4, зажжённый @UUID[Compendium.dnd5e.equipment24.Item.phbagTorch000000]{Факел}."
         },
         "66-70": {
-          "description": "You suffer a bout of “magic sickness” and have the &amp;Reference[Poisoned] condition for 1 hour."
+          "description": "У вас случается приступ «магической болезни», и вы получаете состояние &amp;Reference[Poisoned] на 1 час."
         },
         "71-75": {
-          "description": "You have the &amp;Reference[Petrified] condition until the end of your next turn."
+          "description": "Вы получаете состояние &amp;Reference[Petrified] до конца своего следующего хода."
         },
         "76-80": {
-          "description": "You pull a nonmagical object out of the hat. Roll [[/r 1d4]] to determine the object: on a 1, a @UUID[Compendium.dnd5e.equipment24.Item.phbwepDagger0000]{Dagger}; on a 2, a @UUID[Compendium.dnd5e.equipment24.Item.phbagRope0000000]{Rope} with a @UUID[Compendium.dnd5e.equipment24.Item.phbagGrapplingHo]{Grappling Hook} tied to one end; on a 3, a bag of @UUID[Compendium.dnd5e.equipment24.Item.phbagCaltrops000]{Caltrops}; on a 4, a gem worth 50 GP."
+          "description": "Вы достаёте из колпака немагический предмет. Бросьте [[/r 1d4]], чтобы определить предмет: при 1, @UUID[Compendium.dnd5e.equipment24.Item.phbwepDagger0000]{Кинжал}; при 2, @UUID[Compendium.dnd5e.equipment24.Item.phbagRope0000000]{Верёвка} с привязанным к одному концу @UUID[Compendium.dnd5e.equipment24.Item.phbagGrapplingHo]{Крюком-кошкой}; при 3, мешочек @UUID[Compendium.dnd5e.equipment24.Item.phbagCaltrops000]{Шипов-«чеснок»}; при 4, самоцвет стоимостью 50 зм."
         },
         "81-85": {
-          "description": "A creature appears in an unoccupied space as close to you as possible. The creature isn’t under your control and acts as it normally would, and it disappears after 1 hour or when it drops to 0 Hit Points. Roll [[/r 1d4]] to determine the creature: on a 1, a @UUID[Compendium.dnd5e.actors24.Actor.mmCamel000000000]{Camel}; on a 2, a @UUID[Compendium.dnd5e.actors24.Actor.mmConstrictorSna]{Constrictor Snake}; on a 3, an @UUID[Compendium.dnd5e.actors24.Actor.mmElephant000000]{Elephant}; on a 4, a @UUID[Compendium.dnd5e.actors24.Actor.mmMule0000000000]{Mule}."
+          "description": "В незанятом пространстве как можно ближе к вам появляется существо. Оно не находится под вашим контролем, действует как обычно и исчезает через 1 час или когда его пункты здоровья опускаются до 0. Бросьте [[/r 1d4]], чтобы определить существо: при 1, @UUID[Compendium.dnd5e.actors24.Actor.mmCamel000000000]{Верблюд}; при 2, @UUID[Compendium.dnd5e.actors24.Actor.mmConstrictorSna]{Удав}; при 3, @UUID[Compendium.dnd5e.actors24.Actor.mmElephant000000]{Слон}; при 4, @UUID[Compendium.dnd5e.actors24.Actor.mmMule0000000000]{Мул}."
         },
         "86-90": {
-          "description": "A Hostile @UUID[Compendium.dnd5e.actors24.Actor.PcZ0QjIG6bHpffp9]{Swarm of Bats} flies out of the hat, occupies your space, and attacks you."
+          "description": "Из шляпы вылетает Враждебная @UUID[Compendium.dnd5e.actors24.Actor.PcZ0QjIG6bHpffp9]{Стая летучих мышей}, занимает ваше пространство и атакует вас."
         },
         "91-95": {
-          "description": "A vertical, 10-foot-diameter, two-way portal to another plane of existence opens in an unoccupied space within 30 feet of you and remains open until the end of your next turn. The DM determines where it leads."
+          "description": "Вертикальный двусторонний портал диаметром 10 футов на другой план бытия открывается в незанятом пространстве в пределах 30 футов от вас и остаётся открытым до конца вашего следующего хода. Мастер определяет, куда он ведёт."
         },
         "96-100": {
-          "description": "You pull a magic item out of the hat. Roll [[/r 1d6]] to determine the item’s rarity: on a 1–3, Common; on a 4–5, Uncommon; on a 6, Rare. The DM chooses the item, which disappears after 1 hour if it’s not consumed or destroyed before then."
+          "description": "Вы достаёте из колпака магический предмет. Бросьте [[/r 1d6]], чтобы определить его редкость: при 1–3, Обычный; при 4–5, Необычный; при 6, Редкий. Мастер выбирает предмет, который исчезает через 1 час, если его не израсходовать или не уничтожить раньше."
         }
       }
     },
     "Horn of Valhalla: Type and Requirement": {
-      "name": "Horn of Valhalla: Type and Requirement",
+      "name": "Рог Вальхаллы: тип и требование",
       "results": {
         "1-40": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSilverHornOfV]{Silver} (2 spirits); No requirement"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSilverHornOfV]{Серебряный} (2 духа); без требований"
         },
         "41-75": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgBrassHornOfVa]{Brass} (3 spirits); Proficiency with all Simple weapons"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgBrassHornOfVa]{Латунный} (3 духа); умение обращаться со всем Простым оружием"
         },
         "76-90": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgBronzeHornOfV]{Bronze} (4 spirits); Training with all Medium armor"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgBronzeHornOfV]{Бронзовый} (4 духа); подготовка в ношении всей Средней брони"
         },
         "91-100": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgIronHornOfVal]{Iron} (5 spirits); Proficiency with all Martial weapons"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgIronHornOfVal]{Железный} (5 духов); умение обращаться со всем Военным оружием"
         }
       }
     },
     "Iron Flask Contents": {
-      "name": "Iron Flask Contents",
+      "name": "Железная фляжка: содержимое",
       "results": {
         "1-50": {
-          "description": "No creature"
+          "description": "Нет существа"
         },
         "51-51": {
-          "description": "Arcanaloth"
+          "description": "Арканалот"
         },
         "52-54": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmBoneDevil00000]{Bone Devil}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmBoneDevil00000]{Костяной дьявол}"
         },
         "55-56": {
-          "description": "Cambion"
+          "description": "Камбион"
         },
         "57-58": {
-          "description": "Dao"
+          "description": "Дао"
         },
         "59-59": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmDeva0000000000]{Deva}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmDeva0000000000]{Дэва}"
         },
         "60-61": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmDjinni00000000]{Djinni}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmDjinni00000000]{Джинн}"
         },
         "62-63": {
-          "description": "Efreeti@UUID[Compendium.dnd5e.actors24.Actor.mmEfreeti0000000]{Efreeti}"
+          "description": "Ифрит@UUID[Compendium.dnd5e.actors24.Actor.mmEfreeti0000000]{Ифрит}"
         },
         "64-65": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmErinyes0000000]{Erinyes}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmErinyes0000000]{Эриния}"
         },
         "66-67": {
-          "description": "Fomorian"
+          "description": "Фомор"
         },
         "68-68": {
-          "description": "Githyanki Knight"
+          "description": "Гитьянки-рыцарь"
         },
         "69-69": {
-          "description": "Githzerai Zerth"
+          "description": "Гитзераи-зерт"
         },
         "70-71": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmGlabrezu000000]{Glabrezu}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmGlabrezu000000]{Глабрезу}"
         },
         "72-74": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmHezrou00000000]{Hezrou}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmHezrou00000000]{Хезроу}"
         },
         "75-75": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmIncubus0000000]{Incubus}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmIncubus0000000]{Инкуб}"
         },
         "76-77": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmInvisibleStalk]{Invisible Stalker}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmInvisibleStalk]{Невидимый охотник}"
         },
         "78-79": {
-          "description": "Marid"
+          "description": "Марид"
         },
         "80-80": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmMarilith000000]{Marilith}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmMarilith000000]{Марилит}"
         },
         "81-82": {
-          "description": "Mezzoloth"
+          "description": "Меззолот"
         },
         "83-84": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmNalfeshnee0000]{Nalfeshnee}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmNalfeshnee0000]{Нальфешни}"
         },
         "85-86": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmNightHag000000]{Night Hag}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmNightHag000000]{Ночная карга}"
         },
         "87-88": {
-          "description": "Nycaloth"
+          "description": "Никалот"
         },
         "89-89": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmPlanetar000000]{Planetar}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmPlanetar000000]{Планетар}"
         },
         "90-91": {
-          "description": "Red Slaad"
+          "description": "Красный слаад"
         },
         "92-93": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmSalamander0000]{Salamander}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmSalamander0000]{Саламандра}"
         },
         "94-94": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmSolar000000000]{Solar}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmSolar000000000]{Соляр}"
         },
         "95-95": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmSuccubus000000]{Succubus}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmSuccubus000000]{Суккуб}"
         },
         "96-96": {
-          "description": "Ultroloth"
+          "description": "Ультролот"
         },
         "97-99": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmVrock000000000]{Vrock}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmVrock000000000]{Врак}"
         },
         "100-100": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmXorn0000000000]{Xorn}"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmXorn0000000000]{зорн}"
         }
       }
     },
     "Manual of Golems: Type, Time, and Cost": {
-      "name": "Manual of Golems: Type, Time, and Cost",
+      "name": "Книга голема: тип, время и стоимость",
       "results": {
         "1-5": {
-          "description": "<strong>Golem:</strong> Clay Golem<br /><strong>Time:</strong> 30 days<br /><strong>Cost:</strong> 65,000 GP"
+          "description": "<strong>Голем:</strong> Глиняный голем<br /><strong>Время:</strong> 30 дней<br /><strong>Стоимость:</strong> 65,000 зм"
         },
         "6-17": {
-          "description": "<strong>Golem:</strong> Flesh Golem<br /><strong>Time:</strong> 60 days<br /><strong>Cost:</strong> 50,000 GP"
+          "description": "<strong>Голем:</strong> Мясной голем<br /><strong>Время:</strong> 60 дней<br /><strong>Стоимость:</strong> 50,000 зм"
         },
         "18-18": {
-          "description": "<strong>Golem:</strong> Iron Golem<br /><strong>Time:</strong> 120 days<br /><strong>Cost:</strong> 100,000 GP"
+          "description": "<strong>Голем:</strong> Железный голем<br /><strong>Время:</strong> 120 дней<br /><strong>Стоимость:</strong> 100,000 зм"
         },
         "19-20": {
-          "description": "<strong>Golem:</strong> Stone Golem<br /><strong>Time:</strong> 90 days<br /><strong>Cost:</strong> 80,000 GP"
+          "description": "<strong>Голем:</strong> Каменный голем<br /><strong>Время:</strong> 90 дней<br /><strong>Стоимость:</strong> 80,000 зм"
         }
       }
     },
     "Necklace of Prayer Beads Type": {
-      "name": "Necklace of Prayer Beads Type",
+      "name": "Ожерелье молитвенных чёток: тип",
       "results": {
         "1-6": {
-          "description": "Bead of Blessing: @UUID[Compendium.dnd5e.spells24.Item.phbsplBless00000]{Bless}"
+          "description": "Бусина благословения: @UUID[Compendium.dnd5e.spells24.Item.phbsplBless00000]{Благословение}"
         },
         "7-12": {
-          "description": "Bead of Curing: @UUID[Compendium.dnd5e.spells24.Item.phbsplCureWounds]{Cure Wounds} (level 2 version)"
+          "description": "Бусина лечения: @UUID[Compendium.dnd5e.spells24.Item.phbsplCureWounds]{Исцеление ран} (версия 2 круга)"
         },
         "13-16": {
-          "description": "Bead of Favor: @UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Greater Restoration}"
+          "description": "Бусина милости: @UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Высшее восстановление}"
         },
         "17-18": {
-          "description": "Bead of Smiting: @UUID[Compendium.dnd5e.spells24.Item.phbsplShiningSmi]{Shining Smite}"
+          "description": "Бусина кары: @UUID[Compendium.dnd5e.spells24.Item.phbsplShiningSmi]{Сияющая кара}"
         },
         "19-19": {
-          "description": "Bead of Summons: @UUID[Compendium.dnd5e.spells24.Item.phbsplGuardianof]{Guardian of Faith}"
+          "description": "Бусина призыва: @UUID[Compendium.dnd5e.spells24.Item.phbsplGuardianof]{Страж веры}"
         },
         "20-20": {
-          "description": "Bead of Wind Walking: @UUID[Compendium.dnd5e.spells24.Item.phbsplWindWalk00]{Wind Walk}"
+          "description": "Бусина путешествия с ветром: @UUID[Compendium.dnd5e.spells24.Item.phbsplWindWalk00]{Путешествие с ветром}"
         }
       }
     },
     "Potion Miscibility": {
-      "name": "Potion Miscibility",
+      "name": "Совместимость зелий",
       "results": {
         "1-1": {
-          "description": "Both potions lose their effects, and the mixture creates a magical explosion in a 5-foot-radius Sphere centered on itself. Each creature in that area takes [[/damage 4d10 type=force]] damage."
+          "description": "Оба зелья теряют свои эффекты, а смесь вызывает магический взрыв в Сфере радиусом 5 футов с центром на самой смеси. Каждое существо в этой области получает [[/damage 4d10 type=force]] урона."
         },
         "2-8": {
-          "description": "Both potions lose their effects, and the mixture becomes an ingested poison of your choice (see @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.UfAEdm3LbTzvQHC5]{Poison})."
+          "description": "Оба зелья теряют свои эффекты, а смесь становится принимаемым внутрь ядом на ваш выбор. См. @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.UfAEdm3LbTzvQHC5]{Яды}."
         },
         "9-15": {
-          "description": "Both potions lose their effects."
+          "description": "Оба зелья теряют свои эффекты."
         },
         "16-25": {
-          "description": "One potion loses its effect."
+          "description": "Одно зелье теряет свой эффект."
         },
         "26-35": {
-          "description": "Both potions work, but with their numerical effects and durations halved. If a potion has no numerical effect and no duration, it instead loses its effect."
+          "description": "Оба зелья действуют, но их числовые эффекты и длительность уменьшаются вдвое. Если у зелья нет ни числового эффекта, ни длительности, оно вместо этого теряет свой эффект."
         },
         "36-90": {
-          "description": "Both potions work normally."
+          "description": "Оба зелья действуют как обычно."
         },
         "91-99": {
-          "description": "Both potions work, but the numerical effects and duration of one potion are <span>doubled</span>. If neither potion has anything to double in this way, they work normally."
+          "description": "Оба зелья действуют, но числовые эффекты и длительность одного зелья <span>удваиваются</span>. Если ни у одного зелья нет ничего, что можно удвоить таким образом, они действуют как обычно."
         },
         "100-100": {
-          "description": "Only one potion works, but its effects are permanent. Choose the simplest effect to make permanent or the one that seems the most fun. For example, a Potion of Healing might increase the drinker’s Hit Point maximum by [[/roll 2d4 + 2]], or a Potion of Invisibility might give the drinker the Invisible condition indefinitely. At your discretion, a Dispel Magic spell or similar magic might end this lasting effect."
+          "description": "Действует только одно зелье, но его эффекты становятся постоянными. Выберите самый простой эффект или тот, который кажется наиболее интересным. Например, Зелье исцеления может увеличить максимум ПЗ выпившего его существа на [[/roll 2d4 + 2]], а Зелье невидимости может дать ему состояние Невидимость на неограниченное время. По вашему усмотрению заклинание Рассеивание магии или подобная магия могут окончить этот постоянный эффект."
         }
       }
     },
     "Potion of Resistance Type": {
-      "name": "Potion of Resistance Type",
+      "name": "Зелье устойчивости: тип",
       "results": {
         "1-1": {
-          "description": "Acid"
+          "description": "Кислота"
         },
         "2-2": {
-          "description": "Cold"
+          "description": "Холод"
         },
         "3-3": {
-          "description": "Fire"
+          "description": "Огонь"
         },
         "4-4": {
-          "description": "Force"
+          "description": "Сила"
         },
         "5-5": {
-          "description": "Lightning"
+          "description": "Молния"
         },
         "6-6": {
-          "description": "Necrotic"
+          "description": "Некротический"
         },
         "7-7": {
-          "description": "Poison"
+          "description": "Яд"
         },
         "8-8": {
-          "description": "Psychic"
+          "description": "Психический"
         },
         "9-9": {
-          "description": "Radiant"
+          "description": "Лучистый"
         },
         "10-10": {
-          "description": "Thunder"
+          "description": "Гром"
         }
       }
     },
@@ -786,1529 +786,1529 @@
       }
     },
     "Ring of Resistance: Damage Type and Gemstone": {
-      "name": "Ring of Resistance: Damage Type and Gemstone",
+      "name": "Кольцо устойчивости: тип урона и самоцвет",
       "results": {
         "1-1": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.dBl3gfYXWn7YguDb]{Acid (Pearl)}"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.dBl3gfYXWn7YguDb]{Кислота (Жемчуг)}"
         },
         "2-2": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.P5fYc9OEg5GKGgkR]{Fire (Garnet)}"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.P5fYc9OEg5GKGgkR]{Огонь (Гранат)}"
         },
         "3-3": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.8IIAYzI3gqAJIBYo]{Fire (Garnet)}"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.8IIAYzI3gqAJIBYo]{Огонь (Гранат)}"
         },
         "4-4": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.ivnRnslXhD6UZH0L]{Force (Sapphire)}"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.ivnRnslXhD6UZH0L]{Сила (Сапфир)}"
         },
         "5-5": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.96wcenml9tk62g37]{Lightning (Citrine)}"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.96wcenml9tk62g37]{Молния (Цитрин)}"
         },
         "6-6": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.9r8SX6QYbeLa780J]{Necrotic (Jet)}"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.9r8SX6QYbeLa780J]{Некротический (Гагат)}"
         },
         "7-7": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.9r8SX6QYbeLa780J]{Poison (Amethyst)}"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.9r8SX6QYbeLa780J]{Яд (Аметист)}"
         },
         "8-8": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.ls5HwdyGS36zGNsf]{Psychic (Jade)}"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.ls5HwdyGS36zGNsf]{Психический (Нефрит)}"
         },
         "9-9": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.zgCVJEc1e9dCj7Ut]{Radiant (Topaz)}"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.zgCVJEc1e9dCj7Ut]{Лучистый (Топаз)}"
         },
         "10-10": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.JA9aLSXZ6W3O0W9l]{Thunder (Spinel)}"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista.ActiveEffect.JA9aLSXZ6W3O0W9l]{Гром (Шпинель)}"
         }
       }
     },
     "Robe of Useful Items": {
-      "name": "Robe of Useful Items",
+      "name": "Мантия полезных вещей",
       "results": {
         "1-8": {
-          "description": "Bag of [[/award 100GP]]"
+          "description": "Мешочек с [[/award 100GP]]"
         },
         "9-15": {
-          "description": "Silver coffer (1 foot long, 6 inches wide and deep) worth 500 GP"
+          "description": "Серебряный ларец длиной 1 фут, шириной и глубиной 6 дюймов стоимостью 500 зм"
         },
         "16-22": {
-          "description": "Iron door (up to 10 feet wide and 10 feet high, barred on one side of your choice), which you can place in an opening you can reach; it conforms to fit the opening, attaching and hinging itself"
+          "description": "Железная дверь шириной до 10 футов и высотой до 10 футов, с засовом с выбранной вами стороны. Вы можете поместить её в доступный вам проём; она принимает его форму и сама закрепляется на петлях"
         },
         "23-30": {
-          "description": "10 gems worth 100 GP each"
+          "description": "10 самоцветов стоимостью 100 зм каждый"
         },
         "31-44": {
-          "description": "Wooden ladder (24 feet long)"
+          "description": "Деревянная лестница длиной 24 фута"
         },
         "45-51": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmRidingHorse000]{Riding Horse} with a Riding Saddle"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.mmRidingHorse000]{Скаковая лошадь} со скаковым седлом"
         },
         "52-59": {
-          "description": "Open pit (a 10-foot Cube), which you can place on the ground within 10 feet of yourself"
+          "description": "Открытая яма в форме Куба со стороной 10 футов, которую можно поместить на земле в пределах 10 футов от вас"
         },
         "60-68": {
-          "description": "4 @UUID[Compendium.dnd5e.equipment24.Item.phbagPotionofHea]{Potions of Healing}"
+          "description": "4 @UUID[Compendium.dnd5e.equipment24.Item.phbagPotionofHea]{Зелья исцеления}"
         },
         "69-75": {
-          "description": "@UUID[Compendium.dnd5e.actors24.Actor.phbmobRowboat000]{Rowboat} (12 feet long)"
+          "description": "@UUID[Compendium.dnd5e.actors24.Actor.phbmobRowboat000]{Лодка} длиной 12 футов"
         },
         "76-83": {
-          "description": "Spell Scroll containing one spell of level 1, 2, or 3 (your choice)"
+          "description": "Свиток заклинания с одним заклинанием 1, 2 или 3 круга на ваш выбор"
         },
         "84-90": {
-          "description": "2 @UUID[Compendium.dnd5e.actors24.Actor.mmMastiff0000000]{Mastiffs}"
+          "description": "2 @UUID[Compendium.dnd5e.actors24.Actor.mmMastiff0000000]{Мастифа}"
         },
         "91-96": {
-          "description": "Window (2 feet by 4 feet, up to 2 feet deep), which you can place on a vertical surface you can reach"
+          "description": "Окно размером 2 на 4 фута и глубиной до 2 футов, которое можно поместить на доступной вам вертикальной поверхности"
         },
         "97-100": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.phbagRamPortable]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.phbagRamPortable]{Ручной таран}"
         }
       }
     },
     "Rust Bag of Tricks": {
-      "name": "Rust Bag of Tricks",
+      "name": "Сумка сюрпризов (оранжевая)",
       "results": {
         "1-1": {
-          "name": "Rat"
+          "name": "Крыса"
         },
         "2-2": {
-          "name": "Owl"
+          "name": "Сова"
         },
         "3-3": {
-          "name": "Mastiff"
+          "name": "Мастиф"
         },
         "4-4": {
-          "name": "Goat"
+          "name": "Козёл"
         },
         "5-5": {
-          "name": "Giant Goat"
+          "name": "Гигантский козёл"
         },
         "6-6": {
-          "name": "Giant Boar"
+          "name": "Гигантский кабан"
         },
         "7-7": {
-          "name": "Lion"
+          "name": "Лев"
         },
         "8-8": {
-          "name": "Brown Bear"
+          "name": "Бурый медведь"
         }
       }
     },
     "Alignment": {
-      "name": "Alignment",
+      "name": "Мировоззрение разумного предмета",
       "results": {
         "1-15": {
-          "description": "Lawful Good"
+          "description": "Принципиальный Добрый"
         },
         "16-35": {
-          "description": "Neutral Good"
+          "description": "Нейтральный Добрый"
         },
         "36-50": {
-          "description": "Chaotic Good"
+          "description": "Хаотичный Добрый"
         },
         "51-63": {
-          "description": "Lawful Neutral"
+          "description": "Принципиальный Нейтральный"
         },
         "64-73": {
-          "description": "Neutral"
+          "description": "Нейтральный"
         },
         "74-85": {
-          "description": "Chaotic Neutral"
+          "description": "Хаотичный Нейтральный"
         },
         "86-89": {
-          "description": "Lawful Evil"
+          "description": "Принципиальный Злой"
         },
         "90-96": {
-          "description": "Neutral Evil"
+          "description": "Нейтральный Злой"
         },
         "97-100": {
-          "description": "Chaotic Evil"
+          "description": "Хаотичный Злой"
         }
       }
     },
     "Communication": {
-      "name": "Communication",
+      "name": "Общение разумного предмета",
       "results": {
         "1-6": {
-          "description": "The item communicates by transmitting emotion to the creature carrying or wielding it&lt;."
+          "description": "Предмет общается, передавая эмоции существу, которое носит его или владеет им."
         },
         "7-9": {
-          "description": "The item speaks one or more languages."
+          "description": "Предмет говорит на одном или нескольких языках."
         },
         "10-10": {
-          "description": "The item speaks one or more languages. In addition, the item can communicate telepathically with any creature that carries or wields it."
+          "description": "Предмет говорит на одном или нескольких языках. Кроме того, он может общаться телепатически с любым существом, которое носит его или владеет им."
         }
       }
     },
     "Senses": {
-      "name": "Senses",
+      "name": "Восприятие разумного предмета",
       "results": {
         "1-1": {
-          "description": "Hearing and standard vision out to 30 feet"
+          "description": "Слух и обычное зрение в пределах 30 футов"
         },
         "2-2": {
-          "description": "Hearing and standard vision out to 60 feet"
+          "description": "Слух и обычное зрение в пределах 60 футов"
         },
         "3-3": {
-          "description": "Hearing and standard vision out to 120 feet"
+          "description": "Слух и обычное зрение в пределах 120 футов"
         },
         "4-4": {
-          "description": "Hearing and Darkvision out to 120 feet"
+          "description": "Слух и ночное зрение в пределах 120 футов"
         }
       }
     },
     "Special Purpose": {
-      "name": "Special Purpose",
+      "name": "Особая цель разумного предмета",
       "results": {
         "1-1": {
-          "description": "<strong>Aligned.</strong> The item seeks to defeat or destroy those of a diametrically opposed alignment. Such an item is never Neutral."
+          "description": "<strong>Борьба мировоззрений.</strong> Предмет стремится победить или уничтожить существ с диаметрально противоположным мировоззрением. Такой предмет никогда не бывает нейтральным."
         },
         "2-2": {
-          "description": "<strong>Bane.</strong> The item seeks to thwart or destroy creatures of a particular type, such as Constructs, Fiends, or Undead."
+          "description": "<strong>Погибель.</strong> Предмет стремится препятствовать существам определённого типа, например Конструкциям, Бестиям или Нежити, либо уничтожать их."
         },
         "3-3": {
-          "description": "<strong>Creator Seeker.</strong> The item seeks its creator and wants to understand why it was created."
+          "description": "<strong>Поиск создателя.</strong> Предмет ищет своего создателя и хочет понять, зачем был создан."
         },
         "4-4": {
-          "description": "<strong>Destiny Seeker.</strong> The item believes it and its bearer have key roles to play in future events."
+          "description": "<strong>Поиск судьбы.</strong> Предмет верит, что ему и его владельцу предстоит сыграть ключевые роли в будущих событиях."
         },
         "5-5": {
-          "description": "<strong>Destroyer.</strong> The item craves destruction and goads its user to fight arbitrarily."
+          "description": "<strong>Разрушение.</strong> Предмет жаждет разрушения и подстрекает владельца сражаться без разбора."
         },
         "6-6": {
-          "description": "<strong>Glory Seeker.</strong> The item seeks renown as the greatest magic item in the world by winning fame or notoriety for its user."
+          "description": "<strong>Поиск славы.</strong> Предмет стремится прославиться как величайший магический предмет в мире, принося владельцу добрую или дурную известность."
         },
         "7-7": {
-          "description": "<strong>Lore Seeker.</strong> The item craves knowledge or is determined to solve a mystery, learn a secret, or unravel a cryptic prophecy."
+          "description": "<strong>Поиск знаний.</strong> Предмет жаждет знаний или стремится разгадать загадку, узнать тайну либо истолковать туманное пророчество."
         },
         "8-8": {
-          "description": "<strong>Protector.</strong> The item seeks to defend a particular kind of creature, such as elves or werewolves."
+          "description": "<strong>Защита.</strong> Предмет стремится защищать определённый вид существ, например эльфов или вервольфов."
         },
         "9-9": {
-          "description": "<strong>Soulmate Seeker.</strong> The item seeks another sentient magic item, perhaps one that is similar to itself."
+          "description": "<strong>Поиск родственной души.</strong> Предмет ищет другой разумный магический предмет, возможно, похожий на него самого."
         },
         "10-10": {
-          "description": "<strong>Templar.</strong> The item seeks to defend the servants and interests of a particular deity."
+          "description": "<strong>Служение.</strong> Предмет стремится защищать слуг и интересы определённого божества."
         }
       }
     },
     "Ammunition of Slaying: Creature Type": {
-      "name": "Ammunition of Slaying: Creature Type",
+      "name": "Боеприпасы убийства: тип существа",
       "results": {
         "1-10": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.4GIkMFeZQHZnfjvq]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.4GIkMFeZQHZnfjvq]{Боеприпасы убийства Аберраций}"
         },
         "11-15": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.70bFeuTndNorjLBe]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.70bFeuTndNorjLBe]{Боеприпасы убийства Животных}"
         },
         "16-20": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.o4aDyFCK0ekd9w8j]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.o4aDyFCK0ekd9w8j]{Боеприпасы убийства Небожителей}"
         },
         "21-25": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.AvExH8PizzJN0jSM]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.AvExH8PizzJN0jSM]{Боеприпасы убийства Конструкций}"
         },
         "26-35": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.VRMET3XgPTjBG91L]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.VRMET3XgPTjBG91L]{Боеприпасы убийства Драконов}"
         },
         "36-45": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.ku2JX8rDga8GUBul]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.ku2JX8rDga8GUBul]{Боеприпасы убийства Элементалей}"
         },
         "46-50": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.ZssaQ07jWS7jFiej]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.ZssaQ07jWS7jFiej]{Боеприпасы убийства Гуманоидов}"
         },
         "51-60": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.3JnW3nSByOVKu1LW]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.3JnW3nSByOVKu1LW]{Боеприпасы убийства Фей}"
         },
         "61-70": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.ulADMO3yope7gn5R]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.ulADMO3yope7gn5R]{Боеприпасы убийства Бестий}"
         },
         "71-75": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.MKSR9zEe2s3qVILa]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.MKSR9zEe2s3qVILa]{Боеприпасы убийства Великанов}"
         },
         "76-80": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.cFNisqoGRSTHYDI4]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.cFNisqoGRSTHYDI4]{Боеприпасы убийства Монстров}"
         },
         "81-85": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.3mSYXVx987sezjuS]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.3mSYXVx987sezjuS]{Боеприпасы убийства Жиж}"
         },
         "86-90": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.BsXM9mDyGJ1R754S]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.BsXM9mDyGJ1R754S]{Боеприпасы убийства Растений}"
         },
         "91-100": {
-          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.4NXhqKrNtDQjBcc8]"
+          "description": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.4NXhqKrNtDQjBcc8]{Боеприпасы убийства Нежити}"
         }
       }
     },
     "Sphere of Annihilation Interaction Results": {
-      "name": "Sphere of Annihilation Interaction Results",
+      "name": "Сфера аннигиляции: результаты взаимодействия",
       "results": {
         "1-50": {
-          "description": "The sphere is destroyed."
+          "description": "Сфера уничтожена."
         },
         "51-85": {
-          "description": "The sphere moves through the portal or into the extradimensional space."
+          "description": "Сфера проходит через портал или попадает во внепространственную область."
         },
         "86-100": {
-          "description": "A spatial rift sends the sphere and each creature and object within 180 feet of the sphere to a random plane of existence."
+          "description": "Пространственный разрыв отправляет сферу и каждое существо и предмет в пределах 180 футов от неё на случайный план бытия."
         }
       }
     },
     "Tan Bag of Tricks": {
-      "name": "Tan Bag of Tricks",
+      "name": "Сумка сюрпризов (бурая)",
       "results": {
         "1-1": {
-          "name": "Jackal"
+          "name": "Шакал"
         },
         "2-2": {
-          "name": "Ape"
+          "name": "Примат"
         },
         "3-3": {
-          "name": "Baboon"
+          "name": "Бабуин"
         },
         "4-4": {
-          "name": "Axe Beak"
+          "name": "Топороклюв"
         },
         "5-5": {
-          "name": "Black Bear"
+          "name": "Чёрный медведь"
         },
         "6-6": {
-          "name": "Giant Weasel"
+          "name": "Гигантская ласка"
         },
         "7-7": {
-          "name": "Giant Hyena"
+          "name": "Гигантская гиена"
         },
         "8-8": {
-          "name": "Tiger"
+          "name": "Тигр"
         }
       }
     },
     "Wand of Wonder Effects": {
-      "name": "Wand of Wonder Effects",
-      "description": "<p>A roll table of effects for the @UUID[Compendium.dnd5e.equipment24.Item.dmgWandOfWonder0]{Wand of Wonder} which implements the effects as activities where possible.</p>",
+      "name": "Жезл чудес: эффекты",
+      "description": "<p>Таблица эффектов @UUID[Compendium.dnd5e.equipment24.Item.dmgWandOfWonder0]{Жезла чудес}, по возможности реализованных как активности.</p>",
       "results": {
         "1-20": {
-          "description": "You cast a spell originating from the chosen point. Roll 1d10 to determine the spell: on a 1–2, @UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{Darkness}; on a 3–4, @UUID[Compendium.dnd5e.spells24.Item.phbsplFaerieFire]{Faerie Fire}; on a 5–6, @UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{Fireball}; on a 7–8, @UUID[Compendium.dnd5e.spells24.Item.phbsplSlow000000]{Slow}; on a 9–10, @UUID[Compendium.dnd5e.spells24.Item.phbsplStinkingCl]{Stinking Cloud}."
+          "description": "Вы творите заклинание с начальной точкой в выбранной точке. Бросьте 1d10, чтобы определить заклинание: при 1–2, @UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{Тьма}; при 3–4, @UUID[Compendium.dnd5e.spells24.Item.phbsplFaerieFire]{Фейское сияние}; при 5–6, @UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{Огненный шар}; при 7–8, @UUID[Compendium.dnd5e.spells24.Item.phbsplSlow000000]{Замедление}; при 9–10, @UUID[Compendium.dnd5e.spells24.Item.phbsplStinkingCl]{Смрадное облако}."
         },
         "21-25": {
-          "description": "Nothing happens at the chosen point of origin. Instead, you have the &amp;Reference[Stunned] condition until the start of your next turn, believing something awesome just happened."
+          "description": "В выбранной начальной точке ничего не происходит. Вместо этого вы получаете состояние &amp;Reference[Stunned] до начала своего следующего хода, полагая, что произошло нечто потрясающее."
         },
         "26-30": {
-          "description": "You cast @UUID[Compendium.dnd5e.spells24.Item.phbsplGustofWind]{Gust of Wind}. The Line created by the spell extends from you to the chosen point of origin."
+          "description": "Вы творите @UUID[Compendium.dnd5e.spells24.Item.phbsplGustofWind]{Порыв ветра}. Созданная заклинанием Линия проходит от вас до выбранной начальной точки."
         },
         "31-35": {
-          "description": "Nothing happens at the chosen point of origin. Instead, you take [[/damage 1d6 type=psychic]] damage."
+          "description": "В выбранной начальной точке ничего не происходит. Вместо этого вы получаете [[/damage 1d6 type=psychic]] урона."
         },
         "36-40": {
-          "description": "Heavy rain falls for 1 minute in a 120-foot-high, 60-foot-radius Cylinder centered on the chosen point of origin. During that time, the area of effect is &amp;Reference[Lightly Obscured]."
+          "description": "В течение 1 минуты в Цилиндре высотой 120 футов и радиусом 60 футов с центром в выбранной начальной точке идёт сильный дождь. В это время в области действия &amp;Reference[Lightly Obscured]."
         },
         "41-45": {
-          "description": "A cloud of 600 oversized butterflies fills a 60-foot-high, 30-foot-radius Cylinder centered on the chosen point of origin. The butterflies remain for 10 minutes, during which time the area of effect is &amp;Reference[Heavily Obscured]."
+          "description": "Облако из 600 огромных бабочек заполняет Цилиндр высотой 60 футов и радиусом 30 футов с центром в выбранной начальной точке. Бабочки остаются на 10 минут, и в это время в области действия &amp;Reference[Heavily Obscured]."
         },
         "46-50": {
-          "description": "You cast @UUID[Compendium.dnd5e.spells24.Item.phbsplLightningB]{Lightning Bolt}. The Line created by the spell extends from you to the chosen point of origin."
+          "description": "Вы творите @UUID[Compendium.dnd5e.spells24.Item.phbsplLightningB]{Удар молнии}. Созданная заклинанием Линия проходит от вас до выбранной начальной точки."
         },
         "51-55": {
-          "description": "The creature closest to the chosen point of origin is enlarged as if you had cast @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{Enlarge/Reduce} on it. If the target isn’t you and can’t be affected by that spell, you become the target instead."
+          "description": "Ближайшее к выбранной начальной точке существо увеличивается, как если бы вы сотворили на него @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{Увеличение/уменьшение}. Если цель не вы и это заклинание не может на неё воздействовать, целью становитесь вы."
         },
         "56-60": {
-          "description": "A magically formed creature appears in an unoccupied space as close to the chosen point of origin as possible. The creature isn’t under your control, acts as it normally would, and disappears after 1 hour or when it drops to 0 Hit Points. Roll [[/r 1d4]] to determine which creature appears. On a 1, a Rhinoceros appears; on a 2, an Elephant appears; and on a 3–4, a Rat appears."
+          "description": "В незанятом пространстве как можно ближе к выбранной начальной точке появляется магически созданное существо. Оно не находится под вашим контролем, действует как обычно и исчезает через 1 час или когда его пункты здоровья опускаются до 0. Бросьте [[/r 1d4]], чтобы определить существо. При 1 появляется Носорог; при 2, Слон; при 3–4, Крыса."
         },
         "61-64": {
-          "description": "Grass covers a 60-foot-radius circle of ground, with the center of that circle as close to the chosen point of origin as possible. Grass that’s already there grows to ten times its normal size and remains overgrown for 1 minute."
+          "description": "Трава покрывает круг земли радиусом 60 футов, центр которого находится как можно ближе к выбранной начальной точке. Уже растущая там трава увеличивается в десять раз и остаётся такой в течение 1 минуты."
         },
         "65-68": {
-          "description": "An object of the DM’s choice disappears into the Ethereal Plane. The object must be neither worn nor carried, within 120 feet of the chosen point of origin, and no larger than 10 feet in any dimension. If there are no such objects in range, nothing happens."
+          "description": "Предмет на выбор Мастера исчезает на Эфирном плане. Предмет не должен быть надет или переноситься, должен находиться в пределах 120 футов от выбранной начальной точки и не превышать 10 футов ни в одном измерении. Если подходящих предметов в пределах дистанции нет, ничего не происходит."
         },
         "69-72": {
-          "description": "Nothing happens at the chosen point of origin. Instead, you shrink as if you had cast @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{Enlarge/Reduce} on yourself and remain in that state for 1 minute."
+          "description": "В выбранной начальной точке ничего не происходит. Вместо этого вы уменьшаетесь, как если бы сотворили на себя @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{Увеличение/уменьшение}, и остаётесь в таком состоянии на 1 минуту."
         },
         "73-77": {
-          "description": "Leaves grow from the creature nearest to the chosen point of origin. Unless they are picked off, the leaves turn brown and fall off after 24 hours."
+          "description": "Из ближайшего к выбранной начальной точке существа вырастают листья. Если их не сорвать, через 24 часа они буреют и опадают."
         },
         "78-82": {
-          "description": "Nothing happens at the chosen point of origin. Instead, a burst of colorful, shimmering light extends from you in a 30-foot Emanation. Each creature in the area must succeed on a [[/save con 15]] saving throw or have the &amp;Reference[Blinded] condition for 1 minute. A creature repeats the save at the end of each of its turns, ending the effect on itself on a success."
+          "description": "В выбранной начальной точке ничего не происходит. Вместо этого от вас исходит вспышка разноцветного мерцающего света в Эманации на 30 футов. Каждое существо в области должно успешно пройти испытание [[/save con 15]], иначе получает состояние &amp;Reference[Blinded] на 1 минуту. Существо повторяет испытание в конце каждого своего хода, оканчивая эффект на себе при успехе."
         },
         "83-87": {
-          "description": "Nothing happens at the chosen point of origin. Instead, you cast @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Invisibility} on yourself."
+          "description": "В выбранной начальной точке ничего не происходит. Вместо этого вы творите на себя @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Невидимость}."
         },
         "88-92": {
-          "description": "Nothing happens at the chosen point of origin. Instead, a stream of [[/r 1d4*10 #Gems]] gems, each worth 1 GP, shoots from the wand’s tip in a Line 30 feet long and 5 feet wide toward the chosen point of origin. Each gem deals [[/damage 1 type=bludgeoning]] damage, and the total damage of the gems is divided equally among all creatures in the Line."
+          "description": "В выбранной начальной точке ничего не происходит. Вместо этого из кончика жезла в её сторону вылетает поток из [[/r 1d4*10 #Самоцветы]] самоцветов стоимостью 1 зм каждый, образуя Линию длиной 30 футов и шириной 5 футов. Каждый самоцвет причиняет [[/damage 1 type=bludgeoning]] урона, а суммарный урон самоцветов делится поровну между всеми существами в Линии."
         },
         "93-97": {
-          "description": "You cast @UUID[Compendium.dnd5e.spells24.Item.phbsplPolymorph0]{Polymorph}, targeting the creature closest to the chosen point of origin. Roll [[/r 1d4]] to determine the target’s new form. On a 1, the new form is a Black Bear; on a 2, the new form is a Giant Wasp; on a 3–4, the new form is a Frog."
+          "description": "Вы творите @UUID[Compendium.dnd5e.spells24.Item.phbsplPolymorph0]{Полиморф}, выбирая целью ближайшее к выбранной начальной точке существо. Бросьте [[/r 1d4]], чтобы определить новый облик цели. При 1 это Чёрный медведь; при 2, Гигантская оса; при 3–4, Лягушка."
         },
         "98-100": {
-          "description": "The creature closest to the chosen point of origin makes a [[/save con 15]] saving throw. On a failed save, the creature has the &amp;Reference[Restrained] condition and begins to turn to stone. While Restrained in this way, the creature repeats the save at the end of its next turn. On a successful save, the effect ends. On a failed save, the creature has the &amp;Reference[Petrified] condition instead of the Restrained condition. The petrification lasts until the creature is freed by the @UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Greater Restoration} spell or similar magic."
+          "description": "Ближайшее к выбранной начальной точке существо проходит испытание [[/save con 15]]. При провале оно получает состояние &amp;Reference[Restrained] и начинает превращаться в камень. Находясь в состоянии Обездвиженность от этого эффекта, существо повторяет испытание в конце своего следующего хода. При успехе эффект оканчивается. При провале существо получает состояние &amp;Reference[Petrified] вместо состояния Обездвиженность. Окаменение длится, пока существо не освободят заклинанием @UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Высшее восстановление} или подобной магией."
         }
       }
     },
     "Animated Object Catalysts": {
-      "name": "Animated Object Catalysts",
-      "description": "<p>The Object Was Animated By …</p>",
+      "name": "Причины оживления предмета",
+      "description": "<p>Предмет ожил благодаря…</p>",
       "results": {
         "1-1": {
-          "description": "A Celestial or Fiend using the object to protect or torment a mortal."
+          "description": "Небожителю или Бестии, которые используют предмет, чтобы защищать или мучить смертного."
         },
         "2-2": {
-          "description": "A combination of magic and technology, such as alchemy or alien science."
+          "description": "Сочетанию магии и технологии, например алхимии или инопланетной науке."
         },
         "3-3": {
-          "description": "The essence of someone transformed by a supernatural trickster."
+          "description": "Сущности того, кого преобразил сверхъестественный обманщик."
         },
         "4-4": {
-          "description": "Fey as part of their games or wiles."
+          "description": "Феям, оживившим его ради своих игр или хитростей."
         },
         "5-5": {
-          "description": "A magic-user in need of a guardian or servant."
+          "description": "Магу, которому нужен страж или слуга."
         },
         "6-6": {
-          "description": "Happenstance, with the item gaining a semblance of life after a hundred years of use."
+          "description": "Случайности: после сотни лет использования предмет обрёл подобие жизни."
         },
         "7-7": {
-          "description": "The song of a magical instrument."
+          "description": "Песне волшебного инструмента."
         },
         "8-8": {
-          "description": "A spirit possessing the object."
+          "description": "Духу, вселившемуся в предмет."
         },
         "9-9": {
-          "description": "Wild magic, a spell that went awry, or a chaotic Artifact."
+          "description": "Дикой магии, неудачному заклинанию или хаотичному Артефакту."
         },
         "10-10": {
-          "description": "The will of a powerful psychic being."
+          "description": "Воле могущественного псионического существа."
         }
       }
     },
     "Bandit Motivations": {
-      "name": "Bandit Motivations",
-      "description": "<p>The Bandit …</p>",
+      "name": "Мотивы бандита",
+      "description": "<p>Бандит…</p>",
       "results": {
         "1-1": {
-          "description": "Fights only oppressors."
+          "description": "Сражается только с угнетателями."
         },
         "2-2": {
-          "description": "Is an ex-soldier who was discarded by their nation and now takes what they were promised."
+          "description": "Бывший солдат, от которого отказалась его страна; теперь он берёт то, что ему обещали."
         },
         "3-3": {
-          "description": "Is in a gang that views nonmembers as foes."
+          "description": "Состоит в банде, считающей всех чужаков врагами."
         },
         "4-4": {
-          "description": "Hesitantly serves a villainous leader."
+          "description": "Неохотно служит злодейскому главарю."
         },
         "5-5": {
-          "description": "Secretly works for a government or a regional ruler to sow chaos."
+          "description": "Тайно работает на правительство или местного правителя, чтобы сеять хаос."
         },
         "6-6": {
-          "description": "Takes what they need to survive."
+          "description": "Берёт то, что нужно для выживания."
         }
       }
     },
     "Cult Symbols": {
-      "name": "Cult Symbols",
+      "name": "Символы культа",
       "results": {
         "1-1": {
-          "description": "<strong>The symbol is</strong> an alchemical sign"
+          "description": "<strong>Символ представляет собой</strong> алхимический знак"
         },
         "2-2": {
-          "description": "<strong>The symbol is</strong> an animal"
+          "description": "<strong>Символ представляет собой</strong> животное"
         },
         "3-3": {
-          "description": "<strong>The symbol is</strong> a celestial body"
+          "description": "<strong>Символ представляет собой</strong> небесное тело"
         },
         "4-4": {
-          "description": "<strong>The symbol is</strong> a deity’s icon"
+          "description": "<strong>Символ представляет собой</strong> знак божества"
         },
         "5-5": {
-          "description": "<strong>The symbol is</strong> an element"
+          "description": "<strong>Символ представляет собой</strong> стихию"
         },
         "6-6": {
-          "description": "<strong>The symbol is</strong> an eye"
+          "description": "<strong>Символ представляет собой</strong> глаз"
         },
         "7-7": {
-          "description": "<strong>The symbol is</strong> a geometric shape"
+          "description": "<strong>Символ представляет собой</strong> геометрическую фигуру"
         },
         "8-8": {
-          "description": "<strong>The symbol is</strong> a letter or number"
+          "description": "<strong>Символ представляет собой</strong> букву или число"
         },
         "9-9": {
-          "description": "<strong>The symbol is</strong> part of a monster"
+          "description": "<strong>Символ представляет собой</strong> часть чудовища"
         },
         "10-10": {
-          "description": "<strong>The symbol is</strong> a skull"
+          "description": "<strong>Символ представляет собой</strong> череп"
         }
       }
     },
     "Cult Symbols - Depictions": {
-      "name": "Cult Symbols - Depictions",
+      "name": "Символы культа: изображения",
       "results": {
         "1-1": {
-          "description": "<strong>Depicted as</strong> A calendar or map"
+          "description": "<strong>Изображён как</strong> календарь или карта"
         },
         "2-2": {
-          "description": "<strong>Depicted as</strong> A crest or as heraldry"
+          "description": "<strong>Изображён как</strong> герб или геральдический знак"
         },
         "3-3": {
-          "description": "<strong>Depicted as</strong> An elaborate diagram"
+          "description": "<strong>Изображён как</strong> сложная диаграмма"
         },
         "4-4": {
-          "description": "<strong>Depicted as</strong> A metaphorical image"
+          "description": "<strong>Изображён как</strong> метафорический образ"
         },
         "5-5": {
-          "description": "<strong>Depicted as</strong> A mystical being"
+          "description": "<strong>Изображён как</strong> мистическое существо"
         },
         "6-6": {
-          "description": "<strong>Depicted as</strong> Part of an equation"
+          "description": "<strong>Изображён как</strong> часть уравнения"
         },
         "7-7": {
-          "description": "<strong>Depicted as</strong> A repeating pattern"
+          "description": "<strong>Изображён как</strong> повторяющийся узор"
         },
         "8-8": {
-          "description": "<strong>Depicted as</strong> A series of scratches"
+          "description": "<strong>Изображён как</strong> ряд царапин"
         },
         "9-9": {
-          "description": "<strong>Depicted as</strong> A simple pictogram"
+          "description": "<strong>Изображён как</strong> простая пиктограмма"
         },
         "10-10": {
-          "description": "<strong>Depicted as</strong> A weapon or tool"
+          "description": "<strong>Изображён как</strong> оружие или инструмент"
         }
       }
     },
     "Cultist Agendas": {
-      "name": "Cultist Agendas",
-      "description": "<p>The Cultist Strives To …</p>",
+      "name": "Цели культиста",
+      "description": "<p>Культист стремится…</p>",
       "results": {
         "1-1": {
-          "description": "Bring about the end of a dominant order, an age, or the world."
+          "description": "Положить конец господствующему порядку, эпохе или миру."
         },
         "2-2": {
-          "description": "Expand their faith though mind control or supernatural coercion."
+          "description": "Распространить свою веру с помощью контроля разума или сверхъестественного принуждения."
         },
         "3-3": {
-          "description": "Burn away the comfortable lies of reality, revealing forgotten or terrible truths."
+          "description": "Сжечь удобную ложь реальности, открыв забытые или ужасные истины."
         },
         "4-4": {
-          "description": "Make global changes, like sinking the land or awakening volcanoes."
+          "description": "Изменить мир, например затопить сушу или пробудить вулканы."
         },
         "5-5": {
-          "description": "Remake life on a mass scale, altering other creatures’ bodies or spiritual beings."
+          "description": "Преобразить жизнь в огромных масштабах, меняя тела других существ или духовных сущностей."
         },
         "6-6": {
-          "description": "Summon their deity or its herald, weapon, or realm into their world."
+          "description": "Призвать в свой мир своё божество, его вестника, оружие или царство."
         }
       }
     },
     "Doppelganger Deceptions": {
-      "name": "Doppelganger Deceptions",
-      "description": "<p>The Doppelganger Schemes To …</p>",
+      "name": "Обманы доппельгангера",
+      "description": "<p>Доппельгангер замышляет…</p>",
       "results": {
         "1-1": {
-          "description": "Cause chaos within the temple of a deity that cursed it to live without a true form."
+          "description": "Посеять хаос в храме божества, проклявшего его жизнью без истинного облика."
         },
         "2-2": {
-          "description": "Conceal evidence of a vast conspiracy."
+          "description": "Скрыть свидетельства обширного заговора."
         },
         "3-3": {
-          "description": "Control a community through fear by posing as a legendary bogeyman."
+          "description": "Управлять общиной с помощью страха, выдавая себя за легендарное страшилище."
         },
         "4-4": {
-          "description": "Replace a noble to enjoy a decadent lifestyle."
+          "description": "Заменить благородного, чтобы наслаждаться роскошной жизнью."
         },
         "5-5": {
-          "description": "Spy on wizards to learn how to complete its own botched magical creation."
+          "description": "Шпионить за волшебниками, чтобы узнать, как завершить собственное неудачное магическое сотворение."
         },
         "6-6": {
-          "description": "Take an influential position, acting as a sleeper agent for a doppelganger invasion."
+          "description": "Занять влиятельное положение, действуя как спящий агент вторжения доппельгангеров."
         }
       }
     },
     "Fire Elemental Compositions": {
-      "name": "Fire Elemental Compositions",
-      "description": "<p>The Fire Elemental’s Body Features …</p>",
+      "name": "Состав тела элементаля огня",
+      "description": "<p>В теле элементаля огня есть…</p>",
       "results": {
         "1-1": {
-          "description": "Colorful, superheated gases."
+          "description": "Разноцветные перегретые газы."
         },
         "2-2": {
-          "description": "A column of diabolical or divine flame."
+          "description": "Столп дьявольского или божественного пламени."
         },
         "3-3": {
-          "description": "Crackling shapes that look like animals, fiends, skeletons, sprites, or other beings."
+          "description": "Потрескивающие фигуры, похожие на животных, бестий, скелетов, спрайтов или других существ."
         },
         "4-4": {
-          "description": "Flames that are predominantly white, blue, or a more unusual color."
+          "description": "Пламя преимущественно белого, синего или более необычного цвета."
         },
         "5-5": {
-          "description": "The form of a calm or tormented humanoid."
+          "description": "Облик спокойного или измученного гуманоида."
         },
         "6-6": {
-          "description": "Smoke that forms eerie shapes or symbols."
+          "description": "Дым, складывающийся в жуткие фигуры или символы."
         },
         "7-7": {
-          "description": "Soot that smells like cedar, cloves, incense, or burning meat."
+          "description": "Сажа с запахом кедра, гвоздики, благовоний или горящего мяса."
         },
         "8-8": {
-          "description": "Swirls of cinders and burning debris."
+          "description": "Вихри тлеющих углей и горящих обломков."
         }
       }
     },
     "Gelatinous Cube Debris": {
-      "name": "Gelatinous Cube Debris",
-      "description": "<p>Floating in the Gelatinous Cube Is A …</p>",
+      "name": "Находки в желатиновом кубе",
+      "description": "<p>В желатиновом кубе плавает…</p>",
       "results": {
         "1-1": {
-          "description": "Chest or recently trapped mimic."
+          "description": "Сундук или недавно пойманный мимик."
         },
         "2-2": {
-          "description": "Collection of bubbles or rocks resembling eyes."
+          "description": "Скопление пузырей или камней, напоминающее глаза."
         },
         "3-3": {
-          "description": "Key to a nearby door or coffer."
+          "description": "Ключ от ближайшей двери или ларца."
         },
         "4-4": {
-          "description": "Remarkable weapon in need of repair."
+          "description": "Примечательное оружие, требующее починки."
         },
         "5-5": {
-          "description": "Skeleton belonging to a famous adventurer."
+          "description": "Скелет известного искателя приключений."
         },
         "6-6": {
-          "description": "Tablet bearing a mysterious message."
+          "description": "Табличка с таинственным посланием."
         }
       }
     },
     "Incubus Nightmares": {
-      "name": "Incubus Nightmares",
-      "description": "<p>The Incubus’s Victim Has Dreams Of …</p>",
+      "name": "Кошмары инкуба",
+      "description": "<p>Жертве инкуба снится…</p>",
       "results": {
         "1-1": {
-          "description": "An angry family member or authority figure."
+          "description": "Разгневанный родственник или облечённый властью человек."
         },
         "2-2": {
-          "description": "Being chased through the wilderness."
+          "description": "Погоня за ней по дикой местности."
         },
         "3-3": {
-          "description": "Being devoured by animals or monsters."
+          "description": "Как её пожирают животные или чудовища."
         },
         "4-4": {
-          "description": "Falling, drowning, or suffocating."
+          "description": "Падение, утопление или удушье."
         },
         "5-5": {
-          "description": "A ruinous public embarrassment."
+          "description": "Губительный публичный позор."
         },
         "6-6": {
-          "description": "A shadowy intruder or monstrous silhouette."
+          "description": "Таинственный незваный гость или чудовищный силуэт."
         },
         "7-7": {
-          "description": "A traumatic past event."
+          "description": "Травмирующее событие из прошлого."
         },
         "8-8": {
-          "description": "A visitor with an eerie or enigmatic message."
+          "description": "Посетитель с жутким или загадочным посланием."
         }
       }
     },
     "Mage Roles": {
-      "name": "Mage Roles",
-      "description": "<p>The Mage Is …</p>",
+      "name": "Роли мага",
+      "description": "<p>Маг…</p>",
       "results": {
         "1-1": {
-          "description": "An astronomer who draws magic from stars."
+          "description": "Астроном, черпающий магию из звёзд."
         },
         "2-2": {
-          "description": "An author who writes about the occult."
+          "description": "Автор, пишущий об оккультизме."
         },
         "3-3": {
-          "description": "A magical engineer who creates wonders."
+          "description": "Магический инженер, создающий чудеса."
         },
         "4-4": {
-          "description": "An oracle who interprets omens."
+          "description": "Оракул, толкующий знамения."
         },
         "5-5": {
-          "description": "A prodigy with a remarkable magical heritage."
+          "description": "Вундеркинд с выдающимся магическим наследием."
         },
         "6-6": {
-          "description": "A psion whose powers manifest as spells."
+          "description": "Псионик, чьи силы проявляются как заклинания."
         },
         "7-7": {
-          "description": "A scholar investigating ancient lore."
+          "description": "Учёный, исследующий древние знания."
         },
         "8-8": {
-          "description": "A soothsayer who advises rulers."
+          "description": "Прорицатель, советующий правителям."
         },
         "9-9": {
-          "description": "A war mage who aids soldiers in battle."
+          "description": "Боевой маг, помогающий солдатам в битве."
         },
         "10-10": {
-          "description": "A witch who shares secret wisdom."
+          "description": "Ведьма, делящаяся тайной мудростью."
         }
       }
     },
     "Minotaur Mazes": {
-      "name": "Minotaur Mazes",
-      "description": "<p>The Minotaur of Baphomet Lurks In …</p>",
+      "name": "Лабиринты минотавра",
+      "description": "<p>Минотавр Бафомета скрывается…</p>",
       "results": {
         "1-1": {
-          "description": "A multilevel mine or sewer."
+          "description": "В многоуровневой шахте или канализации."
         },
         "2-2": {
-          "description": "Multiple mazes connected by magic portals."
+          "description": "В нескольких лабиринтах, соединённых магическими порталами."
         },
         "3-3": {
-          "description": "A poisonous swamp with labyrinthine paths."
+          "description": "В ядовитом болоте с запутанными тропами."
         },
         "4-4": {
-          "description": "The ruins of a buried palace or temple."
+          "description": "В руинах погребённого дворца или храма."
         }
       }
     },
     "Owlbear Den Features": {
-      "name": "Owlbear Den Features",
-      "description": "<p>An Owlbear Den Contains …</p>",
+      "name": "Особенности логова медвесыча",
+      "description": "<p>В логове медвесыча есть…</p>",
       "results": {
         "1-1": {
-          "description": "Evidence of previous occupants, like bandits, wolves, or dragons."
+          "description": "Следы прежних обитателей, например бандитов, волков или драконов."
         },
         "2-2": {
-          "description": "Heaps of regurgitated pellets studded with coins or other treasure."
+          "description": "Кучи отрыгнутых комков с монетами или другими сокровищами."
         },
         "3-3": {
-          "description": "A nest with 1d6 owlbear eggs."
+          "description": "Гнездо с 1d6 яйцами медвесыча."
         },
         "4-4": {
-          "description": "Passages through the earth or hollow trees."
+          "description": "Проходы в земле или полых деревьях."
         }
       }
     },
     "Pseudodragon Treats": {
-      "name": "Pseudodragon Treats",
-      "description": "<p>The Pseudodragon Wants …</p>",
+      "name": "Желания псевдодракона",
+      "description": "<p>Псевдодракон хочет…</p>",
       "results": {
         "1-1": {
-          "description": "Flamboyant accessories it can wear."
+          "description": "Яркие аксессуары, которые можно носить."
         },
         "2-2": {
-          "description": "Mementos from a lost friend or master."
+          "description": "Сувениры от потерянного друга или хозяина."
         },
         "3-3": {
-          "description": "Outlandish delicacies—like axe beak-egg omelets or mammoth-milk cheese."
+          "description": "Диковинные деликатесы, например омлет из яиц топороклюва или сыр из молока мамонта."
         },
         "4-4": {
-          "description": "The possessions of a sibling, rival, or master."
+          "description": "Вещи брата, сестры, соперника или хозяина."
         },
         "5-5": {
-          "description": "Shiny gifts, from gems to abalone shells."
+          "description": "Блестящие подарки, от самоцветов до раковин морского ушка."
         },
         "6-6": {
-          "description": "Soft bedding and stuffed toys."
+          "description": "Мягкую подстилку и мягкие игрушки."
         },
         "7-7": {
-          "description": "A specific cook’s signature dessert."
+          "description": "Фирменный десерт конкретного повара."
         },
         "8-8": {
-          "description": "Time-consuming beauty treatments."
+          "description": "Долгие косметические процедуры."
         },
         "9-9": {
-          "description": "To hear a bedtime story or favorite song."
+          "description": "Услышать сказку на ночь или любимую песню."
         },
         "10-10": {
-          "description": "Trophies and important-sounding titles."
+          "description": "Трофеи и внушительно звучащие титулы."
         }
       }
     },
     "Shadow Shapes": {
-      "name": "Shadow Shapes",
-      "description": "<p>The Shadow Appears As …</p>",
+      "name": "Облики тени",
+      "description": "<p>Тень выглядит как…</p>",
       "results": {
         "1-1": {
-          "description": "A distorted stalker that lurks in the woods."
+          "description": "Искажённый преследователь, скрывающийся в лесу."
         },
         "2-2": {
-          "description": "A fiend that dwells near a wicked ritual site."
+          "description": "Бестия, обитающая у места нечестивого ритуала."
         },
         "3-3": {
-          "description": "Grasping hands that haunt a miser’s home."
+          "description": "Хватающие руки, преследующие обитателей дома скупца."
         },
         "4-4": {
-          "description": "A grim storybook character that follows those who speak its name."
+          "description": "Мрачный персонаж сказки, следующий за теми, кто произносит его имя."
         },
         "5-5": {
-          "description": "Its target, acting in eerie pantomime."
+          "description": "Её цель, исполняющая жуткую пантомиму."
         },
         "6-6": {
-          "description": "An ominous priest that haunts a defiled site."
+          "description": "Зловещий священник, обитающий в осквернённом месте."
         }
       }
     },
     "Skeleton Pantomimes": {
-      "name": "Skeleton Pantomimes",
-      "description": "<p>Left to Its Own Devices, the Skeleton …</p>",
+      "name": "Пантомимы скелета",
+      "description": "<p>Предоставленный самому себе скелет…</p>",
       "results": {
         "1-1": {
-          "description": "Delivers meal salvers or ages-old correspondence to the crypt of its dead master."
+          "description": "Доставляет подносы с едой или древнюю корреспонденцию в склеп своего мёртвого хозяина."
         },
         "2-2": {
-          "description": "Endlessly trains in battle with other skeletons, despite being hacked to animate splinters."
+          "description": "Бесконечно тренируется в бою с другими скелетами, даже когда его рубят на живые осколки."
         },
         "3-3": {
-          "description": "Mimics ways it entertained itself in life, such as acting, dancing, or reading."
+          "description": "Повторяет прижизненные развлечения, например играет роли, танцует или читает."
         },
         "4-4": {
-          "description": "Performs a familiar task, such as cleaning, cooking, mining, or praying."
+          "description": "Выполняет привычную работу, например убирает, готовит, добывает руду или молится."
         },
         "5-5": {
-          "description": "Repeats its final moments of life."
+          "description": "Повторяет последние мгновения своей жизни."
         },
         "6-6": {
-          "description": "Stands guard at the post it protected in life."
+          "description": "Стоит на страже поста, который защищал при жизни."
         }
       }
     },
     "Stirge Roosts": {
-      "name": "Stirge Roosts",
-      "description": "<p>Between Hunts, the Stirge Lurks In …</p>",
+      "name": "Насесты кровососа",
+      "description": "<p>Между охотами кровосос скрывается…</p>",
       "results": {
         "1-1": {
-          "description": "The attic or furniture of a ruined building."
+          "description": "На чердаке или в мебели разрушенного здания."
         },
         "2-2": {
-          "description": "A cave or narrow crevice."
+          "description": "В пещере или узкой расщелине."
         },
         "3-3": {
-          "description": "A hollow tree or thicket."
+          "description": "В дупле дерева или зарослях."
         },
         "4-4": {
-          "description": "The remains of a gigantic, dead creature."
+          "description": "В останках гигантского мёртвого существа."
         }
       }
     },
     "Stone Golem Orders": {
-      "name": "Stone Golem Orders",
-      "description": "<p>The Stone Golem Follows Orders To …</p>",
+      "name": "Приказы каменному голему",
+      "description": "<p>Каменный голем выполняет приказ…</p>",
       "results": {
         "1-1": {
-          "description": "Allow only those wearing ritual garb to pass."
+          "description": "Пропускать только одетых в ритуальное облачение."
         },
         "2-2": {
-          "description": "Cast Slow on and aid in apprehending anyone who touches a city’s prized relic."
+          "description": "Творить Замедление и помогать задерживать любого, кто коснётся ценной городской реликвии."
         },
         "3-3": {
-          "description": "Destroy a dam or bridge at the command of one bearing a ruler’s medallion of office."
+          "description": "Разрушить плотину или мост по команде того, кто носит медальон власти правителя."
         },
         "4-4": {
-          "description": "Obey whoever places a missing crest in its chest, then deactivate for a year."
+          "description": "Подчиняться тому, кто вставит недостающий герб в его грудь, а затем отключиться на год."
         },
         "5-5": {
-          "description": "Reveal a hidden passage to those who recite a leader’s final words."
+          "description": "Открывать тайный проход тем, кто произнесёт последние слова вождя."
         },
         "6-6": {
-          "description": "Watch for and do battle with the type of monster that slew the hero it resembles."
+          "description": "Высматривать чудовищ того вида, который убил героя, на которого он похож, и сражаться с ними."
         }
       }
     },
     "Succubus Temptations": {
-      "name": "Succubus Temptations",
-      "description": "<p>The Succubus Manipulates Its Target By …</p>",
+      "name": "Соблазны суккуба",
+      "description": "<p>Суккуб манипулирует своей целью, прибегая к следующему…</p>",
       "results": {
         "1-1": {
-          "description": "Adopting the form of a lost loved one."
+          "description": "Принимает облик потерянного близкого."
         },
         "2-2": {
-          "description": "Charming someone close to its target."
+          "description": "Очаровывает кого-то из близких цели."
         },
         "3-3": {
-          "description": "Isolating them from their loved ones."
+          "description": "Изолирует её от близких."
         },
         "4-4": {
-          "description": "Manipulating events to bring surprise fortune."
+          "description": "Подстраивает события, чтобы принести неожиданную удачу."
         },
         "5-5": {
-          "description": "Posing as a flattering underling."
+          "description": "Выдаёт себя за льстивого подчинённого."
         },
         "6-6": {
-          "description": "Taking the form of one in need of protection."
+          "description": "Принимает облик того, кому нужна защита."
         }
       }
     },
     "Vampire Resting Places": {
-      "name": "Vampire Resting Places",
-      "description": "<p>The Vampire’s Resting Place Is …</p>",
+      "name": "Места упокоения вампира",
+      "description": "<p>Место упокоения вампира находится…</p>",
       "results": {
         "1-1": {
-          "description": "Among the roots of a dead tree."
+          "description": "Среди корней мёртвого дерева."
         },
         "2-2": {
-          "description": "At the bottom of a stagnant pool."
+          "description": "На дне застойного водоёма."
         },
         "3-3": {
-          "description": "A coffin filled with grave dirt."
+          "description": "В гробу с могильной землёй."
         },
         "4-4": {
-          "description": "A large pot full of blood or vinegar."
+          "description": "В большом горшке с кровью или уксусом."
         },
         "5-5": {
-          "description": "A space accessible only by shape-shifting."
+          "description": "В пространстве, доступном только при перевоплощении."
         },
         "6-6": {
-          "description": "Within a statue or suit of armor."
+          "description": "Внутри статуи или доспехов."
         }
       }
     },
     "Warrior Roles": {
-      "name": "Warrior Roles",
-      "description": "<p>The Warrior Is …</p>",
+      "name": "Роли воителя",
+      "description": "<p>Воитель…</p>",
       "results": {
         "1-1": {
-          "description": "A bodyguard who protects a noble."
+          "description": "Телохранитель, защищающий благородного."
         },
         "2-2": {
-          "description": "A cavalry officer with an unusual steed."
+          "description": "Кавалерийский офицер с необычным скакуном."
         },
         "3-3": {
-          "description": "A crusader who fights for a divine cause."
+          "description": "Крестоносец, сражающийся во имя божественного дела."
         },
         "4-4": {
-          "description": "A duelist who claims to be unbeatable."
+          "description": "Дуэлянт, утверждающий, что непобедим."
         },
         "5-5": {
-          "description": "A gate guard who asks nonsensical questions."
+          "description": "Привратник, задающий бессмысленные вопросы."
         },
         "6-6": {
-          "description": "A grizzled veteran who trains new recruits."
+          "description": "Седой ветеран, обучающий новобранцев."
         },
         "7-7": {
-          "description": "A hunter skilled at slaying specific monsters."
+          "description": "Охотник, искусный в убийстве определённых чудовищ."
         },
         "8-8": {
-          "description": "A retired general who is weary of battle."
+          "description": "Отставной генерал, уставший от битв."
         },
         "9-9": {
-          "description": "A volunteer with a homemade weapon."
+          "description": "Доброволец с самодельным оружием."
         },
         "10-10": {
-          "description": "A young mercenary trying to prove their skill."
+          "description": "Молодой наёмник, пытающийся доказать своё мастерство."
         }
       }
     },
     "Wraith Manifestations": {
-      "name": "Wraith Manifestations",
-      "description": "<p>The Wraith Embodies …</p>",
+      "name": "Проявления духа",
+      "description": "<p>Дух воплощает…</p>",
       "results": {
         "1-1": {
-          "description": "The blasphemous magic of a cursed location."
+          "description": "Богохульную магию проклятого места."
         },
         "2-2": {
-          "description": "The exorcised evil of a redeemed villain."
+          "description": "Изгнанное зло исправившегося злодея."
         },
         "3-3": {
-          "description": "A legendary villain who returns once a century."
+          "description": "Легендарного злодея, возвращающегося раз в столетие."
         },
         "4-4": {
-          "description": "Locals’ fear of a superstition or legend."
+          "description": "Страх местных перед суеверием или легендой."
         },
         "5-5": {
-          "description": "The memory of a tragedy."
+          "description": "Память о трагедии."
         },
         "6-6": {
-          "description": "A profane idea or foul piece of lore."
+          "description": "Нечестивую идею или мерзкое знание."
         },
         "7-7": {
-          "description": "The torment of one or more suffering souls."
+          "description": "Мучения одной или нескольких страдающих душ."
         },
         "8-8": {
-          "description": "The viciousness of a profane Artifact."
+          "description": "Злобу нечестивого Артефакта."
         },
         "9-9": {
-          "description": "The vile dreams of a slumbering god."
+          "description": "Мерзкие сны спящего бога."
         },
         "10-10": {
-          "description": "The voracity of a life-hungry realm, such as the Shadowfell or Negative Plane."
+          "description": "Прожорливость царства, жаждущего жизни, например Царства Теней или Негативного плана."
         }
       }
     },
     "Elven Lineage": {
-      "name": "Elven Lineage",
-      "description": "<p>You are part of a lineage that grants you supernatural abilities.</p>",
+      "name": "Эльфийская родословная",
+      "description": "<p>Вы принадлежите к родословной, дарующей сверхъестественные способности.</p>",
       "results": {
         "1-1": {
-          "name": "Elf, Drow"
+          "name": "Эльф, Дроу"
         },
         "2-2": {
-          "name": "Elf, High"
+          "name": "Эльф, Высший"
         },
         "3-3": {
-          "name": "Elf, Wood"
+          "name": "Эльф, Лесной"
         }
       }
     },
     "Fiendish Legacy": {
-      "name": "Fiendish Legacy",
-      "description": "<p>You are the recipient of a legacy that grants you supernatural abilities.</p>",
+      "name": "Наследие бестий",
+      "description": "<p>Вы получили наследие, дарующее сверхъестественные способности.</p>",
       "results": {
         "1-1": {
-          "name": "Tiefling, Abyssal"
+          "name": "Тифлинг, Демонический"
         },
         "2-2": {
-          "name": "Tiefling, Chthonic"
+          "name": "Тифлинг, Хтонический"
         },
         "3-3": {
-          "name": "Tiefling, Infernal"
+          "name": "Тифлинг, Дьявольский"
         }
       }
     },
     "Gnomish Lineage": {
-      "name": "Gnomish Lineage",
-      "description": "<p>You are part of a lineage that grants you supernatural abilities.</p>",
+      "name": "Гномья родословная",
+      "description": "<p>Вы принадлежите к родословной, дарующей сверхъестественные способности.</p>",
       "results": {
         "1-1": {
-          "name": "Gnome, Forest"
+          "name": "Гном, Лесной"
         },
         "2-2": {
-          "name": "Gnome, Rock"
+          "name": "Гном, Скальный"
         }
       }
     },
     "Prismatic Layers": {
-      "name": "Prismatic Layers",
+      "name": "Призматические слои",
       "results": {
         "1-1": {
-          "name": "Red",
-          "description": "<p><em>Failed Save:</em> [[/damage 12d6 fire]] damage.</p><p><em>Successful Save:</em> Half as much damage.</p><p><em>Additional Effects</em>: Nonmagical ranged attacks can’t pass through this layer, which is destroyed if it takes at least 25 Cold damage.</p>"
+          "name": "Красный",
+          "description": "<p><em>Провал испытания:</em> [[/damage 12d6 fire]] урона.</p><p><em>Успех испытания:</em> Половина урона.</p><p><em>Дополнительные эффекты</em>: Немагические дальнобойные атаки не могут проходить сквозь этот слой. Он разрушается, если получает не менее 25 урона холодом.</p>"
         },
         "2-2": {
-          "name": "Orange",
-          "description": "<p><em>Failed Save:</em> [[/damage 12d6 acid]] damage.</p><p><em>Successful Save:</em> Half as much damage.</p><p><em>Additional Effects:</em> Magical ranged attacks can’t pass through this layer, which is destroyed by a strong wind (such as the one created by <em>Gust of Wind</em>).</p>"
+          "name": "Оранжевый",
+          "description": "<p><em>Провал испытания:</em> [[/damage 12d6 acid]] урона.</p><p><em>Успех испытания:</em> Половина урона.</p><p><em>Дополнительные эффекты:</em> Магические дальнобойные атаки не могут проходить сквозь этот слой. Он разрушается сильным ветром, например созданным заклинанием <em>Порыв ветра</em>.</p>"
         },
         "3-3": {
-          "name": "Yellow",
-          "description": "<p><em>Failed Save:</em> [[/damage 12d6 lightning]] damage.</p><p><em>Successful Save:</em> Half as much damage.</p><p><em>Additional Effects:</em> The layer is destroyed if it takes at least 60 force damage.</p>"
+          "name": "Жёлтый",
+          "description": "<p><em>Провал испытания:</em> [[/damage 12d6 lightning]] урона.</p><p><em>Успех испытания:</em> Половина урона.</p><p><em>Дополнительные эффекты:</em> Слой разрушается, если получает не менее 60 урона силой.</p>"
         },
         "4-4": {
-          "name": "Green",
-          "description": "<p><em>Failed Save:</em> [[/damage 12d6 poison]] damage.</p><p><em>Successful Save:</em> Half as much damage.</p><p><em>Additional Effects:</em> A <em>Passwall</em> spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer.</p>"
+          "name": "Зелёный",
+          "description": "<p><em>Провал испытания:</em> [[/damage 12d6 poison]] урона.</p><p><em>Успех испытания:</em> Половина урона.</p><p><em>Дополнительные эффекты:</em> Заклинание <em>Проход сквозь стену</em> или другое заклинание того же или более высокого круга, способное открыть портал на твёрдой поверхности, разрушает этот слой.</p>"
         },
         "5-5": {
-          "name": "Blue",
-          "description": "<p><em>Failed Save:</em> [[/damage 12d6 cold]] damage.</p><p><em>Successful Save:</em> Half as much damage.</p><p><em>Additional Effects:</em> The layer is destroyed if it takes at least 25 Fire damage.</p>"
+          "name": "Голубой",
+          "description": "<p><em>Провал испытания:</em> [[/damage 12d6 cold]] урона.</p><p><em>Успех испытания:</em> Половина урона.</p><p><em>Дополнительные эффекты:</em> Слой разрушается, если получает не менее 25 урона огнём.</p>"
         },
         "6-6": {
-          "name": "Indigo",
-          "description": "<p><em>Failed Save:</em> The target has the &amp;Reference[Restrained] condition and makes a [[/save con]] saving throw at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the &amp;Reference[Petrified] condition until it is freed by an effect like the <em>Greater Restoration</em> spell. The successes and failures needn’t be consecutive; keep track of both until the target collects three of a kind.</p><p><em>Additional Effects:</em> Spells can’t be cast through this layer, which is destroyed by Bright Light shed by the <em>Daylight</em> spell.</p>"
+          "name": "Синий",
+          "description": "<p><em>Провал испытания:</em> Цель получает состояние &amp;Reference[Restrained] и проходит испытание [[/save con]] в конце каждого своего хода. После трёх успехов состояние оканчивается. После трёх провалов цель получает состояние &amp;Reference[Petrified], пока её не освободит эффект вроде заклинания <em>Высшее восстановление</em>. Успехи и провалы не обязательно должны идти подряд; учитывайте и те и другие, пока цель не наберёт три одинаковых результата.</p><p><em>Дополнительные эффекты:</em> Сквозь этот слой нельзя творить заклинания. Он разрушается Ярким светом заклинания <em>Дневной свет</em>.</p>"
         },
         "7-7": {
-          "name": "Violet",
-          "description": "<p><em>Failed Save:</em> The target has the &amp;Reference[Blinded] condition and makes a [[/save wis]] saving throw at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (DM’s choice).</p><p><em>Additional Effects:</em> This layer is destroyed by <em>Dispel Magic</em>.</p>"
+          "name": "Фиолетовый",
+          "description": "<p><em>Провал испытания:</em> Цель получает состояние &amp;Reference[Blinded] и проходит испытание [[/save wis]] в начале вашего следующего хода. При успехе состояние оканчивается. При провале состояние оканчивается, а существо телепортируется на другой план бытия на выбор Мастера.</p><p><em>Дополнительные эффекты:</em> Этот слой разрушается заклинанием <em>Рассеивание магии</em>.</p>"
         }
       }
     },
     "Prismatic Rays": {
-      "name": "Prismatic Rays",
+      "name": "Призматические лучи",
       "results": {
         "1-1": {
-          "name": "Red",
-          "description": "<p><em>Failed Save:</em> [[/damage 12d6 fire]] damage.</p><p><em>Successful Save:</em> Half as much damage.</p>"
+          "name": "Красный",
+          "description": "<p><em>Провал испытания:</em> [[/damage 12d6 fire]] урона.</p><p><em>Успех испытания:</em> Половина урона.</p>"
         },
         "2-2": {
-          "name": "Orange",
-          "description": "<p><em>Failed Save:</em> [[/damage 12d6]] acid damage.</p><p><em>Successful Save:</em> Half as much damage.</p>"
+          "name": "Оранжевый",
+          "description": "<p><em>Провал испытания:</em> [[/damage 12d6]] урона кислотой.</p><p><em>Успех испытания:</em> Половина урона.</p>"
         },
         "3-3": {
-          "name": "Yellow",
-          "description": "<p><em>Failed Save:</em> [[/damage 12d6 lightning]] damage.</p><p><em>Successful Save:</em> Half as much damage.</p>"
+          "name": "Жёлтый",
+          "description": "<p><em>Провал испытания:</em> [[/damage 12d6 lightning]] урона.</p><p><em>Успех испытания:</em> Половина урона.</p>"
         },
         "4-4": {
-          "name": "Green",
-          "description": "<p><em>Failed Save:</em> [[/damage 12d6 poison]] damage.</p><p><em>Successful Save:</em> Half as much damage.</p>"
+          "name": "Зелёный",
+          "description": "<p><em>Провал испытания:</em> [[/damage 12d6 poison]] урона.</p><p><em>Успех испытания:</em> Половина урона.</p>"
         },
         "5-5": {
-          "name": "Blue",
-          "description": "<p><em>Failed Save:</em> [[/damage 12d6 cold]] damage.</p><p><em>Successful Save:</em> Half as much damage.</p>"
+          "name": "Голубой",
+          "description": "<p><em>Провал испытания:</em> [[/damage 12d6 cold]] урона.</p><p><em>Успех испытания:</em> Половина урона.</p>"
         },
         "6-6": {
-          "name": "Indigo",
-          "description": "<p><em>Failed Save:</em> The target has the &amp;Reference[Restrained] condition and makes a [[/save con]] saving throw at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the &amp;Reference[Petrified] condition until it is freed by an effect like the <em>Greater Restoration</em> spell. The successes and failures needn’t be consecutive; keep track of both until the target collects three of a kind.</p>"
+          "name": "Синий",
+          "description": "<p><em>Провал испытания:</em> Цель получает состояние &amp;Reference[Restrained] и проходит испытание [[/save con]] в конце каждого своего хода. После трёх успехов состояние оканчивается. После трёх провалов цель получает состояние &amp;Reference[Petrified], пока её не освободит эффект вроде заклинания <em>Высшее восстановление</em>. Успехи и провалы не обязательно должны идти подряд; учитывайте и те и другие, пока цель не наберёт три одинаковых результата.</p>"
         },
         "7-7": {
-          "name": "Violet",
-          "description": "<p><em>Failed Save:</em> The target has the &amp;Reference[Blinded] condition and makes a [[/save wis]] saving throw at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (DM’s choice).</p>"
+          "name": "Фиолетовый",
+          "description": "<p><em>Провал испытания:</em> Цель получает состояние &amp;Reference[Blinded] и проходит испытание [[/save wis]] в начале вашего следующего хода. При успехе состояние оканчивается. При провале состояние оканчивается, а существо телепортируется на другой план бытия на выбор Мастера.</p>"
         },
         "8-8": {
-          "name": "Special",
-          "description": "<p>The target is struck by two rays. Roll twice, rerolling any 8.</p>"
+          "name": "Особый",
+          "description": "<p>В цель попадают два луча. Сделайте два броска, перебрасывая любую 8.</p>"
         }
       }
     },
     "Standard Languages": {
-      "name": "Standard Languages",
+      "name": "Стандартные языки",
       "results": {
         "1-1": {
-          "description": "<strong>Language:</strong> Common. <strong>Origin:</strong> Sigil."
+          "description": "<strong>Язык:</strong> Всеобщий. <strong>Происхождение:</strong> Сигил."
         },
         "pzL0RD1tg43fqDTo": {
-          "name": "Sub-Languages Table"
+          "name": "Таблица дополнительных языков"
         },
         "JpUuNwaf83gmUwV4": {
-          "name": "Sub-Languages Table"
+          "name": "Таблица дополнительных языков"
         }
       }
     },
     "Trinkets": {
-      "name": "Trinkets",
+      "name": "Безделушки",
       "results": {
         "1-1": {
-          "description": "A mummified goblin hand"
+          "description": "Мумифицированная рука гоблина"
         },
         "2-2": {
-          "description": "A crystal that faintly glows in moonlight"
+          "description": "Кристалл, слабо светящийся в лунном свете"
         },
         "3-3": {
-          "description": "A gold coin minted in an unknown land"
+          "description": "Золотая монета, отчеканенная в неизвестной стране"
         },
         "4-4": {
-          "description": "A diary written in a language you don’t know"
+          "description": "Дневник на незнакомом вам языке"
         },
         "5-5": {
-          "description": "A brass ring that never tarnishes"
+          "description": "Латунное кольцо, которое никогда не тускнеет"
         },
         "6-6": {
-          "description": "An old chess piece made from glass"
+          "description": "Старая стеклянная шахматная фигура"
         },
         "7-7": {
-          "description": "A pair of knucklebone dice, each with a skull symbol on the side that would normally show six pips"
+          "description": "Пара игральных костей из суставных костяшек, на каждой из которых вместо шести точек изображён череп"
         },
         "8-8": {
-          "description": "A small idol depicting a nightmarish creature that gives you unsettling dreams when you sleep near it"
+          "description": "Маленький идол кошмарного существа, из-за которого вам снятся тревожные сны, если спать рядом с ним"
         },
         "9-9": {
-          "description": "A lock of someone’s hair"
+          "description": "Прядь чьих-то волос"
         },
         "10-10": {
-          "description": "The deed for a parcel of land in a realm unknown to you"
+          "description": "Документ о праве собственности на участок земли в неизвестном вам царстве"
         },
         "11-11": {
-          "description": "A 1-ounce block made from an unknown material"
+          "description": "Брусок из неизвестного материала весом 1 унция"
         },
         "12-12": {
-          "description": "A small cloth doll skewered with needles"
+          "description": "Маленькая тряпичная кукла, проткнутая иглами"
         },
         "13-13": {
-          "description": "A tooth from an unknown beast"
+          "description": "Зуб неизвестного животного"
         },
         "14-14": {
-          "description": "An enormous scale, perhaps from a dragon"
+          "description": "Огромная чешуйка, возможно драконья"
         },
         "15-15": {
-          "description": "A bright-green feather"
+          "description": "Ярко-зелёное перо"
         },
         "16-16": {
-          "description": "An old divination card bearing your likeness"
+          "description": "Старая гадальная карта с вашим изображением"
         },
         "17-17": {
-          "description": "A glass orb filled with moving smoke"
+          "description": "Стеклянный шар с движущимся дымом внутри"
         },
         "18-18": {
-          "description": "A 1-pound egg with a bright-red shell"
+          "description": "Яйцо весом 1 фунт с ярко-красной скорлупой"
         },
         "19-19": {
-          "description": "A pipe that blows bubbles"
+          "description": "Трубка, выдувающая пузыри"
         },
         "20-20": {
-          "description": "A glass jar containing a bit of flesh floating in pickling fluid"
+          "description": "Стеклянная банка с кусочком плоти, плавающим в консервирующей жидкости"
         },
         "21-21": {
-          "description": "A gnome-crafted music box that plays a song you dimly remember from your childhood"
+          "description": "Сделанная гномами музыкальная шкатулка, играющая песню, которую вы смутно помните с детства"
         },
         "22-22": {
-          "description": "A wooden statuette of a smug halfling"
+          "description": "Деревянная статуэтка самодовольного полурослика"
         },
         "23-23": {
-          "description": "A brass orb etched with strange runes"
+          "description": "Латунный шар со странными выгравированными рунами"
         },
         "24-24": {
-          "description": "A multicolored stone disk"
+          "description": "Разноцветный каменный диск"
         },
         "25-25": {
-          "description": "A silver icon of a raven"
+          "description": "Серебряная иконка ворона"
         },
         "26-26": {
-          "description": "A bag containing forty-seven teeth, one of which is rotten"
+          "description": "Мешочек с сорока семью зубами, один из которых гнилой"
         },
         "27-27": {
-          "description": "A shard of obsidian that always feels warm to the touch"
+          "description": "Осколок обсидиана, всегда тёплый на ощупь"
         },
         "28-28": {
-          "description": "A dragon’s talon strung on a leather necklace"
+          "description": "Коготь дракона на кожаном ожерелье"
         },
         "29-29": {
-          "description": "A pair of old socks"
+          "description": "Пара старых носков"
         },
         "30-30": {
-          "description": "A blank book whose pages refuse to hold ink, chalk, graphite, or any other marking"
+          "description": "Пустая книга, страницы которой не удерживают чернила, мел, графит и любые другие следы"
         },
         "31-31": {
-          "description": "A silver badge that is a five-pointed star"
+          "description": "Серебряный значок в форме пятиконечной звезды"
         },
         "32-32": {
-          "description": "A knife that belonged to a relative"
+          "description": "Нож, принадлежавший родственнику"
         },
         "33-33": {
-          "description": "A glass vial filled with nail clippings"
+          "description": "Стеклянный пузырёк с обрезками ногтей"
         },
         "34-34": {
-          "description": "A rectangular metal device with two tiny metal cups on one end that throws sparks when wet"
+          "description": "Прямоугольное металлическое устройство с двумя крошечными металлическими чашечками на одном конце, которое искрит при намокании"
         },
         "35-35": {
-          "description": "A white, sequined glove sized for a human"
+          "description": "Белая перчатка с блёстками по размеру человеческой руки"
         },
         "36-36": {
-          "description": "A vest with one hundred tiny pockets"
+          "description": "Жилет с сотней крошечных карманов"
         },
         "37-37": {
-          "description": "A weightless stone"
+          "description": "Невесомый камень"
         },
         "38-38": {
-          "description": "A sketch of a goblin"
+          "description": "Набросок гоблина"
         },
         "39-39": {
-          "description": "An empty glass vial that smells of perfume"
+          "description": "Пустой стеклянный пузырёк с запахом духов"
         },
         "40-40": {
-          "description": "A gemstone that looks like a lump of coal when examined by anyone but you"
+          "description": "Самоцвет, который для всех, кроме вас, выглядит как кусок угля"
         },
         "41-41": {
-          "description": "A scrap of cloth from an old banner"
+          "description": "Лоскут ткани от старого знамени"
         },
         "42-42": {
-          "description": "A rank insignia from a lost legionnaire"
+          "description": "Знак различия пропавшего легионера"
         },
         "43-43": {
-          "description": "A silver bell without a clapper"
+          "description": "Серебряный колокольчик без язычка"
         },
         "44-44": {
-          "description": "A mechanical canary inside a lamp"
+          "description": "Механическая канарейка внутри лампы"
         },
         "45-45": {
-          "description": "A miniature chest carved to look like it has numerous feet on the bottom"
+          "description": "Миниатюрный сундук, вырезанный так, словно у него снизу множество ног"
         },
         "46-46": {
-          "description": "A dead sprite inside a clear glass bottle"
+          "description": "Мёртвый спрайт в прозрачной стеклянной бутылке"
         },
         "47-47": {
-          "description": "A metal can that has no opening but sounds as if it is filled with liquid, sand, spiders, or broken glass (your choice)"
+          "description": "Металлическая банка без отверстия, по звуку наполненная жидкостью, песком, пауками или битым стеклом на ваш выбор"
         },
         "48-48": {
-          "description": "A glass orb filled with water, in which swims a clockwork goldfish"
+          "description": "Стеклянный шар с водой, в котором плавает заводная золотая рыбка"
         },
         "49-49": {
-          "description": "A silver spoon with an M engraved on the handle"
+          "description": "Серебряная ложка с выгравированной на ручке буквой M"
         },
         "50-50": {
-          "description": "A whistle made from gold-colored wood"
+          "description": "Свисток из древесины золотистого цвета"
         },
         "51-51": {
-          "description": "A dead scarab beetle the size of your hand"
+          "description": "Мёртвый жук-скарабей размером с вашу ладонь"
         },
         "52-52": {
-          "description": "Two toy soldiers, one missing a head"
+          "description": "Два игрушечных солдатика, один без головы"
         },
         "53-53": {
-          "description": "A small box filled with different-sized buttons"
+          "description": "Маленькая коробка с пуговицами разных размеров"
         },
         "54-54": {
-          "description": "A candle that can’t be lit"
+          "description": "Свеча, которую нельзя зажечь"
         },
         "55-55": {
-          "description": "A miniature cage with no door"
+          "description": "Миниатюрная клетка без дверцы"
         },
         "56-56": {
-          "description": "An old key"
+          "description": "Старый ключ"
         },
         "57-57": {
-          "description": "An indecipherable treasure map"
+          "description": "Неразборчивая карта сокровищ"
         },
         "58-58": {
-          "description": "A hilt from a broken sword"
+          "description": "Рукоять сломанного меча"
         },
         "59-59": {
-          "description": "A rabbit’s foot"
+          "description": "Кроличья лапка"
         },
         "60-60": {
-          "description": "A glass eye"
+          "description": "Стеклянный глаз"
         },
         "61-61": {
-          "description": "A cameo of a hideous person"
+          "description": "Камея с изображением уродливого человека"
         },
         "62-62": {
-          "description": "A silver skull the size of a coin"
+          "description": "Серебряный череп размером с монету"
         },
         "63-63": {
-          "description": "An alabaster mask"
+          "description": "Алебастровая маска"
         },
         "64-64": {
-          "description": "A cone of sticky black incense that stinks"
+          "description": "Конус липкого чёрного благовония с отвратительным запахом"
         },
         "65-65": {
-          "description": "A nightcap that gives you pleasant dreams when you wear it"
+          "description": "Ночной колпак, дарующий приятные сны, если спать в нём"
         },
         "66-66": {
-          "description": "A single caltrop made from bone"
+          "description": "Один костяной шип-«чеснок»"
         },
         "67-67": {
-          "description": "A gold monocle frame without the lens"
+          "description": "Золотая оправа монокля без линзы"
         },
         "68-68": {
-          "description": "A 1-inch cube, each side a different color"
+          "description": "Куб со стороной 1 дюйм, каждая грань которого разного цвета"
         },
         "69-69": {
-          "description": "A crystal doorknob"
+          "description": "Хрустальная дверная ручка"
         },
         "70-70": {
-          "description": "A packet filled with pink dust"
+          "description": "Пакетик с розовой пылью"
         },
         "71-71": {
-          "description": "A fragment of a beautiful song, written as musical notes on two pieces of parchment"
+          "description": "Фрагмент прекрасной песни, записанный нотами на двух кусках пергамента"
         },
         "72-72": {
-          "description": "A silver teardrop earring containing a real teardrop"
+          "description": "Серебряная серьга в форме слезы, содержащая настоящую слезу"
         },
         "73-73": {
-          "description": "An eggshell painted with scenes of misery in disturbing detail"
+          "description": "Яичная скорлупа с тревожно подробными изображениями страданий"
         },
         "74-74": {
-          "description": "A fan that, when unfolded, shows a sleepy cat"
+          "description": "Веер, на котором в раскрытом виде виден сонный кот"
         },
         "75-75": {
-          "description": "A set of bone pipes"
+          "description": "Набор костяных свирелей"
         },
         "76-76": {
-          "description": "A four-leaf clover pressed inside a book discussing manners and etiquette"
+          "description": "Четырёхлистный клевер, засушенный в книге о манерах и этикете"
         },
         "77-77": {
-          "description": "A sheet of parchment upon which is drawn a mechanical contraption"
+          "description": "Лист пергамента с рисунком механического устройства"
         },
         "78-78": {
-          "description": "An ornate scabbard that fits no blade you have found"
+          "description": "Украшенные ножны, не подходящие ни к одному найденному вами клинку"
         },
         "79-79": {
-          "description": "An invitation to a party where a murder happened"
+          "description": "Приглашение на вечеринку, где произошло убийство"
         },
         "80-80": {
-          "description": "A bronze pentacle with an etching of a rat’s head in its center"
+          "description": "Бронзовая пентаграмма с выгравированной в центре крысиной головой"
         },
         "81-81": {
-          "description": "A purple handkerchief embroidered with the name of an archmage"
+          "description": "Фиолетовый платок с вышитым именем архимага"
         },
         "82-82": {
-          "description": "Half a floor plan for a temple, a castle, or another structure"
+          "description": "Половина плана этажа храма, замка или другого строения"
         },
         "83-83": {
-          "description": "A bit of folded cloth that, when unfolded, turns into a stylish cap"
+          "description": "Сложенный лоскут ткани, который при разворачивании превращается в модную шапку"
         },
         "84-84": {
-          "description": "A receipt of deposit at a bank in a far-off city"
+          "description": "Квитанция о банковском вкладе в далёком городе"
         },
         "85-85": {
-          "description": "A diary with seven missing pages"
+          "description": "Дневник с семью вырванными страницами"
         },
         "86-86": {
-          "description": "An empty silver snuffbox bearing the inscription “dreams” on its lid"
+          "description": "Пустая серебряная табакерка с надписью «сны» на крышке"
         },
         "87-87": {
-          "description": "An iron holy symbol devoted to an unknown god"
+          "description": "Железный символ религии неизвестного бога"
         },
         "88-88": {
-          "description": "A book about a legendary hero’s rise and fall, with the last chapter missing"
+          "description": "Книга о взлёте и падении легендарного героя, в которой нет последней главы"
         },
         "89-89": {
-          "description": "A vial of dragon blood"
+          "description": "Пузырёк драконьей крови"
         },
         "90-90": {
-          "description": "An ancient arrow of elven design"
+          "description": "Древняя стрела эльфийской работы"
         },
         "91-91": {
-          "description": "A needle that never bends"
+          "description": "Игла, которая никогда не гнётся"
         },
         "92-92": {
-          "description": "An ornate brooch of dwarven design"
+          "description": "Украшенная брошь дварфийской работы"
         },
         "93-93": {
-          "description": "An empty wine bottle bearing a pretty label that says, “The Wizard of Wines Winery, Red Dragon Crush, 331422-W”"
+          "description": "Пустая винная бутылка с красивой этикеткой «Винодельня „Волшебник вин“, „Давильня красного дракона“, 331422-W»"
         },
         "94-94": {
-          "description": "A mosaic tile with a multicolored, glazed surface"
+          "description": "Мозаичная плитка с разноцветной глазурованной поверхностью"
         },
         "95-95": {
-          "description": "A petrified mouse"
+          "description": "Окаменевшая мышь"
         },
         "96-96": {
-          "description": "A black pirate flag adorned with a dragon’s skull and crossbones"
+          "description": "Чёрный пиратский флаг с драконьим черепом и скрещёнными костями"
         },
         "97-97": {
-          "description": "A tiny mechanical crab or spider that moves about when it’s not being observed"
+          "description": "Крошечный механический краб или паук, который движется, когда на него не смотрят"
         },
         "98-98": {
-          "description": "A glass jar containing lard with a label that reads, “Griffon Grease”"
+          "description": "Стеклянная банка с салом и этикеткой «Грифоний жир»"
         },
         "99-99": {
-          "description": "A wooden box with a ceramic bottom that holds a living worm with a head on each end of its body"
+          "description": "Деревянная коробка с керамическим дном, в которой живёт червь с головой на каждом конце тела"
         },
         "100-100": {
-          "description": "A metal urn containing the ashes of a hero"
+          "description": "Металлическая урна с прахом героя"
         }
       }
     },
     "Sub-Languages Table": {
-      "name": "Sub-Languages Table",
+      "name": "Таблица дополнительных языков",
       "results": {
         "1-1": {
-          "description": "<strong>Language:</strong> Common Sign Language. <strong>Origin:</strong> Sigil."
+          "description": "<strong>Язык:</strong> Всеобщий язык жестов. <strong>Происхождение:</strong> Сигил."
         },
         "2-2": {
-          "description": "<strong>Language:</strong> Draconic. <strong>Origin:</strong> Dragons."
+          "description": "<strong>Язык:</strong> Драконий. <strong>Происхождение:</strong> Драконы."
         },
         "3-4": {
-          "description": "<strong>Language:</strong> Dwarvish. <strong>Origin:</strong> Dwarves."
+          "description": "<strong>Язык:</strong> Дварфийский. <strong>Происхождение:</strong> Дварфы."
         },
         "5-6": {
-          "description": "<strong>Language:</strong> Elvish. <strong>Origin:</strong> Elves."
+          "description": "<strong>Язык:</strong> Эльфийский. <strong>Происхождение:</strong> Эльфы."
         },
         "7-7": {
-          "description": "<strong>Language:</strong> Giant. <strong>Origin:</strong> Giants."
+          "description": "<strong>Язык:</strong> Великаний. <strong>Происхождение:</strong> Великаны."
         },
         "8-8": {
-          "description": "<strong>Language:</strong> Gnomish. <strong>Origin:</strong> Gnomes."
+          "description": "<strong>Язык:</strong> Гномий. <strong>Происхождение:</strong> Гномы."
         },
         "9-9": {
-          "description": "<strong>Language:</strong> Goblin. <strong>Origin:</strong> Goblinoids."
+          "description": "<strong>Язык:</strong> Гоблинский. <strong>Происхождение:</strong> Гоблиноиды."
         },
         "10-11": {
-          "description": "<strong>Language:</strong> Halfling. <strong>Origin:</strong> Halflings."
+          "description": "<strong>Язык:</strong> Полуросличий. <strong>Происхождение:</strong> Полурослики."
         },
         "12-12": {
-          "description": "<strong>Language:</strong> Orc. <strong>Origin:</strong> Orcs."
+          "description": "<strong>Язык:</strong> Орочий. <strong>Происхождение:</strong> Орки."
         }
       }
     },
     "Cardinal Directions": {
-      "name": "Cardinal Directions",
+      "name": "Стороны света",
       "results": {
         "1-1": {
-          "description": "North"
+          "description": "Север"
         },
         "2-2": {
-          "description": "East"
+          "description": "Восток"
         },
         "3-3": {
-          "description": "South"
+          "description": "Юг"
         },
         "4-4": {
-          "description": "West"
+          "description": "Запад"
         }
       }
     },
     "Confusion Behavior": {
-      "name": "Confusion Behavior",
-      "description": "<p>Behavior for the Turn</p>",
+      "name": "Поведение при Замешательстве",
+      "description": "<p>Поведение в течение хода</p>",
       "results": {
         "1-1": {
-          "description": "The target doesn’t take an action, and it uses all its movement to move. Roll [[/r 1d4]] for the direction: 1, north; 2, east; 3, south; or 4, west."
+          "description": "Цель не совершает действие и использует всё перемещение для движения. Бросьте [[/r 1d4]], чтобы определить направление: 1, север; 2, восток; 3, юг; 4, запад."
         },
         "2-6": {
-          "description": "The target doesn’t move or take actions."
+          "description": "Цель не двигается и не совершает действий."
         },
         "7-8": {
-          "description": "The target doesn’t move, and it takes the Attack action to make one melee attack against a random creature within reach. If none are within reach, the target takes no action."
+          "description": "Цель не двигается и совершает действие Атака, выполняя одну атаку ближнего боя по случайному существу в зоне досягаемости. Если там нет существ, цель не совершает действие."
         },
         "9-10": {
-          "description": "The target chooses its behavior."
+          "description": "Цель сама выбирает своё поведение."
         },
         "8oHL5jQ0fXbXGpuf": {
-          "name": "Cardinal Directions"
+          "name": "Стороны света"
         }
       }
     },
     "Reincarnated Species": {
-      "name": "Reincarnated Species",
-      "description": "<p>Roll [[/r 1d10]] and consult the table below to determine the body’s species, or the DM chooses another playable species.</p>",
+      "name": "Виды при реинкарнации",
+      "description": "<p>Бросьте [[/r 1d10]] и сверьтесь с таблицей ниже, чтобы определить вид тела, либо Мастер выбирает другой доступный для игры вид.</p>",
       "results": {
         "1-1": {
-          "description": "Aasimar"
+          "description": "Аасимар"
         },
         "2-2": {
-          "name": "Dragonborn"
+          "name": "Драконорождённый"
         },
         "3-3": {
-          "name": "Dwarf"
+          "name": "Дварф"
         },
         "6-6": {
-          "name": "Goliath"
+          "name": "Голиаф"
         },
         "7-7": {
-          "name": "Halfling"
+          "name": "Полурослик"
         },
         "8-8": {
-          "name": "Human"
+          "name": "Человек"
         },
         "9-9": {
-          "name": "Orc"
+          "name": "Орк"
         },
         "4-4": {
-          "name": "Elven Lineage"
+          "name": "Эльфийская родословная"
         },
         "10-10": {
-          "name": "Fiendish Legacy"
+          "name": "Наследие бестий"
         },
         "5-5": {
-          "name": "Gnomish Lineage"
+          "name": "Гномья родословная"
         }
       }
     },
     "Teleport Mishap": {
-      "name": "Teleport Mishap",
-      "description": "<p><strong>Mishap damage:</strong> [[/damage 3d10 type=force]]</p><p><strong>Off target distance:</strong> [[/r 2d12#Miles]]{2d12 miles} [[/r 1d8#Direction]]{Direction}</p>",
+      "name": "Неудача телепортации",
+      "description": "<p><strong>Урон от неудачи:</strong> [[/damage 3d10 type=force]]</p><p><strong>Расстояние отклонения:</strong> [[/r 2d12#Мили]]{2d12 миль} [[/r 1d8#Направление]]{Направление}</p>",
       "results": {
         "1-100": {
-          "description": "<strong>Permanent circle:</strong> On target"
+          "description": "<strong>Постоянный круг:</strong> В цель"
         },
         "4W9YPHqIIDyt3WbV": {
-          "description": "<strong>Linked object:</strong> On target"
+          "description": "<strong>Связанный предмет:</strong> В цель"
         },
         "1-5": {
-          "description": "<strong>Very familiar:</strong> Mishap"
+          "description": "<strong>Очень хорошо знакомое место:</strong> Неудача"
         },
         "6-13": {
-          "description": "<strong>Very familiar:</strong> Similar area"
+          "description": "<strong>Очень хорошо знакомое место:</strong> Похожая область"
         },
         "14-24": {
-          "description": "<strong>Very familiar:</strong> Off target"
+          "description": "<strong>Очень хорошо знакомое место:</strong> Мимо цели"
         },
         "25-100": {
-          "description": "<strong>Very familiar:</strong> On target"
+          "description": "<strong>Очень хорошо знакомое место:</strong> В цель"
         },
         "1-33": {
-          "description": "<strong>Seen casually:</strong> Mishap"
+          "description": "<strong>Виденное мельком место:</strong> Неудача"
         },
         "34-43": {
-          "description": "<strong>Seen casually:</strong> Similar area"
+          "description": "<strong>Виденное мельком место:</strong> Похожая область"
         },
         "44-53": {
-          "description": "<strong>Seen casually:</strong> Off target"
+          "description": "<strong>Виденное мельком место:</strong> Мимо цели"
         },
         "54-73": {
-          "description": "<strong>Seen casually:</strong> Off target"
+          "description": "<strong>Виденное мельком место:</strong> Мимо цели"
         },
         "1-43": {
-          "description": "<strong>Viewed or described:</strong> Mishap"
+          "description": "<strong>Виденное или описанное место:</strong> Неудача"
         },
         "S3FXuqVgRazP23RK": {
-          "description": "<strong>Viewed or described:</strong> Similar area"
+          "description": "<strong>Виденное или описанное место:</strong> Похожая область"
         },
         "LWWefv3FEwkukueE": {
-          "description": "<strong>Viewed or described:</strong> Off target"
+          "description": "<strong>Виденное или описанное место:</strong> Мимо цели"
         },
         "74-100": {
-          "description": "<strong>Viewed or described:</strong> On target"
+          "description": "<strong>Виденное или описанное место:</strong> В цель"
         },
         "1-50": {
-          "description": "<strong>False destination:</strong> Mishap"
+          "description": "<strong>Ложное место назначения:</strong> Неудача"
         },
         "51-100": {
-          "description": "<strong>False destination:</strong> Similar area"
+          "description": "<strong>Ложное место назначения:</strong> Похожая область"
         }
       }
     }
