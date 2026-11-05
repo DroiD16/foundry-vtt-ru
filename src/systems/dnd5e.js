@@ -1,8 +1,10 @@
 import { getSettings, registerCompendiumTranslations } from "#helpers";
 import { init as initAltTranslation } from "./dnd5e/alt.js";
+import { initDdbAg } from "./dnd5e/ddb-ag/index.js";
 
 export function init() {
   initAltTranslation();
+  initDdbAg();
   registerSettings();
   registerHooks();
 }

@@ -9,6 +9,37 @@ select {
   font-weight: 500;
 }
 
+.form-group.ru-ru-ddb-ag {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.form-group.ru-ru-ddb-ag > label {
+  flex: 0 0 auto;
+  width: max-content;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.form-group.ru-ru-ddb-ag > .form-fields {
+  flex: 3 1 24rem;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.form-group.ru-ru-ddb-ag > .form-fields > select {
+  flex: 1 1 14rem;
+  width: 0;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.form-group.ru-ru-ddb-ag > .form-fields > button {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+
 /* 3.0 */
 
 .dnd5e2.sheet.actor.character .sheet-header .document-name {
