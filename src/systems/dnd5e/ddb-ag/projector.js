@@ -281,12 +281,22 @@ function syntax(text) {
 // arguments are presentation. A roll-data lookup is accepted only when the item's own roll
 // data defines the path, so a missing DDB scale ("prepared-spells") still keeps the text.
 const presentationAttribute = /^data-colwidth=/i;
-const literalCommand = /^\[\[\/(?:award|skill|check|tool|save)\b[^\]@]*\]\]$/i;
-const rollDataLookup = /^\[\[(?:lookup\s+)?@([\w.-]+)(?:\s+(?:lowercase|uppercase|capitalize))?\]\]$/i;
-const rollDataCheck = /^\[\[\/(?:save|check|skill)\b[^\]@]*\bdc=@([\w.-]+)[^\]@]*\]\]$/i;
+// Buttons need explicit arguments: a bare [[/save]] uses the item's own activity, and
+// activity=<id> names an AG activity the DDB item does not have.
+const literalCommand = /^\[\[\/(?:award|skill|check|tool|save)\s+(?![^\]]*\bactivity=)[^\]@]+\]\]$/i;
+const rollDataLookup = /^\[\[lookup\s+@([\w.-]+)(?:\s+(?:lowercase|uppercase|capitalize))?\]\]$/i;
+// A plain [[@path]] is an inline roll; accept it only for a fixed number (@item.level).
+const rollDataNumber = /^\[\[@([\w.-]+)\]\]$/;
+const rollDataCheck = /^\[\[\/(?:save|check|skill)\s+(?![^\]]*\bactivity=)[^\]@]*\bdc=@([\w.-]+)[^\]@]*\]\]$/i;
+const rollDataRoots = new Set(["scale", "item", "attributes", "abilities", "skills", "details", "classes", "prof"]);
+function rollDataValue(path, rollData) {
+  const keys = path.split(".");
+  if (!rollData || !rollDataRoots.has(keys[0]) || keys.some((key) => ["flags", "constructor", "prototype", "__proto__"].includes(key)))
+    return undefined;
+  return get(rollData, path);
+}
 function rollDataPath(path, rollData) {
-  if (!rollData || /^flags\b/.test(path)) return false;
-  const value = get(rollData, path);
+  const value = rollDataValue(path, rollData);
   return value !== undefined && value !== null && value !== "";
 }
 function syntaxAccepted(before, after, rollData) {
@@ -305,6 +315,13 @@ function syntaxAccepted(before, after, rollData) {
     const path = token.match(rollDataLookup)?.[1] ?? token.match(rollDataCheck)?.[1];
     if (path) {
       if (!rollDataPath(path, rollData)) return false;
+      enrichers.push(token);
+      continue;
+    }
+    const number = token.match(rollDataNumber)?.[1];
+    if (number) {
+      const value = rollDataValue(number, rollData);
+      if (typeof value !== "number" || !Number.isFinite(value)) return false;
       enrichers.push(token);
       continue;
     }
@@ -420,7 +437,9 @@ export function project(data, translated, { diagnostics = () => {}, ...options }
     // DDB leaves originalName unset on classes. Keep the English identity for later runs,
     // whatever form the translated name takes.
     const english = data.flags?.ddbimporter?.originalName;
-    if (data.flags?.ddbimporter && (typeof english !== "string" || !english) && typeof data.name === "string")
+    // Only an untranslated name is an identity; a name renamed by an earlier run is not.
+    if (data.flags?.ddbimporter && (typeof english !== "string" || !english) && typeof data.name === "string" &&
+        /[A-Za-z]/.test(data.name) && !/[А-Яа-яЁё]/.test(data.name))
       delta["flags.ddbimporter.originalName"] = data.name;
   }
   for (const path of paths) {

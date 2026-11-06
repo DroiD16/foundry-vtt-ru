@@ -110,7 +110,12 @@ test("class features resolve through open ItemChoice and pooled grants with DDB 
     })],
     [uuid("origins", "fey"), ag("fey", "Наследие фей", "Fey Ancestry", "feat", { type: { value: "race" } })],
     [uuid("origins", "high"), ag("high", "Высший эльф", "High Elf", "feat", { type: { value: "race" } })],
-    [uuid("origins", "noble"), ag("noble", "Благородный", "Noble", "background")],
+    [uuid("origins", "noble"), ag("noble", "Благородный", "Noble", "background", {
+      advancement: [{ type: "ItemGrant", level: 0, configuration: { items: [uuid("origins", "noblefeat")] } }],
+    })],
+    // A background feature is proven only through "Background: Noble" → AG "Noble".
+    [uuid("origins", "noblefeat"), ag("noblefeat", "Положение", "Position of Privilege", "feat", { type: { value: "background" } })],
+    [uuid("classes", "moon"), ag("moon", "Круг Луны", "Circle of the Moon", "subclass", { identifier: "moon", classIdentifier: "druid" })],
   ]);
   const actor = actorWith([
     ddb("warlock", "Warlock", "class", { identifier: "warlock", levels: 3 }, { definitionId: 5 }),
@@ -125,6 +130,9 @@ test("class features resolve through open ItemChoice and pooled grants with DDB 
         dndbeyond: { choice: { choiceId: "8-492823-101201303", parentName: "Elven Lineage", label: "High Elf Lineage" } } },
       species: { isLineage: true, fullRaceName: "High Elf" } } },
     ddb("noble", "Noble", "background", {}, { originalName: "Background: Noble" }),
+    ddb("noblefeat", "Position of Privilege", "feat", { type: { value: "background" } }),
+    // Renamed by ddb.2 without originalName: the Russian name must not become the identity.
+    { ...ddb("moon", "Круг Луны [Circle of the Moon]", "subclass", { identifier: "moon", classIdentifier: "druid" }), flags: { ddbimporter: { id: 102, importId: "session", is2024: true } } },
   ]);
   // Race items carry no import stamp; only the features are translated here.
   delete actor.items.get("race").data.flags.ddbimporter.importId;
@@ -134,6 +142,8 @@ test("class features resolve through open ItemChoice and pooled grants with DDB 
   assert.equal(name("fey"), "Наследие фей [Fey Ancestry]");
   assert.equal(name("lineage"), "Высший эльф [High Elf]");
   assert.equal(name("noble"), "Благородный [Noble]");
+  assert.equal(name("noblefeat"), "Положение [Position of Privilege]");
+  assert.equal(actor.items.get("moon").data.flags.ddbimporter.originalName, undefined);
   assert.equal(name("warlock"), "Колдун [Warlock]");
   // The class keeps its English identity for later runs.
   assert.equal(actor.items.get("warlock").data.flags.ddbimporter.originalName, "Warlock");
@@ -148,7 +158,9 @@ test("equipment ignores pack copies, DDB subtypes and apostrophes, and falls bac
     [uuid("equipment", "leather"), ag("leather", "Кожаный доспех", "Leather Armor", "equipment", { identifier: "leather", type: { value: "light" } })],
   ]);
   const actor = actorWith([
-    ddb("lamp", "Lamp", "consumable", { type: { value: "trinket", subtype: "" } }, { importId: "earlier" }),
+    // Free Rules 2024 (148) and Basic Rules (1) sources, stamped by an earlier import.
+    ddb("lamp", "Lamp", "consumable", { type: { value: "trinket", subtype: "" } },
+      { importId: "earlier", dndbeyond: { sources: [{ sourceId: 148 }, { sourceId: 1 }] } }),
     ddb("cook", "Cook's Utensils", "tool", { type: { value: "art" } }),
     ddb("leather", "Leather", "equipment", { identifier: "leather", type: { value: "light" } }),
   ]);
@@ -187,6 +199,12 @@ test("safeText accepts AG presentation and lookups the item can resolve", () => 
   assert.equal(ok("<p>Русский [[/r (@flags.ag-fifthpendium.x)d6]]</p>"), false);
   assert.equal(ok("<p>Русский [[lookup @scale.warlock.invocations-known]]</p>", null), false);
   assert.equal(ok("<p>Русский @Macro[Helper]</p>"), false);
+  // AG activity ids do not exist on DDB items; a bare button picks an arbitrary activity.
+  assert.equal(ok("<p>Русский [[/save activity=rGeGukkm2t2fXsoy]]</p>"), false);
+  assert.equal(ok("<p>Русский [[/save]]</p>"), false);
+  // A plain [[@path]] rolls: only a fixed number is accepted, and module flags never.
+  assert.equal(ok("<p>Русский [[@scale.warlock.invocations-known]]</p>"), false);
+  assert.equal(ok("<p>Русский [[lookup @item.flags.x]]</p>", { item: { flags: { x: 1 } } }), false);
   // A reference with options beyond `apply` must survive.
   assert.equal(safeText("<p>&Reference[prone apply=true extra=1]</p>", "<p>Русский</p>"), false);
   // A link to the DDB website is DDB presentation.

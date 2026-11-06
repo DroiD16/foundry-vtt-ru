@@ -1,5 +1,6 @@
 import { presentationEqual } from "./presentation.js";
 import { eligibleActor, eligibleActorIdentity, eligibleItem, identity } from "./identity.js";
+import { canonicalName } from "./publications.js";
 import { automationStrings, get, project, projectCandidates } from "./projector.js";
 
 export async function applyActor(actor, { resolver, supplement = {entries: []}, isGM, onProgress }) {
@@ -125,6 +126,8 @@ export function actorParents(items) {
   return items.map(data => {
     const key = identity(data);
     if (!key) return null;
+    // "Background: Noble" grants as AG "Noble".
+    key.name = canonicalName(key);
     // A DDB subrace or lineage ("High Elf") is granted by its base species in AG ("Elf").
     const f = data.flags?.ddbimporter;
     if (["race", "species"].includes(data.type) && (f?.isSubRace || f?.isLineage) &&

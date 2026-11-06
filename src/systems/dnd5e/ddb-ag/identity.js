@@ -90,6 +90,8 @@ export function nativeImportSource(actor, item) {
     Boolean(item.type === "spell" || data.type === "spell") &&
     Boolean(
       f?.importId &&
+      // DDB recreates character spells on every sync, so a native spell carries the current stamp.
+      f.importId === actor.flags?.ddbimporter?.importId &&
       f.definitionId &&
       (f.definitionEntityTypeId || f.entityTypeId) &&
       pack &&
