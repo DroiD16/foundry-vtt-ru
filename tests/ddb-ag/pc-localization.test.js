@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createAgCatalog } from "../../src/systems/dnd5e/ddb-ag/catalog.js";
 import { Resolver } from "../../src/systems/dnd5e/ddb-ag/resolver.js";
-import { set } from "../../src/systems/dnd5e/ddb-ag/projector.js";
+import { safeName, set } from "../../src/systems/dnd5e/ddb-ag/projector.js";
 import { applyActor } from "../../src/systems/dnd5e/ddb-ag/apply.js";
 
 const original = () => ({
@@ -313,4 +313,70 @@ test("PC parent grants resolve features without leaking into display matching", 
   await pc.prepareParents(multiclass);
   assert.equal(await pc.resolve(feature, { parents: multiclass }), null);
   assert.equal(await display.resolve(feature), null);
+});
+
+test("PC apply renames items without definitionId and with inert automation flags", async () => {
+  const { actor, data } = actorFixture();
+  delete data.flags.ddbimporter.definitionId;
+  data.flags["midi-qol"] = { removeAttackDamageButtons: "default", forceCEOff: true, onUseMacroParts: {} };
+  data.flags.dae = { alwaysActive: false, activeEquipped: true };
+  data.system.activities.attack.flags = { ddbimporter: { noeffect: true } };
+  data.effects[0].changes.push({ key: "name", value: "{} (Test Sword)" });
+  assert.equal((await applyActor(actor, await context())).updated, 1);
+  assert.equal(data.name, "Тестовый меч");
+  assert.equal(data.system.description.value, "Описание тестового меча.");
+});
+
+test("PC apply keeps the English name when automation can find the item by name", async () => {
+  const cases = {
+    "midi ItemMacro": (d) => (d.flags["midi-qol"] = { onUseMacroName: "[postActiveEffects]ItemMacro.Test Sword" }),
+    "midi macro parts": (d) =>
+      (d.flags["midi-qol"] = { onUseMacroParts: { items: [{ macroName: "Sword Macro", option: "postDamageRoll" }] } }),
+    "dae macro": (d) => (d.flags.dae = { macro: { command: "return 1;" } }),
+    "premade flags": (d) => (d.flags["chris-premades"] = { info: { identifier: "testSword" } }),
+    "flag text with name": (d) => (d.flags.custom = { condition: "workflow.item.name === 'Test Sword'" }),
+    "display name in flag text": (d) => {
+      d.name = "Keen Blade";
+      d.flags.custom = { condition: "actor.items.getName('Keen Blade')" };
+    },
+    "macro effect change": (d) => d.effects[0].changes.push({ key: "macro.execute", value: "GM Helper" }),
+    "effect macro flags": (d) => (d.effects[0].flags = { effectmacro: { onCreate: { script: "return;" } } }),
+    "DDB activity macro": (d) => (d.system.activities.attack.macro = { name: "", function: "ddb.feat.helper", visible: false }),
+    "midi activity macro": (d) => (d.system.activities.attack.macroData = { name: "", command: "return 1;" }),
+    "midi activity condition": (d) =>
+      (d.system.activities.attack.useConditionText = "actor.items.getName('Test Sword')?.system.uses.value > 0"),
+    "midi activity onUse": (d) => (d.system.activities.attack.flags = { "midi-qol": { onUseMacroName: "Helper" } }),
+  };
+  for (const [label, mutate] of Object.entries(cases)) {
+    const { actor, data } = actorFixture();
+    mutate(data);
+    assert.equal((await applyActor(actor, await context())).updated, 1, label);
+    assert.notEqual(data.name, "Тестовый меч", label);
+    assert.equal(data.system.description.value, "Описание тестового меча.", label);
+  }
+});
+
+test("PC apply keeps the name when another item on the actor finds it by name", async () => {
+  const { actor, data } = actorFixture();
+  const other = actorFixture();
+  other.item.id = "other-item";
+  other.data.flags.ddbimporter.importId = "session";
+  other.data.flags.ddbimporter.ignoreItemImport = true;
+  other.data.effects[0].changes.push({ key: "flags.midi-qol.optional.strike.count", value: "ItemUses.Test Sword" });
+  actor.items.set(other.item.id, other.item);
+  assert.equal((await applyActor(actor, await context())).updated, 1);
+  assert.equal(data.name, "Test Sword");
+  assert.equal(data.system.description.value, "Описание тестового меча.");
+});
+
+test("PC apply keeps midi-qol hard-coded and inert macro names safe", async () => {
+  const { actor, data } = actorFixture();
+  data.effects[0].changes.push({ key: "macro.CE", value: "Test Sword" }, { key: "macro.tokenMagic", value: "glow" });
+  data.system.activities.attack.macro = { name: "", function: "", visible: true };
+  data.system.activities.attack.macroData = { name: "", command: "" };
+  assert.equal((await applyActor(actor, await context())).updated, 1);
+  assert.equal(data.name, "Тестовый меч");
+  const resist = original();
+  resist.name = resist.flags.ddbimporter.originalName = "Magic Resistance";
+  assert.equal(safeName(resist), false);
 });

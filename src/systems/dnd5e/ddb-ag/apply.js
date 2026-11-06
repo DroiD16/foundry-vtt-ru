@@ -1,6 +1,6 @@
 import { presentationEqual } from "./presentation.js";
 import { eligibleActor, eligibleActorIdentity, eligibleItem, identity } from "./identity.js";
-import { get, project, projectCandidates } from "./projector.js";
+import { automationStrings, get, project, projectCandidates } from "./projector.js";
 
 export async function applyActor(actor, { resolver, supplement = {entries: []}, isGM, onProgress }) {
   if (!isGM || !eligibleActor(actor) || actor.isOwner === false)
@@ -18,6 +18,8 @@ export async function applyActor(actor, { resolver, supplement = {entries: []}, 
   const proposals = [];
   const snapshots = new Map(Array.from(actor.items, i => [i, i.toObject()]));
   const parents = actorParents([...snapshots.values()]);
+  // Automation on any item can find another item by name (midi-qol `ItemUses.Ki`).
+  const automation = [...snapshots.values()].flatMap(automationStrings);
   await resolver.prepareParents?.(parents);
   let prepared = 0;
   for (const item of actor.items) {
@@ -45,6 +47,7 @@ export async function applyActor(actor, { resolver, supplement = {entries: []}, 
       const patch = project(before, match.text, {
         diagnostics: resolver.diagnostics,
         nativeRoot: true,
+        automation,
         ...match.projectOptions,
       });
       const { extra, children } = projectCandidates(before, match, supplement);

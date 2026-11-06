@@ -49,6 +49,8 @@ const protectedNames = new Set([
   "Armor of Agathys",
   "Eye Rays",
   "Multiattack",
+  // midi-qol checkMagicResistance finds this feat by its untranslated name.
+  "Magic Resistance",
 ]);
 // Literal BehaviorHelper activityName consumers in the current DDB support profile.
 const protectedActivityNames = new Set([
@@ -145,30 +147,100 @@ const protectedActivityNames = new Set([
   "Wall Damage",
   "War Oil Slip Save",
 ]);
-export function safeName(data, { nativeRoot = false } = {}) {
-  // DDB 7.6 findMatchedDDBItem requires exact name when definitionId is absent.
-  if (nativeRoot && !([data.flags?.ddbimporter?.id, data.flags?.ddbimporter?.definitionId].every(value => Number.isSafeInteger(value) && value > 0))) return false;
+// A string, or any nested string, with visible content.
+const hasText = (value) =>
+  typeof value === "string"
+    ? value.trim() !== ""
+    : Array.isArray(value)
+      ? value.some(hasText)
+      : Boolean(value) && typeof value === "object" && Object.values(value).some(hasText);
+const escapeRegExp = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+// Modules whose flags are scripted automation. Any content blocks renaming.
+const scriptedFlagModules = ["chris-premades", "gambits-premades", "itemacro", "effectmacro"];
+// Flags that never hold item references and are not collected as automation text.
+// `species` is DDB Importer race metadata (baseName, fullRaceName, groupName).
+const identityFlagModules = new Set(["ddbimporter", "species", "babele", "core", "ru-ru"]);
+// Effect change keys handled by modules that never look an item up by name.
+const inertMacroChange = /^macro\.(?:CE|CUB|tokenMagic|StatusEffect)$/i;
+const collect = (value, out) => {
+  if (typeof value === "string") out.push(value);
+  else if (value && typeof value === "object") for (const v of Object.values(value)) collect(v, out);
+  return out;
+};
+const collectFlags = (flags, out) => {
+  for (const [key, value] of Object.entries(flags ?? {})) if (!identityFlagModules.has(key)) collect(value, out);
+  return out;
+};
+// Strings automation reads at runtime: module flags, effect changes and flags,
+// activity macros and midi-qol conditions. midi-qol finds items by name from any
+// of them (`ItemMacro.<Name>`, `ItemUses.<Name>`, `ActivityUses.<Name>.<Activity>`,
+// `actor.items.getName(...)`), including from a different item on the same actor.
+export function automationStrings(data) {
+  const out = collectFlags(data?.flags, []);
+  for (const effect of Array.isArray(data?.effects) ? data.effects : []) {
+    if (!effect) continue;
+    collectFlags(effect.flags, out);
+    // A `name` change is an enchantment label such as "{} (True Strike)", not a lookup.
+    // Inert macro changes carry condition names ("Dodge"), not item lookups.
+    for (const change of Array.isArray(effect.changes) ? effect.changes : [])
+      if (change && change.key !== "name" && !inertMacroChange.test(change.key ?? "")) collect(change.value, out);
+  }
+  for (const activity of Object.values(data?.system?.activities ?? {})) {
+    if (!activity || typeof activity !== "object") continue;
+    collectFlags(activity.flags, out);
+    for (const key of ["macro", "macroData", "midiProperties", "useConditionText", "effectConditionText"])
+      collect(activity[key], out);
+  }
+  return out;
+}
+// Scripted automation on the item itself blocks renaming even without a visible name.
+function scriptedAutomation(data) {
+  const flags = data.flags ?? {};
+  const midi = flags["midi-qol"] ?? {};
+  if (hasText(midi.onUseMacroName) || hasText(midi.onUseMacroParts)) return true;
+  if (hasText(flags.dae?.macro)) return true;
+  if (scriptedFlagModules.some((key) => hasText(flags[key]))) return true;
+  for (const effect of Array.isArray(data.effects) ? data.effects : []) {
+    if (!effect) continue;
+    if (scriptedFlagModules.some((key) => hasText(effect.flags?.[key]))) return true;
+    if ((Array.isArray(effect.changes) ? effect.changes : []).some((c) => c && /macro/i.test(c.key ?? "") && !inertMacroChange.test(c.key))) return true;
+  }
+  return Object.values(data.system?.activities ?? {}).some(
+    (a) =>
+      a &&
+      typeof a === "object" &&
+      (hasText(a.macro) ||
+        hasText(a.macroData?.command) ||
+        hasText(a.flags?.["midi-qol"]?.onUseMacroName) ||
+        hasText(a.flags?.["midi-qol"]?.onUseMacroParts) ||
+        scriptedFlagModules.some((key) => hasText(a.flags?.[key]))),
+  );
+}
+// True when automation text names the item or uses its Item Macro.
+function nameReferenced(data, names, automation) {
+  const named = names.length
+    ? new RegExp(`(?<![\\p{L}\\p{N}])(?:${names.map(escapeRegExp).join("|")})(?![\\p{L}\\p{N}])`, "u")
+    : null;
+  if (automationStrings(data).some((text) => /ItemMacro/i.test(text))) return true;
+  return Boolean(named) && automation.some((text) => named.test(text));
+}
+// DDB 7.6 findMatchedDDBItem matches items without definitionId by exact name, so a
+// later DDB sync recreates renamed class features in English. That is accepted:
+// imports are rare, and the translation button is run again after one.
+export function safeName(data, { automation } = {}) {
+  const names = [...new Set([data.flags?.ddbimporter?.originalName, data.name])].filter(
+    (name) => typeof name === "string" && name.trim(),
+  );
   return (
     data.type !== "class" &&
-    !protectedNames.has(data.flags?.ddbimporter?.originalName ?? data.name) &&
+    !names.some((name) => protectedNames.has(name)) &&
     !data.flags?.ddbimporter?.dndbeyond?.isCustomItem &&
     !["cachedFor", "enchantment", "enchantmentId", "rider"].some(
       (key) => data.flags?.dnd5e?.[key],
     ) &&
-    !Object.keys(data.flags ?? {}).some(
-      (key) =>
-        ["midi-qol", "dae", "chris-premades", "gambits-premades", "autoanimations"].includes(key) &&
-        Object.keys(data.flags[key] ?? {}).length > 0,
-    ) &&
-    !Object.values(data.system?.activities ?? {}).some(
-      (a) =>
-        (a.macro && (typeof a.macro !== "object" || Object.values(a.macro).some(Boolean))) ||
-        Object.entries(a.flags ?? {}).some(
-          ([key, value]) =>
-            ["midi-qol", "dae", "ddbimporter", "chris-premades"].includes(key) &&
-            Object.keys(value ?? {}).length,
-        ),
-    )
+    !scriptedAutomation(data) &&
+    // `automation` holds the strings of every item on the actor; default to this item.
+    !nameReferenced(data, names, automation ?? automationStrings(data))
   );
 }
 // Parse attributes without DOM dependencies, including unquoted values and mixed casing.
