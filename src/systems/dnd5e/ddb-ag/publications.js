@@ -19,13 +19,25 @@ export function publicationTuple(book, rules) {
 export function canonicalPublication(book, rules) {
   return publicationTuple(book, rules)?.canonical ?? null;
 }
+// A book can come from several DDB sources (PHB 2024 and the Free Rules 2024 subset).
 export function publicationContradicts(key) {
-  const tuple = publicationTuple(key.source ?? key.publication, key.rules);
-  return Boolean(tuple && key.sourceIds?.length && !key.sourceIds.includes(tuple.sourceIds[0]));
+  const book = key.source ?? key.publication;
+  if (key.rules !== "2024" || typeof book !== "string" || !book || !key.sourceIds?.length) return false;
+  const tuples = publicationTuples.filter(t => t.rules === key.rules && [...t.agAliases, ...t.ddbAliases].includes(book));
+  return tuples.length > 0 && !tuples.some(t => t.sourceIds.some(id => key.sourceIds.includes(id)));
+}
+// DDB prefixes some names with their grouping; AG names the item alone.
+function unprefixed(key, name) {
+  if (typeof name !== "string") return name;
+  name = name.replace(/[’‘]/g, "'");
+  if (key.kind === "background") return name.replace(/^Background:\s+/, "");
+  if (key.kind === "feat" && key.subtypeDetail === "eldritchInvocation")
+    return name.replace(/^Eldritch Invocations?:\s+/, "");
+  return name;
 }
 export function canonicalName(key) {
-  if ((key.publication ?? key.source) !== "PHB 2024" || key.rules !== "2024") return key.english ?? key.name;
-  const name = key.english ?? key.name;
+  const name = unprefixed(key, key.english ?? key.name);
+  if ((key.publication ?? key.source) !== "PHB 2024" || key.rules !== "2024") return name;
   if (key.kind === "feat" && key.subtype === "class" && name === "Lay On Hands") return "Lay on Hands";
   if (key.kind === "spell" && name === "Locate Animals or Plants") return "Locate Animals Or Plants";
   return name;

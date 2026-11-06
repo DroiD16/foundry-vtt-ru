@@ -252,7 +252,7 @@ export function initDdbAg() {
         });
         const reasons = failures.slice(0, 1).join("");
         safeNotify(() => ui.notifications[totals.failed ? "warn" : "info"](
-          `DDB/AG: обновлено ${totals.updated}, без изменений ${totals.unchanged}, пропущено ${totals.skipped} (старый или чужой импорт: ${diagnostics.get("older-or-foreign-import") ?? 0}, несовместимый поставщик: ${diagnostics.get("provider-incompatible") ?? 0}), ошибок ${totals.failed}.${reasons ? ` ${reasons}` : ""}`,
+          `DDB/AG: обновлено ${totals.updated}, без изменений ${totals.unchanged}, пропущено ${totals.skipped} (несовместимый поставщик: ${diagnostics.get("provider-incompatible") ?? 0}), ошибок ${totals.failed}.${reasons ? ` ${reasons}` : ""}`,
           { permanent: true },
         ));
       } catch (error) {

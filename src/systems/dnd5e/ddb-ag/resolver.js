@@ -1,6 +1,6 @@
 import {canonicalName, canonicalPublication} from "./publications.js";
 import {providerEnglishName, providerPresentationCompatible} from "./catalog.js";
-import { identity, matchEntry } from "./identity.js";
+import { PHYSICAL_KINDS, identity, matchEntry } from "./identity.js";
 
 export function translationStyle(provider, settings) {
   if (provider === "ag-fifthpendium-ravenloft") return "ag";
@@ -77,8 +77,10 @@ export class Resolver {
     };
     for (const key of parents.filter(p => ["class", "subclass", "race", "species", "background"].includes(p.kind))) {
       const source = this.canonicalSource(key.source, key.rules);
-      const rows = (this.byName.get(key.name) ?? []).filter(({entry}) =>
-        entry.compatible !== false && matchEntry({...key, source}, entry) && (!entry.identifier || entry.identifier === key.identifier));
+      let rows = (this.byName.get(key.name) ?? []).filter(({entry}) =>
+        entry.compatible !== false && matchEntry({...key, source}, entry));
+      // DDB and AG identifiers differ ("moon" vs "college-of-moon"); they only break ties.
+      if (rows.length > 1) rows = rows.filter(({entry}) => !entry.identifier || entry.identifier === key.identifier);
       if (rows.length !== 1) continue;
       const {entry, provider} = rows[0];
       let doc;
@@ -94,12 +96,31 @@ export class Resolver {
       const advancements = Array.isArray(data.system?.advancement) ? data.system.advancement : Object.values(data.system?.advancement ?? {});
       for (const advancement of advancements) {
         if (!["ItemGrant", "ItemChoice"].includes(advancement.type)) continue;
-        for (const target of advancement.configuration?.items ?? []) {
+        const config = advancement.configuration ?? {};
+        for (const target of config.items ?? []) {
           const uuid = typeof target === "string" ? target : target.uuid;
           const child = this.byUuid.get(redirectUuid(uuid, this.redirects));
           if (!child) continue;
           addGrant(child.uuid, {uuid:entry.uuid, role:advancement.type, level:advancement.level});
         }
+        // ItemChoice offers `pool`. Only class/race/background features need a proven grant;
+        // standalone feats in a pool (origin feats, fighting styles) stay independently identifiable.
+        const acquired = (child) => child.kind === "feat" && ["class", "race", "background"].includes(child.subtype);
+        const pool = config.pool ?? [];
+        for (const target of pool) {
+          const uuid = typeof target === "string" ? target : target.uuid;
+          const child = this.byUuid.get(redirectUuid(uuid, this.redirects));
+          if (child && acquired(child)) addGrant(child.uuid, {uuid:entry.uuid, role:advancement.type, level:advancement.level});
+        }
+        const targets = [...(config.items ?? []), ...pool];
+        // An open ItemChoice (Eldritch Invocations) offers every feat of a typed subtype.
+        const restriction = config.restriction;
+        if (advancement.type === "ItemChoice" && !targets.length && restriction?.subtype &&
+            ["class", "race", "background"].includes(restriction.type))
+          for (const provider of this.providers) for (const child of provider.entries)
+            if (child.kind === "feat" && child.rules === entry.rules && child.subtype === restriction.type &&
+                child.subtypeDetail === restriction.subtype)
+              addGrant(child.uuid, {uuid:entry.uuid, role:advancement.type, level:advancement.level});
       }
     }
     // A subclass requires its typed class even when no advancement targets it.
@@ -119,15 +140,18 @@ export class Resolver {
       return context.indexOnly ? null : this.resolveTable(data, context);
     let key = identity(data, context);
     if (!key) return this.skip("missing-identity", data);
-    const publication = (this.sources.sources ?? []).find(s => s.rules === key.rules &&
+    const publications = (this.sources.sources ?? []).filter(s => s.rules === key.rules &&
       (s.ddb.name === key.source || s.ag === key.source));
-    if (publication && key.sourceIds.length && !key.sourceIds.includes(publication.ddb.id))
+    if (publications.length && key.sourceIds.length && !publications.some(p => key.sourceIds.includes(p.ddb.id)))
       return this.skip("publication-contradiction", data);
     key.source = this.canonicalSource(key.source, key.rules);
+    // Curated bindings keep DDB's own spelling ("Eldritch Invocations: Armor of Shadows").
+    const ddbName = key.name;
     key.name = canonicalName(key);
     if (this.catalog?.incompatibleFor(key, context.kind === "Actor" ? "Actor" : "Item")) return this.skip("provider-incompatible", data);
-    const subtypeBindings = (this.roles.subtypeBindings ?? []).filter(b => this.subtypeBindingMatches(data, key, b));
-    const binding = [...(this.roles.bindings ?? []).filter((b) => this.bindingMatches(data, key, b)), ...subtypeBindings];
+    const bindingKey = {...key, name: ddbName};
+    const subtypeBindings = (this.roles.subtypeBindings ?? []).filter(b => this.subtypeBindingMatches(data, bindingKey, b));
+    const binding = [...(this.roles.bindings ?? []).filter((b) => this.bindingMatches(data, bindingKey, b)), ...subtypeBindings];
     const strictSubtype = subtypeBindings.length === 1;
     if (binding.length > 1) return this.skip("ambiguous-binding", data);
     if (binding.length)
@@ -146,10 +170,16 @@ export class Resolver {
           .map(entry => ({entry, provider:this.providers.find(p => p.id === entry.provider)}))
           .filter(row => row.provider)
       : null;
-    const candidates = (actorRows ?? this.byName.get(key.name) ?? []).filter(({ entry }) =>
+    let candidates = (actorRows ?? this.byName.get(key.name) ?? []).filter(({ entry }) =>
       (!this.catalog || binding.length || key.kind !== "feat" || !key.subtype || !entry.subtype || entry.subtype === key.subtype) &&
       matchEntry(key, { ...entry, source: this.canonicalSource(entry.source, entry.rules) }),
     );
+    // Equipment named differently ("Leather" vs "Leather Armor") shares the dnd5e identifier.
+    if (!candidates.length && !binding.length && !actorRows && PHYSICAL_KINDS.has(key.kind) && key.identifier)
+      candidates = this.providers.flatMap((provider) => provider.entries
+        .filter((entry) => entry.identifier === key.identifier &&
+          matchEntry({ ...key, name: entry.name }, { ...entry, source: this.canonicalSource(entry.source, entry.rules) }))
+        .map((entry) => ({ provider, entry })));
     const available = candidates.filter(({ provider, entry }) => {
       const installed = this.modules.get(provider.id);
       return (
@@ -545,7 +575,8 @@ export class Resolver {
     const strings = JSON.stringify(text);
     for (const [, uuid] of strings.matchAll(/@(?:UUID|Embed)\[([^\] ]+)/g)) {
       try {
-        const target = redirectUuid(uuid, this.redirects);
+        // Foundry's parseUuid keeps "#anchor" in the embedded id; the enricher strips it.
+        const target = redirectUuid(uuid.split("#")[0], this.redirects);
         if (!target.startsWith("Compendium.ag-") && !target.startsWith("Compendium.dnd5e."))
           continue;
         if (await this.readLink(target)) links.add(uuid);

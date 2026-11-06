@@ -140,25 +140,27 @@ test("catalog and PC apply translate text once while preserving mechanics and pr
   assert.equal(writes.length, 1);
 });
 
-test("PC apply excludes protected, foreign-import and compendium-copy items", async () => {
+test("PC apply translates older-import items and excludes protected and compendium-copy items", async () => {
   const valid = actorFixture();
   const protectedItem = actorFixture(),
-    foreign = actorFixture(),
+    older = actorFixture(),
     copied = actorFixture();
   protectedItem.data.flags.ddbimporter.ignoreItemImport = true;
-  foreign.data.flags.ddbimporter.importId = "other-import";
+  // With "update equipment" off, DDB keeps equipment stamped by an earlier import.
+  older.data.flags.ddbimporter.importId = "earlier-import";
   copied.item._stats = {
     compendiumSource: "Compendium.other.items.Item.sword",
   };
-  const excluded = [protectedItem, foreign, copied];
-  for (const [i, f] of excluded.entries()) {
-    f.item.id = `excluded-${i}`;
+  const excluded = [protectedItem, copied];
+  for (const [i, f] of [...excluded, older].entries()) {
+    f.item.id = `extra-${i}`;
     valid.actor.items.set(f.item.id, f.item);
   }
   const before = excluded.map((f) => structuredClone(f.data));
   const result = await applyActor(valid.actor, await context());
-  assert.equal(result.updated, 1);
-  assert.equal(result.skipped, 3);
+  assert.equal(result.updated, 2);
+  assert.equal(result.skipped, 2);
+  assert.equal(older.data.name, "Тестовый меч");
   for (const [i, f] of excluded.entries()) {
     assert.equal(f.writes.length, 0);
     assert.deepEqual(f.data, before[i]);

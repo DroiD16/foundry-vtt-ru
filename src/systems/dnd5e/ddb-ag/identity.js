@@ -20,8 +20,13 @@ export function identity(data, { kind } = {}) {
     /^(?:UA|unknown|custom|homebrew)$/i.test(source.book.trim())
   )
     return null;
-  const name = flags.originalName ?? data.flags?.babele?.originalName ??
+  let name = flags.originalName ?? data.flags?.babele?.originalName ??
     (typeof data.name === "string" ? data.name.match(/\[([^\]]+)\]$/)?.[1] ?? data.name : data.name);
+  // DDB names a species lineage trait "Elven Lineage"; AG names it after the lineage ("High Elf").
+  const species = data.flags?.species;
+  if (data.type === "feat" && data.system?.type?.value === "race" && species?.isLineage === true &&
+      typeof name === "string" && /\bLineage$/.test(name) && typeof species.fullRaceName === "string" && species.fullRaceName)
+    name = species.fullRaceName;
   if (!name || !(data.type ?? kind) || !source?.book) return null;
   return {
     kind: data.type ?? kind,
@@ -85,7 +90,6 @@ export function nativeImportSource(actor, item) {
     Boolean(item.type === "spell" || data.type === "spell") &&
     Boolean(
       f?.importId &&
-      f.importId === actor.flags?.ddbimporter?.importId &&
       f.definitionId &&
       (f.definitionEntityTypeId || f.entityTypeId) &&
       pack &&
@@ -108,8 +112,9 @@ export function eligibleItem(actor, item) {
   return Boolean(
     f &&
     !copied(item, nativeImportSource(actor, item)) &&
+    // Any DDB import stamp. With "update equipment" off, DDB keeps equipment from an
+    // earlier import of the same character, so its importId is older than the actor's.
     f.importId &&
-    f.importId === actor.flags?.ddbimporter?.importId &&
     !f.ignoreItemImport &&
     !f.ddbCustomAdded &&
     !f.isCustomItem &&
@@ -122,6 +127,7 @@ export function eligibleItem(actor, item) {
   );
 }
 
+export const PHYSICAL_KINDS = new Set(["weapon", "equipment", "consumable", "tool", "loot", "container"]);
 export function matchEntry(key, entry) {
   if (
     (entry.matchStatus && entry.matchStatus !== "semantic-candidate") ||
@@ -135,7 +141,9 @@ export function matchEntry(key, entry) {
   if (entry.parents || entry.context?.grantParents) return false;
   if (entry.issues?.some((issue) => issue !== "duplicate-discriminators")) return false;
 
-  for (const field of ["subtype", "subtypeDetail", "classIdentifier"]) {
+  // Physical item subtypes are each module's own categorisation (DDB "trinket", AG "lighting").
+  const fields = PHYSICAL_KINDS.has(key.kind) ? ["classIdentifier"] : ["subtype", "subtypeDetail", "classIdentifier"];
+  for (const field of fields) {
     if (entry.context?.[field] && entry.context[field] !== key[field]) return false;
   }
   if (entry.parent && typeof entry.parent !== "string") return false;

@@ -2,10 +2,11 @@ import {semanticKey, matchEntry} from "./identity.js";
 import {canonicalPublication, canonicalName, publicationContradicts, bookFolders, agStyleEvidence} from "./publications.js";
 
 export const AG_PROVIDERS = ["ag-fifthpendium", "ag-fifthpendium-dndbeyond", "ag-fifthpendium-eberron", "ag-fifthpendium-forgotten-realms", "ag-fifthpendium-ravenloft"];
-export const AG_INDEX_FIELDS = ["type", "folder", "flags.babele.originalName", "flags.babele.translated", "flags.babele.hasTranslation", "system.source", "system.details.source", "system.type", "system.identifier", "system.classIdentifier"];
+export const AG_INDEX_FIELDS = ["type", "folder", "flags.babele.originalName", "flags.babele.translated", "flags.babele.hasTranslation", "system.source", "system.details.source", "system.type", "system.identifier", "system.classIdentifier", "system.container"];
 const english = value => typeof value === "string" && /[A-Za-z]/.test(value) && /^[\p{Script=Latin}\p{M}\p{N}\p{P}\p{S} ]+$/u.test(value) && !/[<>\p{Cc}\p{Cf}]/u.test(value);
 export function englishName(data) {
-  const parse = v => typeof v === "string" ? v.match(/\[([^\]]+)\]\s*$/)?.[1] ?? v : null;
+  // AG sometimes types a typographic apostrophe ("Cook’s Utensils"); DDB never does.
+  const parse = v => typeof v === "string" ? (v.match(/\[([^\]]+)\]\s*$/)?.[1] ?? v).replace(/[’‘]/g, "'") : null;
   const names = [parse(data.flags?.babele?.originalName), parse(data.name)].filter(english);
   return new Set(names).size === 1 ? names[0] : null;
 }
@@ -37,6 +38,8 @@ export function providerPresentationCompatible(uuid, name, label) {
   return numbers(name) === numbers(label.match(/^(.*?)\s*\[/)?.[1] ?? label);
 }
 export function catalogRow(data, pack, provider, {style} = {}) {
+  // Items inside AG starting-equipment packs are copies of the standalone entry.
+  if (data.system?.container) return null;
   const name = providerEnglishName(data, {uuid:`Compendium.${pack.collection}.${pack.documentName}.${data._id}`, provider, style});
   if (!name || !data.type) return null;
   let folder = pack.folders?.get(data.folder), book;

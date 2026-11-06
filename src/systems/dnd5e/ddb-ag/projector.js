@@ -232,7 +232,6 @@ export function safeName(data, { automation } = {}) {
     (name) => typeof name === "string" && name.trim(),
   );
   return (
-    data.type !== "class" &&
     !names.some((name) => protectedNames.has(name)) &&
     !data.flags?.ddbimporter?.dndbeyond?.isCustomItem &&
     !["cachedFor", "enchantment", "enchantmentId", "rider"].some(
@@ -278,10 +277,48 @@ function syntax(text) {
   }
   return anchors.sort();
 }
+// Syntax AG prose may add that the DDB text lacks. Table layout and buttons with literal
+// arguments are presentation. A roll-data lookup is accepted only when the item's own roll
+// data defines the path, so a missing DDB scale ("prepared-spells") still keeps the text.
+const presentationAttribute = /^data-colwidth=/i;
+const literalCommand = /^\[\[\/(?:award|skill|check|tool|save)\b[^\]@]*\]\]$/i;
+const rollDataLookup = /^\[\[(?:lookup\s+)?@([\w.-]+)(?:\s+(?:lowercase|uppercase|capitalize))?\]\]$/i;
+const rollDataCheck = /^\[\[\/(?:save|check|skill)\b[^\]@]*\bdc=@([\w.-]+)[^\]@]*\]\]$/i;
+function rollDataPath(path, rollData) {
+  if (!rollData || /^flags\b/.test(path)) return false;
+  const value = get(rollData, path);
+  return value !== undefined && value !== null && value !== "";
+}
+function syntaxAccepted(before, after, rollData) {
+  const remaining = syntax(before);
+  const added = [];
+  for (const token of syntax(after)) {
+    const index = remaining.indexOf(token);
+    if (index >= 0) remaining.splice(index, 1);
+    else added.push(token);
+  }
+  // A link to the D&D Beyond website is DDB presentation; AG prose replaces it.
+  if (remaining.some((token) => !/^href=https:\/\/www\.dndbeyond\.com\//i.test(token))) return false;
+  const enrichers = [];
+  for (const token of added) {
+    if (presentationAttribute.test(token) || literalCommand.test(token)) continue;
+    const path = token.match(rollDataLookup)?.[1] ?? token.match(rollDataCheck)?.[1];
+    if (path) {
+      if (!rollDataPath(path, rollData)) return false;
+      enrichers.push(token);
+      continue;
+    }
+    if (token.startsWith("@") && !token.includes("[")) continue; // checked below
+    return false;
+  }
+  // syntax() also lists the bare "@path" inside each accepted enricher.
+  return added.every((token) => !token.startsWith("@") || token.includes("[") ||
+    enrichers.some((enricher) => enricher.includes(token)));
+}
 export function safeText(
   before,
   after,
-  { validatedLinks = new Set(), validatedReferences = new Set(), allowEqual = false } = {},
+  { validatedLinks = new Set(), validatedReferences = new Set(), allowEqual = false, rollData } = {},
 ) {
   if (
     typeof before !== "string" ||
@@ -296,9 +333,13 @@ export function safeText(
   const afterReferences = new Set(
     [...decodeReferences(after).matchAll(/(?:&|@)Reference\[([^\]]+)\]/gi)].map((m) => m[1]),
   );
+  // DDB marks skills, conditions, weapon masteries and senses with plain glossary references
+  // (&Reference[acr], [prone], [push]); AG prose names them in text or links its own glossary.
+  // Dropping such a tooltip is presentation. A reference with other options must survive.
+  const glossary = (input) => /^(?:[a-z]+=)?[a-z]+(?: apply=(?:true|false))?$/i.test(input);
   if (
     [...beforeReferences].some(
-      (input) => !afterReferences.has(input) && !validatedReferences.has(input),
+      (input) => !afterReferences.has(input) && !validatedReferences.has(input) && !glossary(input),
     )
   )
     return false;
@@ -319,8 +360,7 @@ export function safeText(
     )
   )
     return false;
-  return JSON.stringify(syntax(before)) === JSON.stringify(syntax(after)) &&
-    (allowEqual || !presentationEqual(before, after));
+  return syntaxAccepted(before, after, rollData) && (allowEqual || !presentationEqual(before, after));
 }
 export function presentationText(before, after) {
   if (typeof after !== "string") return after;
@@ -375,7 +415,14 @@ function projectedText(before, after, options) {
 }
 export function project(data, translated, { diagnostics = () => {}, ...options } = {}) {
   const delta = {};
-  if (safeName(data, options) && safeText(data.name, translated.name)) delta.name = translated.name;
+  if (safeName(data, options) && safeText(data.name, translated.name)) {
+    delta.name = translated.name;
+    // DDB leaves originalName unset on classes. Keep the English identity for later runs,
+    // whatever form the translated name takes.
+    const english = data.flags?.ddbimporter?.originalName;
+    if (data.flags?.ddbimporter && (typeof english !== "string" || !english) && typeof data.name === "string")
+      delta["flags.ddbimporter.originalName"] = data.name;
+  }
   for (const path of paths) {
     const before = get(data, path),
       after = projectedText(before, get(translated, path), options);
