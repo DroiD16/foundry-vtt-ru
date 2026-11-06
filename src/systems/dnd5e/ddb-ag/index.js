@@ -132,6 +132,7 @@ function providerData(document, seen = new Set()) {
 
 function unavailableReason() {
   if (!game.modules.get("ddb-importer")?.active) return "Включите DDB Importer для перевода персонажей.";
+  if (!game.modules.get("babele")?.active) return "Включите Babele для перевода персонажей.";
   if (!AG_PROVIDERS.some(id => game.modules.get(id)?.active))
     return "Включите поставщик AG для перевода персонажей.";
   return "";
@@ -141,23 +142,23 @@ const initializedHooks = new WeakSet();
 export function initDdbAg() {
   if (initializedHooks.has(Hooks)) return;
   initializedHooks.add(Hooks);
+  let display;
   Hooks.once("ready", () => {
     const catalog = getAgCatalog();
-    const display = initCompendiumDisplay({catalog, readContext:load});
+    display = initCompendiumDisplay({catalog, readContext:load});
     // dnd5e emits this after startup migration, also when no migration is needed.
     if (display.enabled) Hooks.once("dnd5e.ready", display.pause.acquire());
     return display;
   });
-  Hooks.on("babele.ready", () => {
+  const translationsReady = () => {
     ready = true;
     pending = null;
+    display?.pause?.reset();
     catalog?.invalidate();
-  });
-  Hooks.on("babele.reinitialized", () => {
-    pending = null;
-    catalog?.invalidate();
-    ready = true;
-  });
+    return display?.refreshIndexes?.().catch(error => console.warn("ru-ru DDB index", error));
+  };
+  Hooks.on("babele.ready", translationsReady);
+  Hooks.on("babele.reinitialized", translationsReady);
   Hooks.on("babele.dataLoaded", () => {
     pending = null;
   });
@@ -219,26 +220,32 @@ export function initDdbAg() {
         let lastUpdate = 0;
         for (const [index, actor] of actors.entries()) {
           let lastPhase;
-          const outcome = await applyActor(actor, {
-            ...context,
-            isGM: game.user.isGM,
-            onProgress: ({ phase, completed, total }) => {
-              const now = Date.now();
-              if (phase === lastPhase && completed !== total && now - lastUpdate < 100) return;
-              lastPhase = phase;
-              lastUpdate = now;
-              if (!progress) return;
-              safeNotify(() => {
-                if (!ui.notifications.has(progress)) return;
-                const fraction = total ? completed / total : 1;
-                progress.update({
-                  pct: (index + (phase === "prepare" ? fraction / 2 : (1 + fraction) / 2)) / actors.length,
-                  message: `DDB/AG: персонаж ${index + 1}/${actors.length}, ${phase === "prepare" ? "подготовка" : "сохранение"} предметов ${completed}/${total}`,
+          try {
+            const outcome = await applyActor(actor, {
+              ...context,
+              isGM: game.user.isGM,
+              onProgress: ({ phase, completed, total }) => {
+                const now = Date.now();
+                if (phase === lastPhase && completed !== total && now - lastUpdate < 100) return;
+                lastPhase = phase;
+                lastUpdate = now;
+                if (!progress) return;
+                safeNotify(() => {
+                  if (!ui.notifications.has(progress)) return;
+                  const fraction = total ? completed / total : 1;
+                  progress.update({
+                    pct: (index + (phase === "prepare" ? fraction / 2 : (1 + fraction) / 2)) / actors.length,
+                    message: `DDB/AG: персонаж ${index + 1}/${actors.length}, ${phase === "prepare" ? "подготовка" : "сохранение"} предметов ${completed}/${total}`,
+                  });
                 });
-              });
-            },
-          });
-          for (const key of Object.keys(totals)) totals[key] += outcome[key];
+              },
+            });
+            for (const key of Object.keys(totals)) totals[key] += outcome[key];
+          } catch (error) {
+            totals.failed++;
+            console.error("ru-ru DDB/AG", error);
+            failures.push(`Не удалось перевести персонажа ${actor.name ?? actor.id}.`);
+          }
         }
         safeNotify(() => {
           if (progress && ui.notifications.has(progress)) progress.update({ pct: 1 });

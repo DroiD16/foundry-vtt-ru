@@ -1,8 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
+import { set } from "../../src/systems/dnd5e/ddb-ag/projector.js";
 
-test("startup migration and DDB imports suspend display until completion, including failure", async (t) => {
+test("settings and compendium localization follow Babele readiness and DDB imports", async (t) => {
   const globals = [
     "Hooks",
     "game",
@@ -83,18 +84,20 @@ test("startup migration and DDB imports suspend display until completion, includ
       return this.index;
     },
   };
+  let translationsLoaded = false;
   const provider = {
     collection: "ag-fifthpendium.monsters",
     documentName: "Actor",
     metadata: { packageName: "ag-fifthpendium" },
     getIndex: async () => {
-      return new Map([[donor._id, donor]]);
+      return new Map([[donor._id, translationsLoaded ? donor : { ...donor, name: "Goblin" }]]);
     },
   };
   globalThis.game = {
     user: {},
     modules: new Map([
       ["ddb-importer", { active: true, version: "8.0.0" }],
+      ["babele", { active: true }],
       ["ag-fifthpendium", { active: true }],
     ]),
     settings: { get: () => "ag" },
@@ -177,6 +180,11 @@ test("startup migration and DDB imports suspend display until completion, includ
   assert.equal((await read()).name, "Goblin");
   assert.equal((await read(true)).name, "Goblin");
   emit("dnd5e.ready");
+  await nativePack.getIndex();
+  assert.equal(nativePack.index.get("npc").name, "Goblin");
+  translationsLoaded = true;
+  await Promise.all(emit("babele.ready"));
+  assert.equal(nativePack.index.get("npc").name, "Гоблин");
   const localized = await read();
   assert.equal(localized.name, "Гоблин");
   assert.equal(localized.system.details.biography.value, "Русский текст");
@@ -203,6 +211,13 @@ test("startup migration and DDB imports suspend display until completion, includ
   assert.equal((await read()).name, "Гоблин");
   assert.equal((await read(true)).name, "Гоблин");
 
+  donor.name = "Гоблин-разведчик";
+  await Promise.all(emit("babele.reinitialized"));
+  assert.equal(nativePack.index.get("npc").name, "Гоблин-разведчик");
+  await DDBImporter.debug.lib.DDBRunContext.runWith({}, async () => {
+    assert.equal(nativePack.index.get("npc").name, "Goblin");
+  });
+
   class Element {
     children = [];
     dataset = {};
@@ -226,7 +241,7 @@ test("startup migration and DDB imports suspend display until completion, includ
   globalThis.Option = class {};
   game.user.isGM = true;
   game.actors = [];
-  for (const id of ["ddb-importer", "ag-fifthpendium"]) {
+  for (const id of ["ddb-importer", "ag-fifthpendium", "babele"]) {
     game.modules.get(id).active = false;
     const tab = new Element(),
       root = new Element();
@@ -241,7 +256,66 @@ test("startup migration and DDB imports suspend display until completion, includ
     game.modules.get(id).active = true;
   }
   assert.deepEqual(notices, []);
+
+  // A PC can become ineligible after the batch list was built. Keep the earlier
+  // result and continue with the next PC using the real apply pipeline.
+  const sword = {
+    _id: "sword", name: "Test Sword", type: "weapon",
+    flags: { ddbimporter: { id: 17, definitionId: 42, definitionEntityTypeId: 7,
+      importId: "session", originalName: "Test Sword" } },
+    system: { source: { book: "PHB 2024", rules: "2024" },
+      description: { value: "English sword" } }, effects: [],
+  };
+  const translatedSword = { ...structuredClone(sword), name: "Тестовый меч",
+    flags: { babele: { originalName: "Test Sword" } } };
+  translatedSword.system.description.value = "Описание меча";
+  game.packs.set("ag-fifthpendium.equipment", {
+    collection: "ag-fifthpendium.equipment", documentName: "Item",
+    metadata: { packageName: "ag-fifthpendium" },
+    getIndex: async () => new Map([[translatedSword._id, translatedSword]]),
+  });
+  globalThis.fromUuid = async (uuid) => ({
+    toObject: () => structuredClone(uuid.includes(".equipment.") ? translatedSword : donor),
+  });
+  const actors = ["First", "Unavailable", "Last"].map((name, i) => {
+    const data = structuredClone(sword);
+    const item = { id: data._id, flags: data.flags, toObject: () => structuredClone(data),
+      update: async (patch) => {
+        for (const [path, value] of Object.entries(patch)) set(data, path, value);
+        if (i === 0) actors[1].flags.ddbimporter.importId = null;
+      } };
+    const items = new Map([[item.id, item]]);
+    items[Symbol.iterator] = items.values;
+    return { id: name, name, type: "character", isOwner: true, items,
+      flags: { ddbimporter: { importId: "session", dndbeyond: { characterId: i + 1 } } } };
+  });
+  game.actors = actors;
+  await Promise.all(emit("babele.reinitialized"));
+  ui.notifications.info = (message) => notices.push(message);
+  ui.notifications.warn = (message) => notices.push(message);
+  ui.notifications.has = () => false;
+  ui.notifications.remove = () => {};
+  const tab = new Element(), root = new Element();
+  root.querySelector = () => tab;
+  emit("renderSettingsConfig", {}, root);
+  const button = tab.children[0].children[1].children[1];
+  assert.equal(button.disabled, false);
+  const originalError = console.error;
+  const errors = [];
+  console.error = (...args) => errors.push(args);
+  try {
+    await button.click();
+  } finally {
+    console.error = originalError;
+  }
+  assert.equal(errors.length, 1);
+  assert.equal(errors[0][1].message, "PC недоступен для перевода");
+  assert.match(notices.at(-1), /обновлено 2, без изменений 0, пропущено 0 .*ошибок 1/);
+  assert.match(notices.at(-1), /Unavailable/);
+  assert.equal(actors[0].items.get("sword").toObject().name, "Тестовый меч");
+  assert.equal(actors[2].items.get("sword").toObject().name, "Тестовый меч");
+  assert.equal(button.disabled, false);
   donor.system.source.rules = "2014";
-  emit("babele.reinitialized");
+  await Promise.all(emit("babele.reinitialized"));
   assert.deepEqual(await read(), source);
 });

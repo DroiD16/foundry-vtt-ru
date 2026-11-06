@@ -120,6 +120,10 @@ export function createImportPause({ packs, refresh = () => {} }) {
       return count;
     },
     remember,
+    reset() {
+      switchRows(false);
+      rows.clear();
+    },
     acquire,
     bracket,
     holds,

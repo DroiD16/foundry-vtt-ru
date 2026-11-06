@@ -204,5 +204,5 @@ export function initCompendiumDisplay({
   }
   // Initial game.data indexes also pass through metadata-only naming.
   void refreshIndexes().catch((error) => console.warn("ru-ru DDB index", error));
-  return { enabled, pause };
+  return { enabled, pause, refreshIndexes };
 }
