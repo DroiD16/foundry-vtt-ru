@@ -181,7 +181,9 @@ export function automationStrings(data) {
     if (!effect) continue;
     collectFlags(effect.flags, out);
     // A `name` change is an enchantment label such as "{} (True Strike)", not a lookup.
-    for (const change of effect.changes ?? []) if (change && change.key !== "name") collect(change.value, out);
+    // Inert macro changes carry condition names ("Dodge"), not item lookups.
+    for (const change of Array.isArray(effect.changes) ? effect.changes : [])
+      if (change && change.key !== "name" && !inertMacroChange.test(change.key ?? "")) collect(change.value, out);
   }
   for (const activity of Object.values(data?.system?.activities ?? {})) {
     if (!activity || typeof activity !== "object") continue;
@@ -201,7 +203,7 @@ function scriptedAutomation(data) {
   for (const effect of Array.isArray(data.effects) ? data.effects : []) {
     if (!effect) continue;
     if (scriptedFlagModules.some((key) => hasText(effect.flags?.[key]))) return true;
-    if ((effect.changes ?? []).some((c) => c && /macro/i.test(c.key ?? "") && !inertMacroChange.test(c.key))) return true;
+    if ((Array.isArray(effect.changes) ? effect.changes : []).some((c) => c && /macro/i.test(c.key ?? "") && !inertMacroChange.test(c.key))) return true;
   }
   return Object.values(data.system?.activities ?? {}).some(
     (a) =>

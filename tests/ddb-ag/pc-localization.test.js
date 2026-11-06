@@ -336,8 +336,8 @@ test("PC apply keeps the English name when automation can find the item by name"
     "premade flags": (d) => (d.flags["chris-premades"] = { info: { identifier: "testSword" } }),
     "flag text with name": (d) => (d.flags.custom = { condition: "workflow.item.name === 'Test Sword'" }),
     "display name in flag text": (d) => {
-      d.name = "Test Sword [Keen]";
-      d.flags.custom = { condition: "actor.items.getName('Test Sword [Keen]')" };
+      d.name = "Keen Blade";
+      d.flags.custom = { condition: "actor.items.getName('Keen Blade')" };
     },
     "macro effect change": (d) => d.effects[0].changes.push({ key: "macro.execute", value: "GM Helper" }),
     "effect macro flags": (d) => (d.effects[0].flags = { effectmacro: { onCreate: { script: "return;" } } }),
@@ -371,7 +371,7 @@ test("PC apply keeps the name when another item on the actor finds it by name", 
 
 test("PC apply keeps midi-qol hard-coded and inert macro names safe", async () => {
   const { actor, data } = actorFixture();
-  data.effects[0].changes.push({ key: "macro.CE", value: "Blinded" }, { key: "macro.tokenMagic", value: "glow" });
+  data.effects[0].changes.push({ key: "macro.CE", value: "Test Sword" }, { key: "macro.tokenMagic", value: "glow" });
   data.system.activities.attack.macro = { name: "", function: "", visible: true };
   data.system.activities.attack.macroData = { name: "", command: "" };
   assert.equal((await applyActor(actor, await context())).updated, 1);
