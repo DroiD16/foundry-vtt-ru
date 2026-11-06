@@ -1,4 +1,5 @@
-// Only observed secret-section separators and Reference ampersand escaping are presentation.
+// Only whitespace between tag attributes and Reference ampersand escaping are presentation:
+// Foundry's server cleanHTML re-serializes tags with single spaces between attributes.
 // Scan tags quote-aware; raw/code spans and enrichers are opaque. Malformed input
 // returns the original string, so uncertainty never makes unequal values equal.
 function canonicalSecretSeparator(text) {
@@ -54,10 +55,25 @@ function canonicalSecretSeparator(text) {
       if (!match || /<(?:script|style|pre|code|textarea)\b/i.test(text.slice(end + 1, match.index))) return text;
       output += text.slice(cursor, close.lastIndex); cursor = close.lastIndex; continue;
     }
-    // Exact shape, order and values; no other attributes or attribute syntax accepted.
-    output += /^<section class="secret"[\t\n\f\r ]+id="[A-Za-z0-9_-]+">$/.test(tag)
-      ? tag.replace(/^(<section class="secret")[\t\n\f\r ]+(id=)/, "$1 $2") : tag;
+    output += canonicalTag(tag);
     cursor = end + 1;
+  }
+  return output;
+}
+// Collapse whitespace outside quoted attribute values; the tag is already quote-balanced.
+function canonicalTag(tag) {
+  let output = "", quote = null;
+  for (let i = 0; i < tag.length; i++) {
+    const char = tag[i];
+    if (quote) { if (char === quote) quote = null; output += char; continue; }
+    if (char === '"' || char === "'") { quote = char; output += char; continue; }
+    if (/[\t\n\f\r ]/.test(char)) {
+      while (i + 1 < tag.length && /[\t\n\f\r ]/.test(tag[i + 1])) i++;
+      // Whitespace before the closing bracket carries nothing.
+      if (tag[i + 1] !== ">") output += " ";
+      continue;
+    }
+    output += char;
   }
   return output;
 }

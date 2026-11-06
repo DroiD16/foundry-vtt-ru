@@ -210,3 +210,13 @@ test("safeText accepts AG presentation and lookups the item can resolve", () => 
   // A link to the DDB website is DDB presentation.
   assert.equal(safeText('<p><a href="https://www.dndbeyond.com/sources/x">x</a></p>', "<p>Русский</p>"), true);
 });
+
+test("saved text equals the sent text after the server re-serializes tag whitespace", async () => {
+  const { presentationEqual } = await import("../../src/systems/dnd5e/ddb-ag/presentation.js");
+  const sent = '<table\n      class="core-class-traits"><tr><th scope="row"\n      data-colwidth="231">Кость</th></tr></table>';
+  const stored = '<table class="core-class-traits"><tr><th scope="row" data-colwidth="231">Кость</th></tr></table>';
+  assert.equal(presentationEqual(sent, stored), true);
+  // Whitespace inside attribute values and in text is content.
+  assert.equal(presentationEqual('<p title="a  b">x</p>', '<p title="a b">x</p>'), false);
+  assert.equal(presentationEqual("<p>a  b</p>", "<p>a b</p>"), false);
+});
