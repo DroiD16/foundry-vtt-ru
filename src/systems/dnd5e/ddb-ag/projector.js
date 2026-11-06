@@ -145,30 +145,68 @@ const protectedActivityNames = new Set([
   "Wall Damage",
   "War Oil Slip Save",
 ]);
-export function safeName(data, { nativeRoot = false } = {}) {
-  // DDB 7.6 findMatchedDDBItem requires exact name when definitionId is absent.
-  if (nativeRoot && !([data.flags?.ddbimporter?.id, data.flags?.ddbimporter?.definitionId].every(value => Number.isSafeInteger(value) && value > 0))) return false;
+// A string, or any nested string, with visible content.
+const hasText = (value) =>
+  typeof value === "string"
+    ? value.trim() !== ""
+    : Array.isArray(value)
+      ? value.some(hasText)
+      : Boolean(value) && typeof value === "object" && Object.values(value).some(hasText);
+const escapeRegExp = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+// Modules whose item flags are scripted automation. Any content blocks renaming.
+const scriptedFlagModules = ["chris-premades", "gambits-premades", "itemacro"];
+// Flags that never hold item references and are not scanned for the item name.
+const identityFlagModules = new Set(["ddbimporter", "babele", "core", "ru-ru"]);
+// Automation may find an item by its English name: midi-qol `ItemMacro.<Name>`,
+// macro bodies with `actor.items.getName(...)`, premade scripts. Plain UI or
+// activation settings (midi-qol forceCEOff, dae activeEquipped, ...) never do.
+function nameBoundAutomation(data, english) {
+  const flags = data.flags ?? {};
+  const midi = flags["midi-qol"] ?? {};
+  if (hasText(midi.onUseMacroName) || hasText(midi.onUseMacroParts)) return true;
+  if (hasText(flags.dae?.macro)) return true;
+  if (scriptedFlagModules.some((key) => hasText(flags[key]))) return true;
+  const named = english
+    ? new RegExp(`(?<![\\p{L}\\p{N}])${escapeRegExp(english)}(?![\\p{L}\\p{N}])`, "u")
+    : null;
+  const references = (value) =>
+    typeof value === "string"
+      ? /ItemMacro/i.test(value) || Boolean(named?.test(value))
+      : Boolean(value) && typeof value === "object" && Object.values(value).some(references);
+  const scan = (moduleFlags) =>
+    Object.entries(moduleFlags ?? {}).some(([key, value]) => !identityFlagModules.has(key) && references(value));
+  if (scan(flags)) return true;
+  if (
+    (data.effects ?? []).some((effect) =>
+      // A `name` change is an enchantment label such as "{} (True Strike)", not a lookup.
+      (effect.changes ?? []).some(
+        (change) => /macro/i.test(change.key ?? "") || (change.key !== "name" && references(change.value)),
+      ),
+    )
+  )
+    return true;
+  return Object.values(data.system?.activities ?? {}).some(
+    (a) =>
+      (a.macro && (typeof a.macro !== "object" || Object.values(a.macro).some(Boolean))) ||
+      hasText(a.flags?.["midi-qol"]?.onUseMacroName) ||
+      hasText(a.flags?.["midi-qol"]?.onUseMacroParts) ||
+      scriptedFlagModules.some((key) => hasText(a.flags?.[key])) ||
+      scan(a.flags),
+  );
+}
+// DDB 7.6 findMatchedDDBItem matches items without definitionId by exact name, so a
+// later DDB sync recreates renamed class features in English. That is accepted:
+// imports are rare, and the translation button is run again after one.
+export function safeName(data) {
+  const english = data.flags?.ddbimporter?.originalName ?? data.name;
   return (
     data.type !== "class" &&
-    !protectedNames.has(data.flags?.ddbimporter?.originalName ?? data.name) &&
+    !protectedNames.has(english) &&
     !data.flags?.ddbimporter?.dndbeyond?.isCustomItem &&
     !["cachedFor", "enchantment", "enchantmentId", "rider"].some(
       (key) => data.flags?.dnd5e?.[key],
     ) &&
-    !Object.keys(data.flags ?? {}).some(
-      (key) =>
-        ["midi-qol", "dae", "chris-premades", "gambits-premades", "autoanimations"].includes(key) &&
-        Object.keys(data.flags[key] ?? {}).length > 0,
-    ) &&
-    !Object.values(data.system?.activities ?? {}).some(
-      (a) =>
-        (a.macro && (typeof a.macro !== "object" || Object.values(a.macro).some(Boolean))) ||
-        Object.entries(a.flags ?? {}).some(
-          ([key, value]) =>
-            ["midi-qol", "dae", "ddbimporter", "chris-premades"].includes(key) &&
-            Object.keys(value ?? {}).length,
-        ),
-    )
+    !nameBoundAutomation(data, english)
   );
 }
 // Parse attributes without DOM dependencies, including unquoted values and mixed casing.

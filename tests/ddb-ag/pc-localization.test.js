@@ -314,3 +314,35 @@ test("PC parent grants resolve features without leaking into display matching", 
   assert.equal(await pc.resolve(feature, { parents: multiclass }), null);
   assert.equal(await display.resolve(feature), null);
 });
+
+test("PC apply renames items without definitionId and with inert automation flags", async () => {
+  const { actor, data } = actorFixture();
+  delete data.flags.ddbimporter.definitionId;
+  data.flags["midi-qol"] = { removeAttackDamageButtons: "default", forceCEOff: true, onUseMacroParts: {} };
+  data.flags.dae = { alwaysActive: false, activeEquipped: true };
+  data.system.activities.attack.flags = { ddbimporter: { noeffect: true } };
+  data.effects[0].changes.push({ key: "name", value: "{} (Test Sword)" });
+  assert.equal((await applyActor(actor, await context())).updated, 1);
+  assert.equal(data.name, "Тестовый меч");
+  assert.equal(data.system.description.value, "Описание тестового меча.");
+});
+
+test("PC apply keeps the English name when automation can find the item by name", async () => {
+  const cases = [
+    (d) => (d.flags["midi-qol"] = { onUseMacroName: "[postActiveEffects]ItemMacro.Test Sword" }),
+    (d) => (d.flags["midi-qol"] = { onUseMacroParts: { items: [{ macroName: "Sword Macro", option: "postDamageRoll" }] } }),
+    (d) => (d.flags.dae = { macro: { command: "return 1;" } }),
+    (d) => (d.flags["chris-premades"] = { info: { identifier: "testSword" } }),
+    (d) => (d.flags.custom = { condition: "workflow.item.name === 'Test Sword'" }),
+    (d) => d.effects[0].changes.push({ key: "macro.execute", value: "GM Helper" }),
+    (d) => (d.system.activities.attack.macro = { command: "actor.items.getName('Test Sword')" }),
+    (d) => (d.system.activities.attack.flags = { "midi-qol": { onUseMacroName: "Helper" } }),
+  ];
+  for (const mutate of cases) {
+    const { actor, data } = actorFixture();
+    mutate(data);
+    assert.equal((await applyActor(actor, await context())).updated, 1);
+    assert.equal(data.name, "Test Sword");
+    assert.equal(data.system.description.value, "Описание тестового меча.");
+  }
+});
