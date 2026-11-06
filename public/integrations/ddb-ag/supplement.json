@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "parent": "Hunger of Hadar",
+      "kind": "spell",
+      "rules": "2024",
+      "source": "PHB 2024",
+      "role": "activity",
+      "name": "Cast and Place Darkness",
+      "type": "ddbmacro",
+      "safeName": true,
+      "translations": {
+        "ag": {
+          "name": "Сотворение и размещение тьмы",
+          "description": { "chatFlavor": "Сотворение и размещение тьмы" }
+        },
+        "dndsu": {
+          "name": "Сотворение и размещение тьмы",
+          "description": { "chatFlavor": "Сотворение и размещение тьмы" }
+        }
+      }
+    },
+    {
+      "parent": "Hunger of Hadar",
+      "kind": "spell",
+      "rules": "2024",
+      "source": "PHB 2024",
+      "role": "activity",
+      "name": "Start of Turn Damage",
+      "type": "damage",
+      "safeName": false,
+      "translations": {
+        "ag": {
+          "name": "Урон в начале хода",
+          "description": { "chatFlavor": "Урон в начале хода" }
+        },
+        "dndsu": {
+          "name": "Урон в начале хода",
+          "description": { "chatFlavor": "Урон в начале хода" }
+        }
+      }
+    },
+    {
+      "parent": "Hunger of Hadar",
+      "kind": "spell",
+      "rules": "2024",
+      "source": "PHB 2024",
+      "role": "activity",
+      "name": "End of Turn Save vs Damage",
+      "type": "save",
+      "safeName": false,
+      "translations": {
+        "ag": {
+          "name": "Испытание против урона в конце хода",
+          "description": { "chatFlavor": "Испытание против урона в конце хода" }
+        },
+        "dndsu": {
+          "name": "Спасбросок против урона в конце хода",
+          "description": { "chatFlavor": "Спасбросок против урона в конце хода" }
+        }
+      }
+    }
+  ]
+}
