@@ -9,7 +9,7 @@
       "url": "https://discord.gg/Z2CXFy35WF"
     }
   ],
-  "version": "14.370.2",
+  "version": "14.370.2-ddb.1",
   "compatibility": {
     "minimum": "14",
     "verified": "14",
@@ -1140,7 +1140,7 @@
       "yzecoriolis"
     ]
   },
-  "url": "https://github.com/phenomen/foundry-vtt-ru",
-  "manifest": "https://github.com/phenomen/foundry-vtt-ru/releases/download/release-v14/module.json",
-  "download": "https://github.com/phenomen/foundry-vtt-ru/releases/download/release-v14/ru-ru.zip"
+  "url": "https://github.com/DroiD16/foundry-vtt-ru",
+  "manifest": "https://github.com/DroiD16/foundry-vtt-ru/releases/download/release-v14/module.json",
+  "download": "https://github.com/DroiD16/foundry-vtt-ru/releases/download/release-v14/ru-ru.zip"
 }

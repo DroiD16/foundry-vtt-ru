@@ -1,5 +1,7 @@
 # Русский перевод для Foundry VTT
 
+Это форк русской локализации Foundry VTT с поддержкой синхронизации контента DDB Importer с переводами Adventure Guys (AG).
+
 ![](https://img.shields.io/badge/FVTT-v13-green) ![](https://img.shields.io/badge/FVTT-v14-green)
 
 ![](/public/images/module/cover.webp)
