@@ -1,5 +1,6 @@
 import { presentationEqual } from "./presentation.js";
 import { eligibleActor, eligibleActorIdentity, eligibleItem, identity } from "./identity.js";
+import { canonicalName } from "./publications.js";
 import { automationStrings, get, project, projectCandidates } from "./projector.js";
 
 export async function applyActor(actor, { resolver, supplement = {entries: []}, isGM, onProgress }) {
@@ -26,8 +27,6 @@ export async function applyActor(actor, { resolver, supplement = {entries: []}, 
     safeReporter({ phase: "prepare", completed: prepared++, total: actor.items.size });
     if (!eligibleItem(actor, item)) {
       outcome.skipped++;
-      if (item.flags?.ddbimporter?.importId && item.flags.ddbimporter.importId !== actor.flags?.ddbimporter?.importId)
-        resolver.diagnostics({reason:"older-or-foreign-import", name:item.name});
       continue;
     }
     let before, match;
@@ -44,10 +43,17 @@ export async function applyActor(actor, { resolver, supplement = {entries: []}, 
       continue;
     }
     try {
+      let rollData;
+      try {
+        rollData = item.getRollData?.();
+      } catch {
+        rollData = undefined;
+      }
       const patch = project(before, match.text, {
         diagnostics: resolver.diagnostics,
         nativeRoot: true,
         automation,
+        rollData,
         ...match.projectOptions,
       });
       const { extra, children } = projectCandidates(before, match, supplement);
@@ -120,6 +126,13 @@ export function actorParents(items) {
   return items.map(data => {
     const key = identity(data);
     if (!key) return null;
+    // "Background: Noble" grants as AG "Noble".
+    key.name = canonicalName(key);
+    // A DDB subrace or lineage ("High Elf") is granted by its base species in AG ("Elf").
+    const f = data.flags?.ddbimporter;
+    if (["race", "species"].includes(data.type) && (f?.isSubRace || f?.isLineage) &&
+        typeof f.baseRaceName === "string" && f.baseRaceName)
+      key.name = f.baseRaceName;
     const matching = classes.get(data.system?.classIdentifier) ?? [];
     const level = data.type === "subclass" ?
       (data.system?.classIdentifier && matching.length === 1 ? matching[0].system?.levels : undefined) : data.system?.levels;
